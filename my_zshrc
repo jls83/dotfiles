@@ -1,0 +1,66 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/jls83/.oh-my-zsh"
+
+source ~/.bash_profile
+
+ZSH_THEME="crcandy_edit"
+
+# Plugins
+plugins=(
+  git
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# Custom alias functions
+maccopy() {
+    cat $1 | pbcopy
+}
+
+prFunc() {
+    previous_dir=$(pwd);
+    cd /sites/ycharts;
+
+    github_base_url="https://github.com/ycharts/ycharts/compare/develop...jls83:";
+    current_branch=$(git branch | grep \* | cut -d ' ' -f2);
+    open -na "Google Chrome" "$github_base_url$current_branch";
+
+    vim ~/pr.md;
+    cat ~/pr.md | pbcopy;
+    cd $previous_dir;
+}
+
+openVgShell() {
+    previous_dir=$(pwd);
+    cd /sites/ycharts;
+    vagrant ssh -- -t \
+        "source /home/vagrant/.virtualenvs/ycharts/bin/activate;" \
+        "python /sites/ycharts/manage.py shell_plus";
+    cd $previous_dir;
+}
+
+gitQuicksave() {
+    MSG=$(git checkout -b tmp 2>&1)
+    if [[ $MSG == "fatal: A branch named 'tmp' already exists." ]]; then
+        echo "'tmp' already exists; deleting";
+        git branch -D tmp;
+        git checkout -b tmp;
+    fi
+}
+
+alias npr=prFunc
+alias vgs=openVgShell
+alias wcp=maccopy
+alias qs=gitQuicksave
+
+alias ipy='ipython'
+
+alias vg='cd /sites/ycharts && vagrant ssh'
+alias ycs='cd /sites/ycharts'
+alias gitr='cd /sites/ycharts && git checkout develop && git pull origin develop'

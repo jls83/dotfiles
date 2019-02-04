@@ -1,0 +1,4 @@
+set surround
+
+:map <C-o> :action Back<CR>
+:map <C-i> :action Forward<CR>

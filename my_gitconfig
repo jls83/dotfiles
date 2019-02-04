@@ -1,0 +1,29 @@
+[user]
+	email = josephlsanders@gmail.com
+	name = jls83
+
+[alias]
+    c = commit --verbose
+    ca = commit -a --verbose
+    cm = commit -m
+    cam = commit -am
+
+    d = diff
+
+    s = status -s
+
+    co = checkout
+    cob = checkout -b
+    clr = checkout -- .
+    con = "!f() { git checkout -b $1 && git push joe $1 && git branch -u joe/$1; }; f"
+
+    la = "!git config -l | grep alias | cut -c 7-"
+    br = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:blue)%(objectname:short=7)%(color:reset) - %(align:40,left)%(if)%(upstream:short)%(then)%(color:cyan)%(upstream:short)%(color:reset)%(else)%(color:yellow)%(refname:short)%(color:reset)%(end) %(if:notequals=jls83)%(authorname)%(then)[%(authorname)]%(end)%(end)%09%(align:20,right)%(color:green)%(committerdate:relative)%(color:reset)%(end)'
+
+    hi = "!git --no-pager log --oneline -10 --first-parent --author=jls83"
+
+[filter "lfs"]
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
