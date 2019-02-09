@@ -1,26 +1,10 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/jls83/.oh-my-zsh"
-
-source ~/.bash_profile
-
-ZSH_THEME="crcandy_edit"
-
-# Plugins
-plugins=(
-  git
-)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
 # Custom alias functions
 maccopy() {
     cat $1 | pbcopy
+}
+
+xclipCopy() {
+    cat $1 | xclip -selection clipboard
 }
 
 prFunc() {
@@ -54,13 +38,42 @@ gitQuicksave() {
     fi
 }
 
-alias npr=prFunc
-alias vgs=openVgShell
-alias wcp=maccopy
+case `uname` in
+    "Darwin")
+        export PATH="/usr/local/opt/mysql@5.7/bin:$PATH" # Darwin
+        export ZSH="/Users/jls83/.oh-my-zsh" # Darwin
+
+        alias npr=prFunc
+        alias vgs=openVgShell
+
+        alias vg='cd /sites/ycharts && vagrant ssh'
+        alias ycs='cd /sites/ycharts'
+        alias gitr='cd /sites/ycharts && git checkout develop && git pull origin develop'
+
+        alias wcp=maccopy # Darwin
+        ;;
+
+    "Linux")
+        export PATH="/home/jls83/.pyenv/bin:$PATH" # Linux
+        export ZSH="/home/jls83/.oh-my-zsh" # Linux
+
+        alias ipython='python -m IPython' # Linux
+        alias wcp=xclipCopy # Linux
+
+        # PyEnv Junk
+        eval "$(pyenv init -)"
+        eval "$(pyenv virtualenv-init -)"
+        export PYENV_ROOT="/home/jls83/.pyenv"
+        export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
+        ;;
+esac
+
+ZSH_THEME="crcandy_edit"
+
+plugins=(
+  git
+)
+
+source $ZSH/oh-my-zsh.sh
+
 alias qs=gitQuicksave
-
-alias ipy='ipython'
-
-alias vg='cd /sites/ycharts && vagrant ssh'
-alias ycs='cd /sites/ycharts'
-alias gitr='cd /sites/ycharts && git checkout develop && git pull origin develop'
