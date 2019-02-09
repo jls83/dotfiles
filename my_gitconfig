@@ -1,6 +1,6 @@
 [user]
-	email = josephlsanders@gmail.com
-	name = jls83
+    email = josephlsanders@gmail.com
+    name = jls83
 
 [alias]
     c = commit --verbose
