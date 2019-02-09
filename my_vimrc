@@ -28,10 +28,6 @@ set ruler
 set list
 set listchars=tab:▸\ ,eol:¬
 
-"CoffeeScript syntax stuff below
-hi link coffeeSemicolonError NONE
-hi link coffeeReservedError NONE
-
 " iTerm Blinkencursorzeit
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
