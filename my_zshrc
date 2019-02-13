@@ -15,8 +15,11 @@ prFunc() {
     current_branch=$(git branch | grep \* | cut -d ' ' -f2);
     open -na "Google Chrome" "$github_base_url$current_branch";
 
-    vim ~/pr.md;
-    cat ~/pr.md | pbcopy;
+    if [[ $1 != 'no' ]]; then
+        vim ~/pr.md;
+        cat ~/pr.md | pbcopy;
+    fi
+
     cd $previous_dir;
 }
 
