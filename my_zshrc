@@ -63,6 +63,8 @@ case `uname` in
         export ZSH="/home/jls83/.oh-my-zsh"
 
         alias ipython='python -m IPython'
+        alias nvim='/home/jls83/appimages/nvim.appimage'
+
         alias wcp=xclipCopy
 
         # PyEnv Junk
