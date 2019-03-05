@@ -3,7 +3,7 @@
     name = jls83
 
 [core]
-    editor = nvim
+    editor = vim
 
 [alias]
     c = commit --verbose
