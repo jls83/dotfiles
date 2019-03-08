@@ -2,6 +2,9 @@
     email = josephlsanders@gmail.com
     name = jls83
 
+[core]
+    editor = vim
+
 [alias]
     c = commit --verbose
     ca = commit -a --verbose
