@@ -1,4 +1,6 @@
 set surround
 
-:map <C-o> :action Back<CR>
-:map <C-i> :action Forward<CR>
+let mapleader = " "
+
+nmap <leader>d :action QuickJavaDoc<cr>
+
