@@ -26,7 +26,7 @@ prFunc() {
 openVgShell() {
     previous_dir=$(pwd);
     cd /sites/ycharts;
-    vagrant ssh -- -t \
+    vagrant ssh bionic -- -t \
         "source /home/vagrant/.virtualenvs/ycharts/bin/activate;" \
         "python /sites/ycharts/manage.py shell_plus";
     cd $previous_dir;
@@ -51,7 +51,7 @@ case `uname` in
         alias npr=prFunc
         alias vgs=openVgShell
 
-        alias vg='cd /sites/ycharts && vagrant ssh'
+        alias vg='cd /sites/ycharts && vagrant ssh bionic'
         alias ycs='cd /sites/ycharts'
         alias gitr='cd /sites/ycharts && git checkout develop && git pull origin develop'
 
