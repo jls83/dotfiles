@@ -2,32 +2,38 @@ set surround
 
 let mapleader = " "
 
+" ## IDE Stuff
+noremap <leader>a :action GotoAction<cr>
+nnoremap <leader>d :action QuickJavaDoc<cr>
+
+" I can probably cut this down from 3 keystrokes, but you know
+noremap <leader>sip :action SelectInProjectView<cr>
+
+" This doesn't work quite right
+noremap <leader>g :action Github.Open.In.Browser<cr>
+
+" These run test classes, as well as test methods, under the cursor
+noremap <leader>tt :action RunClass<cr>
+noremap <leader>td :action DebugClass<cr>
+nnoremap <leader>tb :action ToggleLineBreakpoint<cr>
+
+" ## Movement
+" TODO: Can I hold down space and get the same behavior?
+" These literally only work for "methods"
+nnoremap <leader>k :action MethodUp<cr>
+nnoremap <leader>j :action MethodDown<cr>
 
 " This mimics Vim's jump list behavior
 " NOTE: Confirm on non-Mac OSes that these are un-bound in PyCharm
 nnoremap <C-o> :action Back<cr>
 nnoremap <C-i> :action Forward<cr>
 
-nnoremap <leader>a :action GotoAction<cr>
-nnoremap <leader>d :action QuickJavaDoc<cr>
-nnoremap <leader>f :action FindInPath<cr>
-nnoremap <leader>u :action FindUsages<cr>
+" ## Search
+noremap <leader>f :action FindInPath<cr>
+noremap <leader>u :action FindUsages<cr>
 
-" TODO: Can I hold down space and get the same behavior?
-nnoremap <leader>k :action MethodUp<cr>
-nnoremap <leader>j :action MethodDown<cr>
-
-vnoremap <leader>f :action FindInPath<cr>
-" This doesn't work quite right
-vnoremap <leader>g :action Github.Open.In.Browser<cr>
-
-" I can probably cut this down from 3 keystrokes, but you know
-noremap <leader>sip :action SelectInProjectView<cr>
-" These run test classes, as well as test methods, under the cursor
-noremap <leader>tt :action RunClass<cr>
-noremap <leader>td :action DebugClass<cr>
-nnoremap <leader>tb :action ToggleLineBreakpoint<cr>
+" ## Editing
+nnoremap <leader>r :action RenameElement<cr>
 
 " TODO:
-"   * RenameElement
 "   * NewScratchFile (looks like an issue with the dialog box, same as GitHub)
