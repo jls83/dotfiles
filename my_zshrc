@@ -32,6 +32,31 @@ openVgShell() {
     cd $previous_dir;
 }
 
+openVgTmux() {
+    previous_dir=$(pwd);
+    SESSION_NAME="ycSession"
+
+    # Possible error messages to handle
+    NO_SERVER_RUNNING="no server running"
+    NO_SESSIONS="no sessions"
+
+    echo "Checking for $SESSION_NAME...";
+    cd /sites/ycharts;
+    session_list_result=$(vagrant ssh bionic -- -t "tmux ls" 2>&1);
+    if [[ $session_list_result != *$SESSION_NAME* ]] \
+        || [[ $session_list_result == *$NO_SERVER_RUNNING* ]] \
+        || [[ $session_list_result == *$NO_SESSIONS* ]]; then
+        echo "No $SESSION_NAME created, creating new session...";
+        # Redirect stderr to /dev/null so we don't get a "connection closed" message
+        vagrant ssh bionic -- -t "tmux new -d -s $SESSION_NAME" 2>/dev/null;
+    else
+        echo "Found $SESSION_NAME session, connecting...";
+    fi
+    vagrant ssh bionic -- -t "tmux attach -t $SESSION_NAME";
+
+    cd $previous_dir;
+}
+
 gitQuicksave() {
     MSG=$(git checkout -b tmp 2>&1)
     if [[ $MSG == "fatal: A branch named 'tmp' already exists." ]]; then
@@ -50,6 +75,7 @@ case `uname` in
 
         alias npr=prFunc
         alias vgs=openVgShell
+        alias vgt=openVgTmux
 
         alias vg='cd /sites/ycharts && vagrant ssh bionic'
         alias ycs='cd /sites/ycharts'
