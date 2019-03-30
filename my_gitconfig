@@ -27,6 +27,8 @@
 
     hi = "!git --no-pager log --oneline -10 --first-parent --author=jls83"
 
+    wh = "!git add . && git commit --amend -n"
+
 [filter "lfs"]
     process = git-lfs filter-process
     required = true
