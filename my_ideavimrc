@@ -35,5 +35,10 @@ noremap <leader>u :action FindUsages<cr>
 " ## Editing
 nnoremap <leader>r :action RenameElement<cr>
 
+" ## Folding
+" These close all lower folds while leaving the current fold open
+nnoremap zf zCzo
+vnoremap zf zCzo
+
 " TODO:
 "   * NewScratchFile (looks like an issue with the dialog box, same as GitHub)
