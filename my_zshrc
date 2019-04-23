@@ -82,6 +82,12 @@ case `uname` in
         alias gitr='cd /sites/ycharts && git checkout develop && git pull origin develop'
 
         alias wcp=maccopy
+
+        # Alias to copy all SCSS files to proper directory in `ycharts` project
+        SCSS_SOURCE_DIR='/sites/ycharts_pdf_pages/app/styles'
+        SCSS_DEST_DIR='/sites/ycharts/apps/custom_pdf_reports/static/custom_pdf_report_template/scss'
+        alias sass_copy='cp -R $SCSS_SOURCE_DIR $SCSS_DEST_DIR'
+
         ;;
 
     "Linux")
