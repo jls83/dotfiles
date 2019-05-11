@@ -42,3 +42,11 @@ vnoremap zf zCzo
 
 " TODO:
 "   * NewScratchFile (looks like an issue with the dialog box, same as GitHub)
+
+" Testing!
+" This opens a new split with the current file, switches focus (left!), closes the duplicate
+" file tab, then moves focus to the newly opened tab
+nnoremap <leader>k :vsp<cr><C-w>h:q<cr><C-w>l
+
+" Does what it says on the tin!
+nnoremap <leader>v :action MoveEditorToOppositeTabGroup<cr>
