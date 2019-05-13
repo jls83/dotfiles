@@ -46,7 +46,9 @@ vnoremap zf zCzo
 " Testing!
 " This opens a new split with the current file, switches focus (left!), closes the duplicate
 " file tab, then moves focus to the newly opened tab
-nnoremap <leader>k :vsp<cr><C-w>h:q<cr><C-w>l
+nnoremap <leader>m :action MoveTabRight<cr>
 
 " Does what it says on the tin!
 nnoremap <leader>v :action MoveEditorToOppositeTabGroup<cr>
+
+" TODO: Add the TabShifter actions here
