@@ -9,8 +9,10 @@ nnoremap <leader>d :action QuickJavaDoc<cr>
 " I can probably cut this down from 3 keystrokes, but you know
 noremap <leader>sip :action SelectInProjectView<cr>
 
+" Git junk
 " This doesn't work quite right
-noremap <leader>g :action Github.Open.In.Browser<cr>
+noremap <leader>gb :action Github.Open.In.Browser<cr>
+noremap <leader>gh :action Vcs.ShowTabbedFileHistory<cr>
 
 " These run test classes, as well as test methods, under the cursor
 noremap <leader>tt :action RunClass<cr>
@@ -43,12 +45,15 @@ vnoremap zf zCzo
 " TODO:
 "   * NewScratchFile (looks like an issue with the dialog box, same as GitHub)
 
-" Testing!
-" This opens a new split with the current file, switches focus (left!), closes the duplicate
-" file tab, then moves focus to the newly opened tab
-nnoremap <leader>m :action MoveTabRight<cr>
+" Tab Shifter items
+" Tab movement
+nnoremap <leader>sh :action TabShiftActions.ShiftLeft<cr>
+nnoremap <leader>sj :action TabShiftActions.ShiftDown<cr>
+nnoremap <leader>sk :action TabShiftActions.ShiftUp<cr>
+nnoremap <leader>sl :action TabShiftActions.ShiftRight<cr>
 
-" Does what it says on the tin!
-nnoremap <leader>v :action MoveEditorToOppositeTabGroup<cr>
-
-" TODO: Add the TabShifter actions here
+" Split resizing
+nnoremap <leader>ch :action TabShiftActions.StretchLeft<cr>
+nnoremap <leader>cj :action TabShiftActions.StretchDown<cr>
+nnoremap <leader>ck :action TabShiftActions.StretchUp<cr>
+nnoremap <leader>cl :action TabShiftActions.StretchRight<cr>
