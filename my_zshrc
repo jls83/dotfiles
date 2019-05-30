@@ -28,6 +28,7 @@ openVgShell() {
     cd /sites/ycharts;
     vagrant ssh bionic -- -t \
         "source /home/vagrant/.virtualenvs/ycharts/bin/activate;" \
+        "source /home/vagrant/.vagrant_bash_profile_local;" \
         "python /sites/ycharts/manage.py shell_plus";
     cd $previous_dir;
 }
