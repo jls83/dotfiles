@@ -3,7 +3,11 @@
 "
 let mapleader = " "
 
-execute pathogen#infect()
+" Plug.vim steps
+call plug#begin()
+Plug 'tpope/vim-surround'
+
+call plug#end()
 
 syntax on
 syntax enable
