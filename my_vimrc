@@ -7,6 +7,7 @@ let mapleader = " "
 call plug#begin()
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
