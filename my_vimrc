@@ -6,8 +6,10 @@ let mapleader = " "
 " Plug.vim steps
 call plug#begin()
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'vimwiki/vimwiki'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -15,7 +17,19 @@ syntax on
 syntax enable
 filetype plugin indent on
 
+let g:lightline = {
+    \ 'colorscheme': 'jellybeans',
+    \ 'active': {
+    \     'left': [ [ 'mode', 'paste' ],
+    \               [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+    \ },
+    \ 'component_function': {
+    \     'gitbranch': 'fugitive#head',
+    \ },
+    \ }
+
 set background=dark
+set noshowmode
 colorscheme distinguished
 
 set tabstop=4
