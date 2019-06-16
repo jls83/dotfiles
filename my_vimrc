@@ -1,6 +1,5 @@
-"set t_Co=256
-"set term=xterm-256
-"
+set termguicolors
+
 let mapleader = " "
 
 " Plug.vim steps
