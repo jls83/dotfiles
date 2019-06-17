@@ -1,4 +1,6 @@
-set termguicolors
+if has('nvim')
+    set termguicolors
+endif
 
 let mapleader = " "
 
