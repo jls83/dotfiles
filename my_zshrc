@@ -1,3 +1,5 @@
+source fzf_items
+
 # Custom alias functions
 maccopy() {
     cat $1 | pbcopy
@@ -116,6 +118,8 @@ esac
 # Both Linux and Mac have themes called `crcandy_edit`
 ZSH_THEME="crcandy_edit"
 
+# I use the FZF items everywhere
+alias gh=fzfGitLocalBranches 
 plugins=(
   git
 )

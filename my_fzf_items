@@ -1,0 +1,10 @@
+# These are all cribbed from the fzf wiki directly - https://github.com/junegunn/fzf/wiki/examples
+
+# fbr - checkout git branch
+fzfGitLocalBranches() {
+  local branches branch
+  branches=$(git --no-pager branch -vv) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+}
+
