@@ -13,7 +13,10 @@ Plug 'vimwiki/vimwiki'
 Plug 'itchyny/lightline.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+
+" Testing these
 Plug 'Yggdroot/indentLine'
+Plug 'tmhedberg/SimpylFold'
 
 call plug#end()
 
