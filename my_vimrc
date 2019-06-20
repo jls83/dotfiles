@@ -16,7 +16,8 @@ Plug 'junegunn/fzf.vim'
 
 " Testing these
 Plug 'Yggdroot/indentLine'
-Plug 'tmhedberg/SimpylFold'
+Plug 'kalekundert/vim-coiled-snake'
+Plug 'Konfekt/FastFold'
 
 call plug#end()
 
