@@ -119,7 +119,9 @@ esac
 ZSH_THEME="crcandy_edit"
 
 # I use the FZF items everywhere
-alias gh=fzfGitLocalBranches 
+alias gh=fzfGitLocalBranches
+alias ghr=fzfGitAllBranches
+
 plugins=(
   git
 )
