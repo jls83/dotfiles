@@ -54,3 +54,6 @@ nnoremap <leader>cl :action TabShiftActions.StretchRight<cr>
 
 " Testing!
 inoremap jk <esc>
+
+vnoremap <M-k> :action MoveLineUp<cr>
+vnoremap <M-j> :action MoveLineDown<cr>
