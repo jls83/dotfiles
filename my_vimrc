@@ -19,6 +19,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Yggdroot/indentLine'
 Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
+Plug 'mxw/vim-jsx'
 
 call plug#end()
 
