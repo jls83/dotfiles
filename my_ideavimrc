@@ -13,6 +13,7 @@ noremap <leader>sip :action SelectInProjectView<cr>
 " This doesn't work quite right
 noremap <leader>gb :action Github.Open.In.Browser<cr>
 noremap <leader>gh :action Vcs.ShowTabbedFileHistory<cr>
+noremap <leader>ga :action Annotate<cr>
 
 " These run test classes, as well as test methods, under the cursor
 noremap <leader>tt :action RunClass<cr>
