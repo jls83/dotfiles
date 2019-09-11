@@ -1,3 +1,5 @@
+set hlsearch
+set relativenumber
 set surround
 
 let mapleader = " "
