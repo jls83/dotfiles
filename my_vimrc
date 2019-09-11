@@ -2,8 +2,6 @@ if has('nvim')
     set termguicolors
 endif
 
-set relativenumber
-
 let mapleader = " "
 
 " Plug.vim steps
