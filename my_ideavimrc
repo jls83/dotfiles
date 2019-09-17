@@ -62,3 +62,5 @@ vnoremap <M-j> :action MoveLineDown<cr>
 
 nnoremap <leader>hc :action CallHierarchy<cr>
 nnoremap <leader>ht :action TypeHierarchy<cr>
+
+vnoremap <leader>ns :action NewScratchFile<cr>
