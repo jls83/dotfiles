@@ -29,6 +29,16 @@
 
     wh = "!git add . && git commit --amend -n"
 
+    # USAGE: git ron branch src_branch dest_branch
+    # `rebase --onto` is confusing as ALL HELL unless you sit and think about it for a while
+    # (I have to read the docs _every time_ I use it). Instead, this uses the familiar pattern
+    # of `command object src dest` that just about everything else uses.
+    #
+    # NOTE: The `branch` arguments can be any tree-ish that Git uses (e.g. a branch name,
+    # a commit hash, etc.)
+    ron = "!f() { git rebase --onto $3 $2 $1; }; f"
+
+
 [filter "lfs"]
     process = git-lfs filter-process
     required = true
