@@ -20,6 +20,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
 Plug 'mxw/vim-jsx'
+Plug 'AndrewRadev/splitjoin.vim'
 
 call plug#end()
 
