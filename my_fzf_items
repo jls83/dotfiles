@@ -1,11 +1,18 @@
 # These are all cribbed from the fzf wiki directly - https://github.com/junegunn/fzf/wiki/examples
 
 # fbr - checkout git branch
-fzfGitLocalBranches() {
+fzfGitLocalBranchesOld() {
   local branches branch
   branches=$(git --no-pager branch -vv) &&
   branch=$(echo "$branches" | fzf +m) &&
   git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+}
+
+fzfGitLocalBranches() {
+  local branches branch
+  branches=$(git for-each-ref --format='%(refname:short)' refs/heads/) &&
+  branch=$(echo "$branches" | fzf --preview 'git --no-pager log --pretty=oneline --abbrev-commit --no-decorate -n 10 develop..{}' --height 40% --preview-window right:70%) &&
+  git checkout $branch
 }
 
 # fbr - checkout git branch (including remote branches)
