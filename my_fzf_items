@@ -23,3 +23,12 @@ fzfGitAllBranches() {
            fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
+
+# `cd` to one of your git branches
+fzfGitViewAndCdAll() {
+    cd $(echo $GIT_REPOSITORIES | fzf)
+}
+
+fzfGitViewAndCdYCharts() {
+    cd $(echo $YCHARTS_GIT_REPOSITORIES | fzf)
+}
