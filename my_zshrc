@@ -147,7 +147,7 @@ GIT_REPOSITORIES="${YCHARTS_GIT_REPOSITORIES}\n${OTHER_GIT_REPOSITORIES}"
 # I use the FZF items everywhere
 alias gh=fzfGitLocalBranches
 alias ghr=fzfGitAllBranches
-alias repos=fzfGitViewAndCd
+alias repos=fzfGitViewAndCdAll
 alias yre=fzfGitViewAndCdYCharts
 
 # I also use mkdirAndCd everywhere
