@@ -91,9 +91,12 @@ case `uname` in
         alias vgs=openVgShell
         alias vgt=openVgTmux
 
+        # YCharts-specific aliases
         alias vg='cd /sites/ycharts && vagrant ssh bionic'
         alias ycs='cd /sites/ycharts'
-        alias gitr='cd /sites/ycharts && git checkout develop && git pull origin develop'
+        # I'm sure I will regret this, but you know.
+        # alias gitr='cd /sites/ycharts && git checkout develop && git pull origin develop'
+        alias gitr='git checkout develop && git pull origin develop'
 
         alias wcp=maccopy
 
