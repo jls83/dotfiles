@@ -28,6 +28,8 @@ syntax on
 syntax enable
 filetype plugin indent on
 
+let g:markdown_fenced_languages = ['python']
+
 let g:lightline = {
     \ 'colorscheme': 'jellybeans',
     \ 'active': {
@@ -39,6 +41,7 @@ let g:lightline = {
     \ },
     \ }
 
+
 set background=dark
 set noshowmode
 colorscheme distinguished
@@ -47,6 +50,8 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+
+inoremap jk <esc>
 
 "Filetype-specific tab info
 autocmd Filetype html setlocal ts=2 sw=2 sts=2
@@ -69,8 +74,7 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " VimWiki settings
 let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
-
-inoremap jk <esc>
+let g:vimwiki_global_ext = 0 " don't use vimwiki syntax for all MD files
 
 " NerdTree items
 nnoremap <leader>1 :NERDTreeToggle<CR>
