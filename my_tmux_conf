@@ -1,33 +1,6 @@
 set -g default-terminal "screen-256color"
 set -ga terminal-overrides ",xterm-256color*:Tc"
 
-# Color vars
-STATUS_FG=colour137
-STATUS_BG=colour233
-STATUS_RIGHT_FG=colour208
-STATUS_RIGHT_BG=colour235
-
-WINDOW_TAB_BG=colour236
-WINDOW_TAB_FG=colour166
-WINDOW_TAB_NAME_FG=colour255
-WINDOW_TAB_FLAG_FG=colour249
-
-WINDOW_TAB_ACTIVE_BG=colour255
-WINDOW_TAB_ACTIVE_FG=colour166
-WINDOW_TAB_ACTIVE_NAME_FG=colour234
-WINDOW_TAB_ACTIVE_FLAG_FG=colour255
-
-WINDOW_TAB_BELL_FG=colour255
-WINDOW_TAB_BELL_BG=colour1
-
-COPY_MODE_FG=colour1
-COPY_MODE_BG=colour18
-
-PANE_BORDER_FG=colour0
-PANE_BORDER_BG=colour8
-PANE_ACTIVE_BORDER_FG=colour166
-PANE_ACTIVE_BORDER_BG=colour233
-
 # Split panes using | and -
 bind | split-window -h
 bind - split-window -v
