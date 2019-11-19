@@ -65,3 +65,4 @@ nnoremap <leader>hc :action CallHierarchy<cr>
 nnoremap <leader>ht :action TypeHierarchy<cr>
 
 vnoremap <leader>ns :action NewScratchFile<cr>
+nnoremap <leader>ns :action NewScratchFile<cr>
