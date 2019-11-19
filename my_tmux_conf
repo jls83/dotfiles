@@ -29,7 +29,7 @@ set -g status-style 'bg=colour233 fg=colour137'
 
 set -g status-left ''
 set -g status-left-length 1
-set -g status-right '#[fg=colour208,bg=colour235] %Y-%m-%d %H:%M:%S '
+set -g status-right '#[bg=colour235,fg=colour255 bold] #S ::#[fg=colour208 nobold] %Y-%m-%d %H:%M:%S '
 set -g status-right-length 60
 
 setw -g window-status-current-style 'fg=colour255 bg=colour166 bold'
