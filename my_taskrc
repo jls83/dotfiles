@@ -29,3 +29,10 @@ data.location=~/.task
 #include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/solarized-light-256.theme
 #include /usr/local/Cellar/task/2.5.1/share/doc/task/rc/no-color.theme
 
+# CUSTOM REPORTS
+## Scrum report
+report.scrum.description=What I did yesterday for morning standup
+report.scrum.columns=entry,end,depends,project,tags,description
+report.scrum.labels=Created,Completed,Due,Project,Tags,Description
+report.scrum.sort=end-
+report.scrum.filter=end.after:today-1d end.before:today
