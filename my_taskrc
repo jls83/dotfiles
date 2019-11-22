@@ -36,3 +36,6 @@ report.scrum.columns=entry,end,depends,project,tags,description
 report.scrum.labels=Created,Completed,Due,Project,Tags,Description
 report.scrum.sort=end-
 report.scrum.filter=end.after:today-1d end.before:today
+
+# Urgency settings
+urgency.user.tag.icebox.coefficient=-10.0 # Icebox stuff should move to the bottom of the list
