@@ -21,6 +21,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
 Plug 'mxw/vim-jsx'
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
