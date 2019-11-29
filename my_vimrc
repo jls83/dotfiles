@@ -29,7 +29,7 @@ syntax on
 syntax enable
 filetype plugin indent on
 
-let g:markdown_fenced_languages = ['python']
+let g:markdown_fenced_languages = ['python', 'javascript', 'yaml']
 
 let g:lightline = {
     \ 'colorscheme': 'jellybeans',
@@ -55,10 +55,7 @@ set expandtab
 inoremap jk <esc>
 
 "Filetype-specific tab info
-autocmd Filetype html setlocal ts=2 sw=2 sts=2
-autocmd Filetype ps1 setlocal ts=2 sw=2 sts=2
-autocmd Filetype sql setlocal ts=2 sw=2 sts=2
-autocmd Filetype yaml setlocal ts=2 sw=2 sts=2
+autocmd Filetype *.html,*.ps1,*.sql,*.yml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 set number
 set showcmd
