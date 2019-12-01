@@ -22,6 +22,7 @@ Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
 Plug 'mxw/vim-jsx'
 Plug 'easymotion/vim-easymotion'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -42,10 +43,12 @@ let g:lightline = {
     \ },
     \ }
 
+let g:gruvbox_contrast_dark = 'hard'
 
 set background=dark
 set noshowmode
-colorscheme distinguished
+colorscheme gruvbox
+
 
 set tabstop=4
 set softtabstop=4
