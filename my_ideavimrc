@@ -66,3 +66,5 @@ nnoremap <leader>ht :action TypeHierarchy<cr>
 
 vnoremap <leader>ns :action NewScratchFile<cr>
 nnoremap <leader>ns :action NewScratchFile<cr>
+
+" TODO: Add `SurroundWith` stuff here, compatible with `gc`
