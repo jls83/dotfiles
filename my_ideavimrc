@@ -1,23 +1,29 @@
+" vim:foldmethod=marker:
+
 set commentary
 set hlsearch
 set surround
 
 let mapleader = " "
+inoremap jk <esc>
 
 " ## IDE Stuff
 noremap <leader>a :action GotoAction<cr>
 nnoremap <leader>d :action QuickJavaDoc<cr>
-
-" I can probably cut this down from 3 keystrokes, but you know
 noremap <leader>sip :action SelectInProjectView<cr>
 
+nnoremap <leader>hc :action CallHierarchy<cr>
+nnoremap <leader>ht :action TypeHierarchy<cr>
+
+vnoremap <leader>ns :action NewScratchFile<cr>
+nnoremap <leader>ns :action NewScratchFile<cr>
+
 " ## Git Junk
-" This doesn't work quite right
 noremap <leader>gb :action Github.Open.In.Browser<cr>
 noremap <leader>gh :action Vcs.ShowTabbedFileHistory<cr>
 noremap <leader>ga :action Annotate<cr>
 
-" These run test classes, as well as test methods, under the cursor
+" Test running items
 noremap <leader>tt :action RunClass<cr>
 noremap <leader>td :action DebugClass<cr>
 nnoremap <leader>tb :action ToggleLineBreakpoint<cr>
@@ -39,9 +45,6 @@ nnoremap <leader>r :action RenameElement<cr>
 nnoremap zf zCzo
 vnoremap zf zCzo
 
-" TODO:
-"   * NewScratchFile (looks like an issue with the dialog box, same as GitHub)
-
 " ## Tab Shifter items
 " Tab movement
 nnoremap <leader>sh :action TabShiftActions.ShiftLeft<cr>
@@ -56,15 +59,7 @@ nnoremap <leader>ck :action TabShiftActions.StretchUp<cr>
 nnoremap <leader>cl :action TabShiftActions.StretchRight<cr>
 
 " Testing!
-inoremap jk <esc>
-
 vnoremap <M-k> :action MoveLineUp<cr>
 vnoremap <M-j> :action MoveLineDown<cr>
-
-nnoremap <leader>hc :action CallHierarchy<cr>
-nnoremap <leader>ht :action TypeHierarchy<cr>
-
-vnoremap <leader>ns :action NewScratchFile<cr>
-nnoremap <leader>ns :action NewScratchFile<cr>
 
 " TODO: Add `SurroundWith` stuff here, compatible with `gc`
