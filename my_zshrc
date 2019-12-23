@@ -20,7 +20,7 @@ prFunc() {
     open -na "Google Chrome" "$github_base_url$current_branch";
 
     if [[ $1 != 'no' ]]; then
-        vim ~/pr.md;
+        $EDITOR ~/pr.md;
         cat ~/pr.md | pbcopy;
     fi
 
@@ -166,3 +166,6 @@ source $ZSH/oh-my-zsh.sh
 alias qs=gitQuicksave
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Use this so I can override as needed
+export EDITOR="nvim"
