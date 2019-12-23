@@ -114,5 +114,9 @@ inoremap <silent><expr> <TAB>
     \ <SID>check_back_space() ? "\<TAB>" :
     \ coc#refresh()
 inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" CoC Go-Tos
+nmap <silent> <leader>b <Plug>(coc-definition)
+nmap <silent> <leader>u <Plug>(coc-references)
 " }}}1
 
