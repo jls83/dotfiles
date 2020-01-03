@@ -1,6 +1,9 @@
 set -g default-terminal "screen-256color"
 set -ga terminal-overrides ",xterm-256color*:Tc"
 
+# Speed up the <esc> delay
+set escape-time 20
+
 # Split panes using | and -
 bind | split-window -h
 bind - split-window -v
