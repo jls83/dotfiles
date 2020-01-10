@@ -12,3 +12,5 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export PYENV_ROOT="/home/jls83/.pyenv"
 export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
+
+GIT_REPOSITORIES=""

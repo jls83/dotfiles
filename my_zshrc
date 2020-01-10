@@ -88,25 +88,6 @@ esac
 # Both Linux and Mac have themes called `crcandy_edit`
 ZSH_THEME="crcandy_edit"
 
-# Set up a list of Git repos when the shell starts
-YCHARTS_GIT_REPOSITORIES=$(find \
-    /sites \
-    -type d -name ".git" \
-    ! -path "*/.git/*" \
-    -prune \
-    -maxdepth 4 | \
-    sed -e 's/.\{4\}$//')
-
-OTHER_GIT_REPOSITORIES=$(find \
-    ~/other_projects \
-    -type d -name ".git" \
-    ! -path "*/.git/*" \
-    -prune \
-    -maxdepth 4 | \
-    sed -e 's/.\{4\}$//')
-
-GIT_REPOSITORIES="${YCHARTS_GIT_REPOSITORIES}\n${OTHER_GIT_REPOSITORIES}"
-
 # I use the FZF items everywhere
 alias gh=fzfGitLocalBranches
 alias ghr=fzfGitAllBranches
