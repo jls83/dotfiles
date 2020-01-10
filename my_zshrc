@@ -77,35 +77,7 @@ mkdirAndCd() {
 
 case `uname` in
     "Darwin")
-        source ~/.bash_profile
-
-        export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-        export ZSH="/Users/jls83/.oh-my-zsh"
-
-        # PyEnv junk
-        export PATH="/Users/jls83/.pyenv:$PATH"
-        eval "$(pyenv init -)"
-
-        # Haskell junk
-        export PATH="/Users/jls83/.ghcup/bin:$PATH"
-
-        alias npr=prFunc
-        alias vgs=openVgShell
-        alias vgt=openVgTmux
-
-        # YCharts-specific aliases
-        alias vg='cd /sites/ycharts && vagrant ssh bionic'
-        alias ycs='cd /sites/ycharts'
-        # I'm sure I will regret this, but you know.
-        alias gitr='git checkout develop && git pull origin develop'
-
-        alias wcp=maccopy
-
-        # Alias to copy all SCSS files to proper directory in `ycharts` project
-        SCSS_SOURCE_DIR='/sites/ycharts_pdf_pages/app/styles'
-        SCSS_DEST_DIR='/sites/ycharts/apps/custom_pdf_reports/static/custom_pdf_report_template/scss'
-        alias sass_copy='cp -R $SCSS_SOURCE_DIR $SCSS_DEST_DIR'
-
+        source ~/other_projects/dotfiles/zsh/work_macbook
         ;;
 
     "Linux")

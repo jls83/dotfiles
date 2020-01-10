@@ -1,0 +1,22 @@
+source ~/.bash_profile
+
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export ZSH="/Users/jls83/.oh-my-zsh"
+
+# PyEnv junk
+export PATH="/Users/jls83/.pyenv:$PATH"
+eval "$(pyenv init -)"
+
+# Haskell junk
+export PATH="/Users/jls83/.ghcup/bin:$PATH"
+
+alias npr=prFunc
+alias vgs=openVgShell
+alias vgt=openVgTmux
+alias wcp=maccopy
+
+# YCharts-specific aliases
+alias vg='cd /sites/ycharts && vagrant ssh bionic'
+alias ycs='cd /sites/ycharts'
+# I'm sure I will regret this, but you know.
+alias gitr='git checkout develop && git pull origin develop'
