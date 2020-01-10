@@ -1,0 +1,14 @@
+export PATH="/home/jls83/.pyenv/bin:$PATH"
+export ZSH="/home/jls83/.oh-my-zsh"
+export DOTNET_CLI_TELEMETRY_OUTPUT_OPTOUT=1
+
+alias ipython='python -m IPython'
+alias nvim='/home/jls83/appimages/nvim.appimage'
+
+alias wcp=xclipCopy
+
+# PyEnv Junk
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PYENV_ROOT="/home/jls83/.pyenv"
+export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
