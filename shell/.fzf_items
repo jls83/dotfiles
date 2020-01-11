@@ -1,0 +1,34 @@
+# These are all cribbed from the fzf wiki directly - https://github.com/junegunn/fzf/wiki/examples
+
+# fbr - checkout git branch
+fzfGitLocalBranchesOld() {
+  local branches branch
+  branches=$(git --no-pager branch -vv) &&
+  branch=$(echo "$branches" | fzf +m) &&
+  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+}
+
+fzfGitLocalBranches() {
+  local branches branch
+  branches=$(git for-each-ref --format='%(refname:short)' refs/heads/) &&
+  branch=$(echo "$branches" | fzf --preview 'git --no-pager log --pretty=oneline --abbrev-commit --no-decorate --color=always -n 10 develop..{}' --preview-window top:60%) &&
+  git checkout $branch
+}
+
+# fbr - checkout git branch (including remote branches)
+fzfGitAllBranches() {
+  local branches branch
+  branches=$(git branch --all | grep -v HEAD) &&
+  branch=$(echo "$branches" |
+           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+  git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+
+# `cd` to one of your git branches
+fzfGitViewAndCdAll() {
+    cd $(echo $GIT_REPOSITORIES | fzf)
+}
+
+fzfGitViewAndCdYCharts() {
+    cd $(echo $YCHARTS_GIT_REPOSITORIES | fzf)
+}

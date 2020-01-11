@@ -1,0 +1,65 @@
+" vim:foldmethod=marker:
+
+set commentary
+set hlsearch
+set surround
+
+let mapleader = " "
+inoremap jk <esc>
+
+" ## IDE Stuff
+noremap <leader>a :action GotoAction<cr>
+nnoremap <leader>d :action QuickJavaDoc<cr>
+noremap <leader>sip :action SelectInProjectView<cr>
+
+nnoremap <leader>hc :action CallHierarchy<cr>
+nnoremap <leader>ht :action TypeHierarchy<cr>
+
+vnoremap <leader>ns :action NewScratchFile<cr>
+nnoremap <leader>ns :action NewScratchFile<cr>
+
+" ## Git Junk
+noremap <leader>gb :action Github.Open.In.Browser<cr>
+noremap <leader>gh :action Vcs.ShowTabbedFileHistory<cr>
+noremap <leader>ga :action Annotate<cr>
+
+" Test running items
+noremap <leader>tt :action RunClass<cr>
+noremap <leader>td :action DebugClass<cr>
+nnoremap <leader>tb :action ToggleLineBreakpoint<cr>
+
+" This mimics Vim's jump list behavior
+" NOTE: Confirm on non-Mac OSes that these are un-bound in PyCharm
+nnoremap <C-o> :action Back<cr>
+nnoremap <C-i> :action Forward<cr>
+
+" ## Search
+noremap <leader>f :action FindInPath<cr>
+noremap <leader>u :action FindUsages<cr>
+
+" ## Editing
+nnoremap <leader>r :action RenameElement<cr>
+
+" ## Folding
+" These close all lower folds while leaving the current fold open
+nnoremap zf zCzo
+vnoremap zf zCzo
+
+" ## Tab Shifter items
+" Tab movement
+nnoremap <leader>sh :action TabShiftActions.ShiftLeft<cr>
+nnoremap <leader>sj :action TabShiftActions.ShiftDown<cr>
+nnoremap <leader>sk :action TabShiftActions.ShiftUp<cr>
+nnoremap <leader>sl :action TabShiftActions.ShiftRight<cr>
+
+" Split resizing
+nnoremap <leader>ch :action TabShiftActions.StretchLeft<cr>
+nnoremap <leader>cj :action TabShiftActions.StretchDown<cr>
+nnoremap <leader>ck :action TabShiftActions.StretchUp<cr>
+nnoremap <leader>cl :action TabShiftActions.StretchRight<cr>
+
+" Testing!
+vnoremap <M-k> :action MoveLineUp<cr>
+vnoremap <M-j> :action MoveLineDown<cr>
+
+" TODO: Add `SurroundWith` stuff here, compatible with `gc`
