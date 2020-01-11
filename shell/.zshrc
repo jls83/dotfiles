@@ -1,6 +1,6 @@
 # TODO:
 #   * Break out computer-specific files (ycharts, personal_macbook, linux)
-source fzf_items
+source ~/.fzf_items
 
 # Custom alias functions
 maccopy() {
