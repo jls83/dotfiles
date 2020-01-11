@@ -77,11 +77,11 @@ mkdirAndCd() {
 
 case `uname` in
     "Darwin")
-        source ~/other_projects/dotfiles/zsh/work_macbook
+        source ~/env_specific_items/work_macbook
         ;;
 
     "Linux")
-        source ~/other_projects/dotfiles/zsh/thinkpad
+        source ~/env_specific_items/thinkpad
         ;;
 esac
 

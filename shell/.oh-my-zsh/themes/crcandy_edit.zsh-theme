@@ -1,7 +1,7 @@
 ARROW=$'>>'
 PROMPT=$'
-%F{cyan}%D{%H:%M:%S}%f %~ $(git_prompt_info)\
-%F{green}${ARROW}%f '
+%F{208}%D{%H:%M:%S}%f %~ $(git_prompt_info)\
+%F{221}${ARROW}%f '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%F{5}:: "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%f"
