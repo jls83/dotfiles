@@ -103,6 +103,9 @@ nnoremap <leader>sip :NERDTreeFind<CR>
 " fzf-vim items
 nnoremap <leader>f :Rg<CR>
 
+" fugitive items
+nnoremap <leader>ga :Gblame<CR>
+
 " CoC items {{{1
 function! s:check_back_space() abort
   let col = col('.') - 1
