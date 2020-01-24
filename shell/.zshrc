@@ -1,5 +1,6 @@
 # TODO:
 #   * Break out computer-specific files (ycharts, personal_macbook, linux)
+source ~/.bash_profile
 source ~/.fzf_items
 
 # Custom alias functions
@@ -77,12 +78,18 @@ mkdirAndCd() {
 
 case `uname` in
     "Darwin")
-        source ~/env_specific_items/work_macbook
+        case "$MACHINE_TYPE" in
+            "personal")
+                source ~/env_specific_items/personal_macbook
+            ;;
+            "work")
+                source ~/env_specific_items/work_macbook
+            ;;
+        esac
         ;;
-
     "Linux")
         source ~/env_specific_items/thinkpad
-        ;;
+    ;;
 esac
 
 # Both Linux and Mac have themes called `crcandy_edit`
