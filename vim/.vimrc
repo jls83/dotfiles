@@ -106,6 +106,8 @@ nnoremap <leader>f :Rg<CR>
 
 " fugitive items
 nnoremap <leader>ga :Gblame<CR>
+nnoremap <leader>gb :Gbrowse<CR>
+vnoremap <leader>gb :Gbrowse<CR>
 
 " CoC items {{{1
 function! s:check_back_space() abort
