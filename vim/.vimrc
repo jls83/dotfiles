@@ -44,6 +44,7 @@ Plug 'itchyny/lightline.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'morhetz/gruvbox'
 
 " Testing these
 Plug 'Yggdroot/indentLine'
@@ -51,7 +52,7 @@ Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
 Plug 'mxw/vim-jsx'
 Plug 'easymotion/vim-easymotion'
-Plug 'morhetz/gruvbox'
+Plug 'tpope/vim-rhubarb'
 
 call plug#end()
 " }}}1
