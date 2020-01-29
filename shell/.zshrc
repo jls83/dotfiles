@@ -116,3 +116,9 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Use this so I can override as needed
 export EDITOR="nvim"
+
+# TODO Put this in its proper place
+openInPyCharm() {
+    open -a PyCharm $1
+}
+alias pych=openInPyCharm
