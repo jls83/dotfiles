@@ -126,3 +126,5 @@ nmap <silent> <leader>b <Plug>(coc-definition)
 nmap <silent> <leader>u <Plug>(coc-references)
 " }}}1
 
+" Honestly, weird stuff
+nnoremap <leader>p :silent !open -a PyCharm %<CR>
