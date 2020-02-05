@@ -99,6 +99,7 @@ let g:vimwiki_global_ext = 0 " don't use vimwiki syntax for all MD files
 " }}}1
 
 " NerdTree items
+let NERDTreeShowHidden=1
 nnoremap <leader>1 :NERDTreeToggle<CR>
 nnoremap <leader>sip :NERDTreeFind<CR>
 
