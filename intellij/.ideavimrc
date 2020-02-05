@@ -4,6 +4,10 @@ set commentary
 set hlsearch
 set surround
 
+" Trying these guys
+set relativenumber
+set number
+
 let mapleader = " "
 inoremap jk <esc>
 
