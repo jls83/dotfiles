@@ -16,12 +16,13 @@ alias wcp=maccopy
 # I'm sure I will regret this, but you know.
 alias gitr='git checkout develop && git pull origin develop'
 
-# Set up a list of Git repos when the shell starts
-GIT_REPOSITORIES=$(find \
-    ~/projects \
-    -type d -name ".git" \
-    ! -path "*/.git/*" \
-    -prune \
-    -maxdepth 4 | \
-    sed -e 's/.\{4\}$//')
-
+# Set up a list of Git repos when the non-tmux shell starts
+if [[ -n $TMUX ]]; then
+    GIT_REPOSITORIES=$(find \
+        ~/projects \
+        -type d -name ".git" \
+        ! -path "*/.git/*" \
+        -prune \
+        -maxdepth 4 | \
+        sed -e 's/.\{4\}$//');
+fi
