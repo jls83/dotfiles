@@ -122,3 +122,8 @@ openInPyCharm() {
     open -a PyCharm $1
 }
 alias pych=openInPyCharm
+
+ripgrepWithPager() {
+    rg -p $1 | less
+}
+alias rgp=ripgrepWithPager
