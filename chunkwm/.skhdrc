@@ -64,10 +64,12 @@ cmd + alt - 0 : chunkc tiling::desktop --focus 10
 
 # send window to desktop and follow focus
 # I only have two windows and they map directly to desktops, so use "1" and "2" for now
+# NOTE 2020-03-15 - I added support for a third monitor temporarily!
 # TODO: This can be better!
 shift + cmd - x : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop); chunkc tiling::monitor -f $(chunkc get _last_active_desktop)
 shift + cmd - 1 : chunkc tiling::window --send-to-monitor 1; chunkc tiling::monitor -f 1
 shift + cmd - 2 : chunkc tiling::window --send-to-monitor 2; chunkc tiling::monitor -f 2
+shift + cmd - 3 : chunkc tiling::window --send-to-monitor 3; chunkc tiling::monitor -f 3
 
 # focus monitor
 ctrl + alt - z  : chunkc tiling::monitor -f prev
