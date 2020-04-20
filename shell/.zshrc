@@ -127,3 +127,8 @@ ripgrepWithPager() {
     rg -p $1 | less
 }
 alias rgp=ripgrepWithPager
+
+diffWithDelta() {
+    diff -u $1 $2 | delta
+}
+alias ddiff=diffWithDelta
