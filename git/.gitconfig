@@ -4,6 +4,7 @@
 
 [core]
     editor = nvim
+    pager = delta --dark
 
 [alias]
     c = commit --verbose
