@@ -132,3 +132,10 @@ diffWithDelta() {
     diff -u $1 $2 | delta
 }
 alias ddiff=diffWithDelta
+
+getLinesInRange() {
+    # Gets the lines between line $2 and $3 in the file at $1.
+    sed -n -e "$2,$3 p" -e "$3 q" $1;
+}
+alias ht=getLinesInRange
+
