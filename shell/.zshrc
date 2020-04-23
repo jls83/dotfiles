@@ -63,6 +63,31 @@ openVgTmux() {
     cd $previous_dir;
 }
 
+ychartsSshFzf() {
+    previous_dir=$(pwd);
+    
+    # If we already had the virtualenv activated, don't deactivate on exit
+    if [[ -z "$VIRTUAL_ENV" ]] then
+        should_deactivate=true;
+    else
+        should_deactivate=false;
+    fi
+
+    SERVER_ENVIRONMENTS=(production staging);
+    SERVER_GROUPS=(alerts_worker chart companies_admin daily_data_import_admin indicators_admin \
+                   latest_worker main_admin main_worker mixpanel_worker portfolios_worker web);
+
+    SERVER_ENVIRONMENT=$( IFS=$'\n'; echo "${SERVER_ENVIRONMENTS[*]}" | fzf);
+    SERVER_GROUP=$( IFS=$'\n'; echo "${SERVER_GROUPS[*]}" | fzf);
+
+    cd /sites/ycharts_systems;
+    source /sites/ycharts_systems/.env;
+    /sites/ycharts_systems/ycharts_ssh $SERVER_ENVIRONMENT $SERVER_GROUP;
+
+    if [[ "$should_deactivate" = true ]] deactivate;
+    cd $previous_dir;
+}
+
 gitQuicksave() {
     MSG=$(git checkout -b tmp 2>&1)
     if [[ $MSG == "fatal: A branch named 'tmp' already exists." ]]; then
@@ -139,3 +164,4 @@ getLinesInRange() {
 }
 alias ht=getLinesInRange
 
+alias yssh=ychartsSshFzf
