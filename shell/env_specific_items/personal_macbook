@@ -1,20 +1,8 @@
-# vim: syntax=sh
-
-source ~/.bash_profile
-
-export ZSH="/Users/jls83/.oh-my-zsh"
+# vim: syntax=zsh
 
 # PyEnv junk
 export PATH="/Users/jls83/.pyenv:$PATH"
 eval "$(pyenv init -)"
-
-alias npr=prFunc
-alias vgs=openVgShell
-alias vgt=openVgTmux
-alias wcp=maccopy
-
-# I'm sure I will regret this, but you know.
-alias gitr='git checkout develop && git pull origin develop'
 
 # Set up a list of Git repos when the non-tmux shell starts
 if [[ -n $TMUX ]]; then
