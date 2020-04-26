@@ -1,9 +1,6 @@
-# TODO:
-#   * Break out computer-specific files (ycharts, personal_macbook, linux)
 source ~/.bash_profile
 source ~/.fzf_items
 
-# TODO: Set this up before the individual computers items
 plugins=(
   git
 )
