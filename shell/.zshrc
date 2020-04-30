@@ -3,11 +3,13 @@ source ~/.fzf_items
 
 plugins=(
   git
+  virtualenv
 )
 
 export EDITOR="nvim"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+ZSH_DISABLE_COMPFIX=true
 export ZSH="/Users/jls83/.oh-my-zsh"
 export ZSH_THEME="crcandy_edit"
 source $ZSH/oh-my-zsh.sh
@@ -94,3 +96,7 @@ case `uname` in
     ;;
 esac
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+AUTOENV_ENABLE_LEAVE="True"
