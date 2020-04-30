@@ -1,5 +1,11 @@
 #!/bin/bash
-CHUNKWM_PLIST_PATH="/Users/jls83/Library/LaunchAgents/homebrew.mxcl.chunkwm.plist"
+if [ $MACHINE_TYPE = work ]
+then
+    CHUNKWM_PLIST_PATH="/Users/jls83/Library/LaunchAgents/com.koekeishiya.chunkwm.plist"
+else
+    # TODO: Remove this if/else check once I've build chunkwm on my personal machine
+    CHUNKWM_PLIST_PATH="/Users/jls83/Library/LaunchAgents/homebrew.mxcl.chunkwm.plist"
+fi
 SKHD_PLIST_PATH="/Users/jls83/Library/LaunchAgents/homebrew.mxcl.skhd.plist"
 
 if [ $1 = "restart" ]
