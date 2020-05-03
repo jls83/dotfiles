@@ -26,8 +26,30 @@ window:
         y: 10
     decorations: none
 
-background_opacity: 0.9
+background_opacity: 1
 
 mouse:
     url:
         modifiers: control
+
+draw_bold_text_with_bright_colors: false
+colors:
+    # Copied from iTerm2's Tango Dark scheme
+    normal:
+        black:      '#000000'
+        red:        '#d71e00'
+        green:      '#5da602'
+        yellow:     '#cfad00'
+        blue:       '#417ab3'
+        magenta:    '#88658d'
+        cyan:       '#00a7aa'
+        white:      '#dbded8'
+    bright:
+        black:      '#676965'
+        red:        '#f44135'
+        green:      '#98e342'
+        yellow:     '#fcea60'
+        blue:       '#83afd8'
+        magenta:    '#bc93b6'
+        cyan:       '#37e5e7'
+        white:      '#f1f1ef'
