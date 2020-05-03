@@ -110,3 +110,4 @@ if [[ -n $TMUX ]]; then
     GIT_REPOSITORIES="${YCHARTS_GIT_REPOSITORIES}\n${OTHER_GIT_REPOSITORIES}"
 fi
 
+export GOPATH="/Users/jls83/other_projects/go_projects"
