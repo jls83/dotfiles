@@ -1,24 +1,20 @@
 font:
-    size: 16.0
+    size: 18.0
     normal:
-        family: 'Inconsolata'
-        type: Regular
+        family: Inconsolata
+        style: Regular
 
     bold:
-        family: 'Inconsolata'
-        type: Bold
+        family: Inconsolata
+        style: Bold
 
     italic:
-        family: 'Inconsolata'
-        type: Italic
-
-    bold_italic:
-        family: 'Inconsolata'
-        type: Bold Italic
+        family: Inconsolata
+        style: Italic
 
     offset:
         x: 0
-        y: 5
+        y: 2
 
 window:
     dimensions:
