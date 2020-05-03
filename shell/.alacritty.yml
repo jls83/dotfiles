@@ -1,0 +1,37 @@
+font:
+    size: 16.0
+    normal:
+        family: 'Inconsolata'
+        type: Regular
+
+    bold:
+        family: 'Inconsolata'
+        type: Bold
+
+    italic:
+        family: 'Inconsolata'
+        type: Italic
+
+    bold_italic:
+        family: 'Inconsolata'
+        type: Bold Italic
+
+    offset:
+        x: 0
+        y: 5
+
+window:
+    dimensions:
+        # This doesn't actually matter, since chunkwm handles it, but set it anyway
+        columns: 120
+        lines: 40
+    padding:
+        x: 10
+        y: 10
+    decorations: none
+
+background_opacity: 0.9
+
+mouse:
+    url:
+        modifiers: control
