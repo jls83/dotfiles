@@ -113,9 +113,11 @@ nnoremap <leader>t :Lines
 vnoremap <leader>t y:Lines <C-r>"<CR>
 
 " fugitive items
-nnoremap <leader>ga :Gblame<CR>
-nnoremap <leader>gb :Gbrowse<CR>
-vnoremap <leader>gb :Gbrowse<CR>
+nnoremap <leader>ga :Git_blame<CR>
+nnoremap <leader>gb :GBrowse<CR>
+vnoremap <leader>gb :GBrowse<CR>
+nnoremap <leader>gl :GBrowse!<CR>
+vnoremap <leader>gl :GBrowse!<CR>
 
 " CoC items {{{1
 function! s:check_back_space() abort
