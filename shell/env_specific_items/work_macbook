@@ -61,7 +61,7 @@ ychartsSshFzf() {
     fi
 
     SERVER_ENVIRONMENTS=(production staging);
-    SERVER_GROUPS=(alerts_worker chart companies_admin daily_data_import_admin indicators_admin \
+    SERVER_GROUPS=(alerts_worker node companies_admin daily_data_import_admin indicators_admin \
                    latest_worker main_admin main_worker mixpanel_worker portfolios_worker web);
 
     SERVER_ENVIRONMENT=$( IFS=$'\n'; echo "${SERVER_ENVIRONMENTS[*]}" | fzf);
