@@ -105,7 +105,12 @@ nnoremap <leader>1 :NERDTreeToggle<CR>
 nnoremap <leader>sip :NERDTreeFind<CR>
 
 " fzf-vim items
-nnoremap <leader>f :Rg<CR>
+" No <CR> at the end to allow me to enter in items; add a space at the end to
+" immediately enter text
+nnoremap <leader>f :Rg 
+vnoremap <leader>f y:Rg <C-r>"<CR>
+nnoremap <leader>t :Lines 
+vnoremap <leader>t y:Lines <C-r>"<CR>
 
 " fugitive items
 nnoremap <leader>ga :Gblame<CR>
