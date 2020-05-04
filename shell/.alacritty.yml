@@ -53,3 +53,5 @@ colors:
         magenta:    '#bc93b6'
         cyan:       '#37e5e7'
         white:      '#f1f1ef'
+    cursor:
+        cursor:      '#dbded8'
