@@ -32,7 +32,7 @@ mouse:
     url:
         modifiers: control
 
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 colors:
     # Copied from iTerm2's Tango Dark scheme
     normal:
