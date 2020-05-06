@@ -113,7 +113,7 @@ nnoremap <leader>t :Lines
 vnoremap <leader>t y:Lines <C-r>"<CR>
 
 " fugitive items
-nnoremap <leader>ga :Git_blame<CR>
+nnoremap <leader>ga :Git blame<CR>
 nnoremap <leader>gb :GBrowse<CR>
 vnoremap <leader>gb :GBrowse<CR>
 nnoremap <leader>gl :GBrowse!<CR>
@@ -138,3 +138,4 @@ nmap <silent> <leader>u <Plug>(coc-references)
 
 " Honestly, weird stuff
 nnoremap <leader>p :silent !open -a PyCharm %<CR>
+nnoremap <leader>h :set hlsearch!<cr>
