@@ -113,7 +113,7 @@ nnoremap <leader>t :Lines
 vnoremap <leader>t y:Lines <C-r>"<CR>
 
 " fugitive items
-nnoremap <leader>ga :Git blame<CR>
+nnoremap <leader>ga :Gblame<CR>
 nnoremap <leader>gb :GBrowse<CR>
 vnoremap <leader>gb :GBrowse<CR>
 nnoremap <leader>gl :GBrowse!<CR>
