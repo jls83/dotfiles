@@ -16,6 +16,7 @@ set relativenumber
 set number
 set showcmd
 set cursorline
+set signcolumn=yes
 
 set list
 set listchars=tab:▸\ ,eol:¬
@@ -133,7 +134,7 @@ function! s:BlameToggle() abort
         Git blame
     endif
 endfunction
-nnoremap <leader>ga :call <SID>BlameToggle()<CR>
+nnoremap <silent><leader>ga :call <SID>BlameToggle()<CR>
 
 " CoC items {{{1
 function! s:check_back_space() abort
@@ -141,10 +142,11 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-inoremap <silent><expr> <TAB>
-    \ pumvisible() ? "\<C-n>" :
-    \ <SID>check_back_space() ? "\<TAB>" :
-    \ coc#refresh()
+inoremap <silent><expr> <TAB> pumvisible()
+            \ ? "\<C-n>"
+            \ : <SID>check_back_space()
+                \ ? "\<TAB>"
+                \ : coc#refresh()
 inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " CoC Go-Tos
