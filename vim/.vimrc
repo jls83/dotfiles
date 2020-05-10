@@ -156,4 +156,4 @@ nmap <silent> <leader>u <Plug>(coc-references)
 
 " Honestly, weird stuff
 nnoremap <leader>p :silent !open -a PyCharm %<CR>
-nnoremap <leader>h :set hlsearch!<cr>
+nnoremap <silent><leader>h :noh<CR>
