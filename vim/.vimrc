@@ -159,10 +159,9 @@ nnoremap <leader>p :silent !open -a PyCharm %<CR>
 nnoremap <silent><leader>h :noh<CR>
 
 function! CopySelectionNoLeadingIndent() range
-    let block_start = line("'<")
-    let block_end = line("'>")
+    " Get the smallest indentation in the selected block
     let min_indent = 0xFFFFFFFE
-    for line_num in range(block_start, block_end)
+    for line_num in range(line("'<"), line("'>"))
         let local_indent = indent(line_num)
         if local_indent < min_indent
             let min_indent = local_indent
@@ -174,16 +173,16 @@ function! CopySelectionNoLeadingIndent() range
 
     " Shift the whole block over using << (min_indent / shiftwidth) times
     for i in range(1, indent_count)
-        silent exec block_start . "," . block_end . "<"
+        silent exec "'<,'><"
     endfor
 
     " Copy the now-dedented range into the clipboard register
-    let @+ = join(getline(block_start, block_end), "\n")
+    let @+ = join(getline(line("'<"), line("'>")), "\n")
 
     " Shift the whole block over using >> (min_indent / shiftwidth) times;
     "   essentially back to normal
     for i in range(1, indent_count)
-        silent exec block_start . "," . block_end . ">"
+        silent exec "'<,'>>"
     endfor
 endfunction
 vnoremap <silent><leader>x :call CopySelectionNoLeadingIndent()<CR>
