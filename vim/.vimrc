@@ -159,6 +159,10 @@ nnoremap <leader>p :silent !open -a PyCharm %<CR>
 nnoremap <silent><leader>h :noh<CR>
 
 function! CopySelectionNoLeadingIndent() range
+    " Keep a reference to the current `modified` status, as our changes will
+    " flip the flag to `true` despite no real changes occuring.
+    let _modified = &modified
+
     " Get the smallest indentation in the selected block
     let min_indent = 0xFFFFFFFE
     for line_num in range(line("'<"), line("'>"))
@@ -184,5 +188,8 @@ function! CopySelectionNoLeadingIndent() range
     for i in range(1, indent_count)
         silent exec "'<,'>>"
     endfor
+
+    " Reset the `modified` flag to its original state
+    let &modified = _modified
 endfunction
 vnoremap <silent><leader>x :call CopySelectionNoLeadingIndent()<CR>
