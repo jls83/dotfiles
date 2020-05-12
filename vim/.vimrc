@@ -157,3 +157,33 @@ nmap <silent> <leader>u <Plug>(coc-references)
 " Honestly, weird stuff
 nnoremap <leader>p :silent !open -a PyCharm %<CR>
 nnoremap <silent><leader>h :noh<CR>
+
+function! CopySelectionNoLeadingIndent() range
+    let block_start = line("'<")
+    let block_end = line("'>")
+    let min_indent = 0xFFFFFFFE
+    for line_num in range(block_start, block_end)
+        let local_indent = indent(line_num)
+        if local_indent < min_indent
+            let min_indent = local_indent
+        endif
+    endfor
+
+    " TODO: Confirm we have an integer
+    let indent_count = min_indent / &shiftwidth
+
+    " Shift the whole block over using << (min_indent / shiftwidth) times
+    for i in range(1, indent_count)
+        silent exec block_start . "," . block_end . "<"
+    endfor
+
+    " Copy the now-dedented range into the clipboard register
+    let @+ = join(getline(block_start, block_end), "\n")
+
+    " Shift the whole block over using >> (min_indent / shiftwidth) times;
+    "   essentially back to normal
+    for i in range(1, indent_count)
+        silent exec block_start . "," . block_end . ">"
+    endfor
+endfunction
+vnoremap <silent><leader>x :call CopySelectionNoLeadingIndent()<CR>
