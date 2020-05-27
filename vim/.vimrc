@@ -102,8 +102,8 @@ let g:vimwiki_global_ext = 0 " don't use vimwiki syntax for all MD files
 
 " NerdTree items
 let NERDTreeShowHidden=1
-nnoremap <leader>1 :NERDTreeToggle<CR>
-nnoremap <leader>sip :NERDTreeFind<CR>
+nnoremap <silent><leader>1 :NERDTreeToggle<CR>
+nnoremap <silent><leader>sip :NERDTreeFind<CR>
 
 " fzf-vim items
 " No <CR> at the end to allow me to enter in items; add a space at the end to
@@ -156,7 +156,6 @@ nmap <silent> <leader>u <Plug>(coc-references)
 
 " Honestly, weird stuff
 nnoremap <leader>p :silent !open -a PyCharm %<CR>
-nnoremap <silent><leader>h :noh<CR>
 
 function! CopySelectionNoLeadingIndent() range
     " Keep a reference to the current `modified` status, as our changes will
