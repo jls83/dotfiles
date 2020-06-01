@@ -100,3 +100,9 @@ esac
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 AUTOENV_ENABLE_LEAVE="True"
+
+# TODO: Put this in an appropriate place
+fzfFetchRemote() {
+    git fetch $(git remote -v | awk '{print $1}' | uniq | fzf)
+}
+alias gfr=fzfFetchRemote
