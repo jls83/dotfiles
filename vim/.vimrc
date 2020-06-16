@@ -107,6 +107,7 @@ nnoremap <silent><leader>sip :NERDTreeFind<CR>
 
 " fzf-vim items
 nnoremap <silent> <C-p> :GFiles<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
 " No <CR> at the end to allow me to enter in items; add a space at the end to
 " immediately enter text
 nnoremap <leader>f :Rg 
@@ -151,7 +152,7 @@ inoremap <silent><expr> <TAB> pumvisible()
 inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 " CoC Go-Tos
-nmap <silent> <leader>b <Plug>(coc-definition)
+nmap <silent> <leader>gd <Plug>(coc-definition)
 nmap <silent> <leader>u <Plug>(coc-references)
 " }}}1
 
@@ -193,3 +194,10 @@ function! CopySelectionNoLeadingIndent() range
     let &modified = _modified
 endfunction
 vnoremap <silent><leader>x :call CopySelectionNoLeadingIndent()<CR>
+
+" Copied from the vim-numbertoggle repo: https://github.com/jeffkreeftmeijer/vim-numbertoggle
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
+augroup END
