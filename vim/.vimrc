@@ -56,6 +56,7 @@ Plug 'Konfekt/FastFold'
 Plug 'mxw/vim-jsx'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-rhubarb'
+Plug 'https://github.com/alok/notational-fzf-vim'
 
 call plug#end()
 " }}}1
@@ -154,6 +155,11 @@ inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 " CoC Go-Tos
 nmap <silent> <leader>gd <Plug>(coc-definition)
 nmap <silent> <leader>u <Plug>(coc-references)
+" }}}1
+
+" Notational Velocity items {{{1
+" TODO: Map over the `vimwiki_list` items here instead
+let g:nv_search_paths = ['~/vimwiki']
 " }}}1
 
 " Honestly, weird stuff
