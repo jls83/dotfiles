@@ -66,4 +66,7 @@ nnoremap <leader>cl :action TabShiftActions.StretchRight<cr>
 vnoremap <M-k> :action MoveLineUp<cr>
 vnoremap <M-j> :action MoveLineDown<cr>
 
+" Prettier formatting stuff
+nnoremap <leader>qp :action Javascript.Linters.EsLint.Fix<cr>
+
 " TODO: Add `SurroundWith` stuff here, compatible with `gc`
