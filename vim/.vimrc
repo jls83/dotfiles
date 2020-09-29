@@ -58,6 +58,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-rhubarb'
 Plug 'https://github.com/alok/notational-fzf-vim'
 Plug 'cespare/vim-toml'
+" Plug 'prettier/vim-prettier'
 
 call plug#end()
 " }}}1
@@ -161,6 +162,13 @@ nmap <silent> <leader>u <Plug>(coc-references)
 " Notational Velocity items {{{1
 " TODO: Map over the `vimwiki_list` items here instead
 let g:nv_search_paths = ['~/vimwiki']
+" }}}1
+
+" CoC Eslint & Prettier items {{{1
+" NOTE: I've also added config items to the CoC Config file for this so
+" `eslint --fix` runs when running Prettier
+nnoremap <leader>qp <Plug>(coc-format-selected)
+vnoremap <leader>qp <Plug>(coc-format-selected)
 " }}}1
 
 " Honestly, weird stuff
