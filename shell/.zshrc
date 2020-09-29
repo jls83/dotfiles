@@ -4,6 +4,7 @@ source ~/.fzf_items
 plugins=(
   git
   virtualenv
+  poetry
 )
 
 export EDITOR="nvim"

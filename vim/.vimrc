@@ -28,7 +28,7 @@ filetype plugin indent on
 " Filetype-specific tab info
 autocmd Filetype *.html,*.ps1,*.sql,*.yml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
-let g:markdown_fenced_languages = ['python', 'javascript', 'yaml', 'sh', 'html', 'go']
+let g:markdown_fenced_languages = ['python', 'javascript', 'yaml', 'sh', 'html', 'go', 'clojure']
 
 " iTerm Blinkencursorzeit
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -57,6 +57,7 @@ Plug 'mxw/vim-jsx'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-rhubarb'
 Plug 'https://github.com/alok/notational-fzf-vim'
+Plug 'cespare/vim-toml'
 
 call plug#end()
 " }}}1
