@@ -58,7 +58,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-rhubarb'
 Plug 'https://github.com/alok/notational-fzf-vim'
 Plug 'cespare/vim-toml'
-Plug 'wellle/context.vim'
+" Plug 'wellle/context.vim'
 " Plug 'prettier/vim-prettier'
 
 call plug#end()
