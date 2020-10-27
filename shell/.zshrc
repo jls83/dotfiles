@@ -110,3 +110,4 @@ alias gfr=fzfFetchRemote
 
 # TODO: Father forgive me
 export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
