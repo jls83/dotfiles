@@ -4,7 +4,7 @@ export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # PyEnv junk
 export PATH="/Users/jls83/.pyenv:$PATH"
-eval "$(pyenv init -)"
+eval "$(pyenv init - --no-rehash)"
 
 # Haskell junk
 export PATH="/Users/jls83/.ghcup/bin:$PATH"
@@ -76,8 +76,15 @@ ychartsSshFzf() {
 }
 alias yssh=ychartsSshFzf
 
+fzfGitViewAndCdAll() {
+    DIRS=("/sites" "/Users/jls83/other_projects")
+    fzfDirectorySwitcher $DIRS
+}
+alias repos=fzfGitViewAndCdAll
+
 fzfGitViewAndCdYCharts() {
-    cd $(echo $YCHARTS_GIT_REPOSITORIES | fzf)
+    DIRS=("/sites")
+    fzfDirectorySwitcher $DIRS
 }
 alias yre=fzfGitViewAndCdYCharts
 
@@ -88,26 +95,5 @@ alias yre=fzfGitViewAndCdYCharts
 # YCharts-specific aliases
 alias vg='cd /sites/ycharts && vagrant ssh bionic'
 alias ycs='cd /sites/ycharts'
-
-# Set up a list of Git repos when the shell starts
-if [[ -n $TMUX ]]; then
-    YCHARTS_GIT_REPOSITORIES=$(find \
-        /sites \
-        -type d -name ".git" \
-        ! -path "*/.git/*" \
-        -prune \
-        -maxdepth 4 | \
-        sed -e 's/.\{4\}$//')
-
-    OTHER_GIT_REPOSITORIES=$(find \
-        ~/other_projects \
-        -type d -name ".git" \
-        ! -path "*/.git/*" \
-        -prune \
-        -maxdepth 4 | \
-        sed -e 's/.\{4\}$//')
-
-    GIT_REPOSITORIES="${YCHARTS_GIT_REPOSITORIES}\n${OTHER_GIT_REPOSITORIES}"
-fi
 
 export GOPATH="/Users/jls83/other_projects/go_projects"
