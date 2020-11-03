@@ -2,18 +2,13 @@
 
 # PyEnv junk
 export PATH="/Users/jls83/.pyenv:$PATH"
-eval "$(pyenv init -)"
+eval "$(pyenv init - --no-rehash)"
 
 # Go junk
 export GOPATH="/Users/jls83/projects/go_projects"
 
-# Set up a list of Git repos when the non-tmux shell starts
-if [[ -n $TMUX ]]; then
-    GIT_REPOSITORIES=$(find \
-        ~/projects \
-        -type d -name ".git" \
-        ! -path "*/.git/*" \
-        -prune \
-        -maxdepth 4 | \
-        sed -e 's/.\{4\}$//');
-fi
+fzfGitViewAndCdAll() {
+    DIRS=("/projects")
+    fzfDirectorySwitcher $DIRS
+}
+alias repos=fzfGitViewAndCdAll
