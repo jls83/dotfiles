@@ -20,8 +20,8 @@ fzfGitAllBranches() {
 }
 alias ghr=fzfGitAllBranches
 
-# `cd` to one of your git branches
-fzfGitViewAndCdAll() {
-    cd $(echo $GIT_REPOSITORIES | fzf)
+# Do an `fd -d 1` on all directories in the incoming argument array, dump the result to `fzf`,
+# then `cd` to the resuilt
+fzfDirectorySwitcher() {
+    cd $(fd . -d 1 $@ | fzf)
 }
-alias repos=fzfGitViewAndCdAll
