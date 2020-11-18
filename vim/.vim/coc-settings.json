@@ -1,0 +1,14 @@
+{
+  "python.pythonPath": "~/.pyenv/shims/python",
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true,
+  "diagnostic.refreshOnInsertMode": true,
+  "tsserver.log": "verbose",
+  "tsserver.trace.server": "verbose",
+  "tsserver.npm": "/usr/local/bin/npm",
+  "eslint.options": {
+    "configFile": "/sites/ycharts/confs/developers/.eslintrc.js"
+  },
+  "prettier.eslintIntegration": true
+}
