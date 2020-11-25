@@ -60,6 +60,7 @@ Plug 'https://github.com/alok/notational-fzf-vim'
 Plug 'cespare/vim-toml'
 " Plug 'wellle/context.vim'
 " Plug 'prettier/vim-prettier'
+Plug 'AndrewRadev/splitjoin.vim'
 
 call plug#end()
 " }}}1
