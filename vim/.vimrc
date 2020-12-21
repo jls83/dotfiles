@@ -61,6 +61,13 @@ Plug 'cespare/vim-toml'
 " Plug 'wellle/context.vim'
 " Plug 'prettier/vim-prettier'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'jpalardy/vim-slime'
+Plug 'Olical/conjure', {'tag': 'v4.9.0'}
+Plug 'tpope/vim-dispatch'
+Plug 'clojure-vim/vim-jack-in'
+" Only in Neovim:
+Plug 'radenling/vim-dispatch-neovim'
+
 
 call plug#end()
 " }}}1
@@ -69,6 +76,7 @@ call plug#end()
 colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 set background=dark
+hi Normal guibg=NONE ctermbg=NONE
 " }}}1
 
 " Lightline settings {{{1
@@ -119,6 +127,22 @@ nnoremap <leader>f :Rg
 vnoremap <leader>f y:Rg <C-r>"<CR>
 nnoremap <leader>t :Lines 
 vnoremap <leader>t y:Lines <C-r>"<CR>
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 
 " fugitive items
 nnoremap <leader>gb :GBrowse<CR>
@@ -218,3 +242,7 @@ augroup numbertoggle
   autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
 augroup END
+
+" vim-slime shit; TODO move up
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
