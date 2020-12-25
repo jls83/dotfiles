@@ -38,7 +38,10 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " Plug.vim plugins {{{1
 " NOTE: I'm not sure this is the right place for this...
 let g:coc_global_extensions = [
+    \'coc-angular',
     \'coc-conjure',
+    \'coc-eslint',
+    \'coc-json',
     \'coc-python',
     \'coc-tsserver',
 \]
