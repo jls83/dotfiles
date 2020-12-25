@@ -65,6 +65,10 @@ Plug 'jpalardy/vim-slime'
 Plug 'Olical/conjure', {'tag': 'v4.9.0'}
 Plug 'tpope/vim-dispatch'
 Plug 'clojure-vim/vim-jack-in'
+
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+
 " Only in Neovim:
 Plug 'radenling/vim-dispatch-neovim'
 
