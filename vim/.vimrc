@@ -36,6 +36,13 @@ let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 " Plug.vim plugins {{{1
+" NOTE: I'm not sure this is the right place for this...
+let g:coc_global_extensions = [
+    \'coc-conjure',
+    \'coc-python',
+    \'coc-tsserver',
+\]
+
 call plug#begin()
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -61,7 +68,7 @@ Plug 'cespare/vim-toml'
 " Plug 'wellle/context.vim'
 " Plug 'prettier/vim-prettier'
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'jpalardy/vim-slime'
+" Plug 'jpalardy/vim-slime'
 Plug 'Olical/conjure', {'tag': 'v4.9.0'}
 Plug 'tpope/vim-dispatch'
 Plug 'clojure-vim/vim-jack-in'
