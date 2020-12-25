@@ -133,6 +133,8 @@ nnoremap <silent><leader>1 :NERDTreeToggle<CR>
 nnoremap <silent><leader>sip :NERDTreeFind<CR>
 
 " fzf-vim items
+let g:fzf_layout = { 'down': '40%' }
+
 nnoremap <silent> <C-p> :GFiles<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 " No <CR> at the end to allow me to enter in items; add a space at the end to
