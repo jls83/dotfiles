@@ -78,6 +78,7 @@ Plug 'clojure-vim/vim-jack-in'
 
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'junegunn/rainbow_parentheses.vim'
 
 " Only in Neovim:
 Plug 'radenling/vim-dispatch-neovim'
@@ -262,3 +263,10 @@ augroup END
 " vim-slime shit; TODO move up
 let g:slime_target = "tmux"
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
+
+" Rainbow Parens Stuff
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+augroup rainbow_lisp
+    autocmd!
+    autocmd Filetype clojure RainbowParentheses
+augroup END
