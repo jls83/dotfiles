@@ -48,35 +48,26 @@ let g:coc_global_extensions = [
 \]
 
 call plug#begin()
+" I am dead without these
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
-Plug 'scrooloose/nerdtree'
-Plug 'vimwiki/vimwiki'
-Plug 'itchyny/lightline.vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'gruvbox-community/gruvbox'
 
-" Testing these
-Plug 'Yggdroot/indentLine'
-Plug 'kalekundert/vim-coiled-snake'
-Plug 'Konfekt/FastFold'
-Plug 'mxw/vim-jsx'
-Plug 'easymotion/vim-easymotion'
+" I am mildly inconvenienced without these
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-Plug 'https://github.com/alok/notational-fzf-vim'
-Plug 'cespare/vim-toml'
-" Plug 'wellle/context.vim'
-" Plug 'prettier/vim-prettier'
-Plug 'AndrewRadev/splitjoin.vim'
-" Plug 'jpalardy/vim-slime'
+Plug 'scrooloose/nerdtree'
+Plug 'vimwiki/vimwiki'
+Plug 'itchyny/lightline.vim'
+
+" Clojure stuff
 Plug 'Olical/conjure', {'tag': 'v4.9.0'}
 Plug 'tpope/vim-dispatch'
 Plug 'clojure-vim/vim-jack-in'
-
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -84,6 +75,16 @@ Plug 'junegunn/rainbow_parentheses.vim'
 " Only in Neovim:
 Plug 'radenling/vim-dispatch-neovim'
 
+" Testing these
+Plug 'Yggdroot/indentLine'
+Plug 'kalekundert/vim-coiled-snake'
+Plug 'Konfekt/FastFold'
+Plug 'mxw/vim-jsx'
+Plug 'easymotion/vim-easymotion'
+Plug 'cespare/vim-toml'
+Plug 'AndrewRadev/splitjoin.vim'
+" Plug 'alok/notational-fzf-vim'
+" Plug 'prettier/vim-prettier'
 
 call plug#end()
 " }}}1
@@ -260,10 +261,6 @@ augroup numbertoggle
   autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
 augroup END
-
-" vim-slime shit; TODO move up
-let g:slime_target = "tmux"
-let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
 
 " Rainbow Parens Stuff
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
