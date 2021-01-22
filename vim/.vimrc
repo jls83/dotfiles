@@ -77,6 +77,7 @@ Plug 'radenling/vim-dispatch-neovim'
 
 " Testing these
 Plug 'Yggdroot/indentLine'
+" Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'kalekundert/vim-coiled-snake'
 Plug 'Konfekt/FastFold'
 Plug 'mxw/vim-jsx'
