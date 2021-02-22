@@ -88,6 +88,10 @@ fzfGitViewAndCdYCharts() {
 }
 alias yre=fzfGitViewAndCdYCharts
 
+convertMarkdownToDocx() {
+    pandoc -t docx $1 -o $2 --highlight-style tango
+}
+
 #################
 # OTHER ALIASES #
 #################
