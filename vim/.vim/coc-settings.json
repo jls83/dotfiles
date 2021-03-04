@@ -37,5 +37,13 @@
 
     }
   },
-  "diagnostic-languageserver.filetypes": {"clojure":"clj_kondo_lint"}
+  "diagnostic-languageserver.filetypes": {"clojure":"clj_kondo_lint"},
+  "languageserver": {
+    "haskell": {
+      "command": "haskell-language-server-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
+      "filetypes": ["haskell", "lhaskell"]
+    }
+  }
 }

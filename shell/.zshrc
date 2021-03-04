@@ -111,3 +111,4 @@ alias gfr=fzfFetchRemote
 # TODO: Father forgive me
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+[ -f "/Users/jls83/.ghcup/env" ] && source "/Users/jls83/.ghcup/env" # ghcup-env
