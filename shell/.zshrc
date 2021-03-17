@@ -112,3 +112,12 @@ alias gfr=fzfFetchRemote
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 [ -f "/Users/jls83/.ghcup/env" ] && source "/Users/jls83/.ghcup/env" # ghcup-env
+
+countdownThing() {
+    seconds=$1
+    while [ $seconds -gt 0 ]; do
+       echo -ne "$seconds\033[0K\r"
+       sleep 1
+       : $((seconds--))
+    done
+}
