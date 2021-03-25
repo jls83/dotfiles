@@ -45,6 +45,7 @@ let g:coc_global_extensions = [
     \'coc-python',
     \'coc-tsserver',
     \'coc-diagnostic',
+    \'coc-ultisnips',
 \]
 
 call plug#begin()
@@ -86,6 +87,8 @@ Plug 'cespare/vim-toml'
 Plug 'AndrewRadev/splitjoin.vim'
 " Plug 'alok/notational-fzf-vim'
 " Plug 'prettier/vim-prettier'
+Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
 
 call plug#end()
 " }}}1
