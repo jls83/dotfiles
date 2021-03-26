@@ -272,3 +272,7 @@ augroup rainbow_lisp
     autocmd!
     autocmd Filetype clojure RainbowParentheses
 augroup END
+
+" UltiSnips stuff
+" Add a weird override to not blow away CoC's tab completion
+let g:UltiSnipsExpandTrigger="<c-s-tab>"
