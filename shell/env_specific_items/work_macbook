@@ -92,6 +92,20 @@ convertMarkdownToDocx() {
     pandoc -t docx $1 -o $2 --highlight-style tango
 }
 
+runManagementCommand() {
+    all_management_commands=$(fd "management/commands.*py" -p -E '__init__*' -E '__pycache__')
+    management_command_with_path=$(echo $all_management_commands | fzf)
+    management_command=$(basename -s .py $management_command_with_path)
+
+    previous_dir=$(pwd);
+    cd /sites/ycharts;
+    vagrant ssh bionic -- -t \
+        "source /home/vagrant/.virtualenvs/ycharts/bin/activate;" \
+        "source /home/vagrant/.vagrant_bash_profile_local;" \
+        "python /sites/ycharts/manage.py $management_command";
+    cd $previous_dir;
+}
+
 #################
 # OTHER ALIASES #
 #################
