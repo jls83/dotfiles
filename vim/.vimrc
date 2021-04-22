@@ -276,3 +276,9 @@ augroup END
 " UltiSnips stuff
 " Add a weird override to not blow away CoC's tab completion
 let g:UltiSnipsExpandTrigger="<c-s-tab>"
+
+" Some other stuff I'm working on
+nnoremap <leader>y :%y*<CR>
+vnoremap <leader>y "*y
+nnoremap Y y$
+
