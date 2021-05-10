@@ -62,7 +62,8 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'scrooloose/nerdtree'
-Plug 'vimwiki/vimwiki'
+" Plug 'jls83/vimwiki', {'branch': 'mixed_backlinks'}
+Plug 'vimwiki/vimwiki', {'branch': 'dev'}
 Plug 'itchyny/lightline.vim'
 
 " Clojure stuff
@@ -116,6 +117,8 @@ set noshowmode
 " }}}1
 
 " VimWiki settings {{{1
+" Have to do this as a hack to allow for the double bracket link syntax
+autocmd VimEnter * let g:vimwiki_syntaxlocal_vars['markdown']['Link1'] = g:vimwiki_syntaxlocal_vars['default']['Link1']
 "" Main Wiki {{{2
 let main_wiki = {}
 let main_wiki.path = '~/vimwiki'
