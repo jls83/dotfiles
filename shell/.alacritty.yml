@@ -9,8 +9,12 @@ font:
         style: Bold
 
     italic:
-        family: Inconsolata
+        family: Inconsolata LGC
         style: Italic
+
+    bold_italic:
+        family: Inconsolata LGC
+        style: Bold-Italic
 
     offset:
         x: 0
@@ -26,6 +30,11 @@ window:
         y: 10
     decorations: none
 
+cursor:
+    style:
+        blinking: Always
+    blink_interval: 600
+
 background_opacity: 0.9
 
 mouse:
@@ -35,6 +44,9 @@ mouse:
 draw_bold_text_with_bright_colors: true
 colors:
     # Copied from iTerm2's Tango Dark scheme
+    primary:
+        background: '#000000'
+        foreground: '#dbded8'
     normal:
         black:      '#000000'
         red:        '#d71e00'
@@ -54,4 +66,5 @@ colors:
         cyan:       '#37e5e7'
         white:      '#f1f1ef'
     cursor:
-        cursor:      '#dbded8'
+        text:       CellBackground
+        cursor:     CellForeground
