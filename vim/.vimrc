@@ -90,6 +90,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 " Plug 'prettier/vim-prettier'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
+Plug 'preservim/tagbar'
 
 call plug#end()
 " }}}1
