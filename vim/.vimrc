@@ -30,6 +30,9 @@ autocmd Filetype *.html,*.ps1,*.sql,*.yml setlocal tabstop=2 shiftwidth=2 softta
 
 let g:markdown_fenced_languages = ['python', 'javascript', 'yaml', 'sh', 'html', 'go', 'clojure', 'typescript']
 
+" This is terrifying to me.
+let g:python3_host_prog = '/Users/jls83/.virtualenvs/py3nvim/bin/python'
+
 " " iTerm Blinkencursorzeit
 " let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 " let &t_SR = "\<Esc>]50;CursorShape=2\x7"
