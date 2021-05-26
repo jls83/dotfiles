@@ -32,6 +32,7 @@ let g:markdown_fenced_languages = ['python', 'javascript', 'yaml', 'sh', 'html',
 
 " This is terrifying to me.
 let g:python3_host_prog = '/Users/jls83/.virtualenvs/py3nvim/bin/python'
+let g:node_host_prog = '/Users/jls83/.nvm/versions/node/v14.17.0/bin/node'
 
 " " iTerm Blinkencursorzeit
 " let &t_SI = "\<Esc>]50;CursorShape=1\x7"
