@@ -34,6 +34,9 @@ let g:markdown_fenced_languages = ['python', 'javascript', 'yaml', 'sh', 'html',
 let g:python3_host_prog = '/Users/jls83/.virtualenvs/py3nvim/bin/python'
 let g:node_host_prog = '/Users/jls83/.nvm/versions/node/v14.17.0/bin/neovim-node-host'
 
+" This is annoying to me
+let g:markdown_syntax_conceal = 0
+
 " " iTerm Blinkencursorzeit
 " let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 " let &t_SR = "\<Esc>]50;CursorShape=2\x7"
@@ -61,6 +64,8 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'gruvbox-community/gruvbox'
+" Plug 'rktjmp/lush.nvim'
+" Plug 'npxbr/gruvbox.nvim'
 
 " I am mildly inconvenienced without these
 Plug 'tpope/vim-fugitive'
@@ -95,6 +100,9 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'preservim/tagbar'
+
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
 
 call plug#end()
 " }}}1
@@ -290,3 +298,15 @@ nnoremap <leader>y :%y*<CR>
 vnoremap <leader>y "*y
 nnoremap Y y$
 
+" " Lua nonsense
+" lua <<EOF
+" require'nvim-treesitter.configs'.setup {
+"   highlight = {
+"     enable = true,
+"     custom_captures = {
+"       -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
+"       ["foo.bar"] = "Identifier",
+"     },
+"   },
+" }
+" EOF
