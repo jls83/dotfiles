@@ -4,7 +4,10 @@
 
 [core]
     editor = nvim
-    ; pager = delta --dark
+    pager = delta
+
+[delta]
+    line-numbers = true
 
 [alias]
     c = commit --verbose
