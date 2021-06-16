@@ -36,6 +36,7 @@ let g:node_host_prog = '/Users/jls83/.nvm/versions/node/v14.17.0/bin/neovim-node
 
 " This is annoying to me
 let g:markdown_syntax_conceal = 0
+let g:vim_json_conceal = 0
 
 " " iTerm Blinkencursorzeit
 " let &t_SI = "\<Esc>]50;CursorShape=1\x7"
