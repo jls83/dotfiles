@@ -65,13 +65,12 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'gruvbox-community/gruvbox'
-" Plug 'rktjmp/lush.nvim'
-" Plug 'npxbr/gruvbox.nvim'
 
 " I am mildly inconvenienced without these
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'scrooloose/nerdtree'
+Plug 'easymotion/vim-easymotion'
 " Plug 'jls83/vimwiki', {'branch': 'mixed_backlinks'}
 Plug 'vimwiki/vimwiki', {'branch': 'dev'}
 Plug 'itchyny/lightline.vim'
@@ -84,26 +83,29 @@ Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'junegunn/rainbow_parentheses.vim'
 
+" Other language-specific items
+Plug 'mxw/vim-jsx'
+Plug 'cespare/vim-toml'
+
+" These two go together; meh
+Plug 'kalekundert/vim-coiled-snake'
+Plug 'Konfekt/FastFold'
+
 " Only in Neovim:
 Plug 'radenling/vim-dispatch-neovim'
 
 " Testing these
 Plug 'Yggdroot/indentLine'
-" Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'kalekundert/vim-coiled-snake'
-Plug 'Konfekt/FastFold'
-Plug 'mxw/vim-jsx'
-Plug 'easymotion/vim-easymotion'
-Plug 'cespare/vim-toml'
-Plug 'AndrewRadev/splitjoin.vim'
-" Plug 'alok/notational-fzf-vim'
-" Plug 'prettier/vim-prettier'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'preservim/tagbar'
-
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
+
+" I have disabled these
+" Plug 'AndrewRadev/splitjoin.vim'
+" Plug 'alok/notational-fzf-vim'
+" Plug 'prettier/vim-prettier'
 
 call plug#end()
 " }}}1
