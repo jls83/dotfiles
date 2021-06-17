@@ -153,12 +153,13 @@ let g:vimwiki_list = [main_wiki, manager_wiki]
 let g:vimwiki_global_ext = 0 " don't use vimwiki syntax for all MD files
 " }}}1
 
-" NerdTree items
+" NerdTree items {{{1
 let NERDTreeShowHidden=1
 nnoremap <silent><leader>1 :NERDTreeToggle<CR>
 nnoremap <silent><leader>sip :NERDTreeFind<CR>
+" }}}1
 
-" fzf-vim items
+" fzf-vim items {{{1
 let g:fzf_layout = { 'down': '40%' }
 
 nnoremap <silent> <C-p> :GFiles<CR>
@@ -185,8 +186,9 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+" }}}1
 
-" fugitive items
+" fugitive items {{{1
 nnoremap <leader>gb :GBrowse<CR>
 vnoremap <leader>gb :GBrowse<CR>
 nnoremap <leader>gl :GBrowse!<CR>
@@ -208,6 +210,7 @@ function! s:BlameToggle() abort
     endif
 endfunction
 nnoremap <silent><leader>ga :call <SID>BlameToggle()<CR>
+" }}}1
 
 " CoC items {{{1
 function! s:check_back_space() abort
