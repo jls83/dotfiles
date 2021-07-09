@@ -101,6 +101,9 @@ Plug 'SirVer/ultisnips'
 Plug 'preservim/tagbar'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
+Plug 'aklt/plantuml-syntax'
+Plug 'tyru/open-browser.vim'
+Plug 'weirongxu/plantuml-previewer.vim'
 
 " I have disabled these
 " Plug 'AndrewRadev/splitjoin.vim'
@@ -316,3 +319,9 @@ nnoremap Y y$
 "   },
 " }
 " EOF
+
+au FileType plantuml let g:plantuml_previewer#plantuml_jar_path = get(
+\  matchlist(system('cat `which plantuml` | grep plantuml.jar'), '\v.*\s[''"]?(\S+plantuml\.jar).*'),
+\  1,
+\  0
+\)
