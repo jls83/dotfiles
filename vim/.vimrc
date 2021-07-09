@@ -6,6 +6,10 @@ endif
 
 let mapleader = " "
 inoremap jk <esc>
+nnoremap Y y$
+
+nnoremap <leader>y :%y*<CR>
+vnoremap <leader>y "*y
 
 set tabstop=4
 set softtabstop=4
@@ -303,10 +307,6 @@ augroup END
 let g:UltiSnipsExpandTrigger="<c-s-tab>"
 
 " Some other stuff I'm working on
-nnoremap <leader>y :%y*<CR>
-vnoremap <leader>y "*y
-nnoremap Y y$
-
 " " Lua nonsense
 " lua <<EOF
 " require'nvim-treesitter.configs'.setup {
