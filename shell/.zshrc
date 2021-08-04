@@ -121,3 +121,5 @@ countdownThing() {
        : $((seconds--))
     done
 }
+
+export PATH="/usr/local/opt/llvm/bin:$PATH"
