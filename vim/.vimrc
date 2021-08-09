@@ -67,11 +67,8 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'gruvbox-community/gruvbox'
-
 Plug 'neovim/nvim-lspconfig'
-" Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-lua/diagnostic-nvim'
 Plug 'hrsh7th/nvim-compe'
 
@@ -311,7 +308,7 @@ augroup rainbow_lisp
 augroup END
 
 " UltiSnips stuff
-" Add a weird override to not blow away CoC's tab completion
+" Add a weird override to not blow away regular tab completion
 let g:UltiSnipsExpandTrigger="<c-s-tab>"
 
 " Some other stuff I'm working on
@@ -328,110 +325,5 @@ let g:diagnostic_enable_virtual_text = 1
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c
 
-
-lua <<EOF
-local nvim_lsp = require('lspconfig')
-
--- vim.lsp.set_log_level('debug')
-
-local on_attach = function(_, bufnr)
-    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-    local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
-    local opts = { noremap=true, silent=true }
-
-    buf_set_keymap('n', '<leader>gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    buf_set_keymap('n', '<leader>gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-    buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-    buf_set_keymap('n', '<C-k>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-    buf_set_keymap('n', '<leader>u', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
-end
-
-local servers = {'jedi_language_server', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd'}
--- local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer'}
-
-for _, lsp in ipairs(servers) do
-    local config = {
-        on_attach = on_attach,
-        flags = {
-            debounce_text_changes = 150,
-        },
-    }
-    if lsp == 'pyright' then
-        config['cmd'] = {'/Users/jls83/.nvm/versions/node/v14.17.0/bin/pyright-langserver', '--stdio'}
-    elseif lsp == 'tsserver' then
-        config['cmd'] = {'/Users/jls83/.nvm/versions/node/v14.17.0/bin/typescript-language-server', '--stdio'}
-        config['analysis'] = {
-            typeCheckingMode = 'off',
-        }
-    end
-
-    nvim_lsp[lsp].setup(config)
-end
--- Compe setup
-require'compe'.setup {
-  enabled = true;
-  autocomplete = true;
-  debug = false;
-  min_length = 1;
-  preselect = 'enable';
-  throttle_time = 80;
-  source_timeout = 200;
-  incomplete_delay = 400;
-  max_abbr_width = 100;
-  max_kind_width = 100;
-  max_menu_width = 100;
-  --documentation = true;
-
-  source = {
-    path = true;
-    nvim_lsp = true;
-    -- Hmmm
-    buffer = true;
-    ultisnips = true;
-  };
-}
-
-local t = function(str)
-  return vim.api.nvim_replace_termcodes(str, true, true, true)
-end
-
-local check_back_space = function()
-    local col = vim.fn.col('.') - 1
-    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-        return true
-    else
-        return false
-    end
-end
-
--- Use (s-)tab to:
---- move to prev/next item in completion menuone
---- jump to prev/next snippet's placeholder
-_G.tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t "<C-n>"
-  elseif check_back_space() then
-    return t "<Tab>"
-  else
-    return vim.fn['compe#complete']()
-  end
-end
-
-_G.s_tab_complete = function()
-  if vim.fn.pumvisible() == 1 then
-    return t "<C-p>"
-  else
-    return t "<S-Tab>"
-  end
-end
-
-vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-
---This line is important for auto-import
-vim.api.nvim_set_keymap('i', '<cr>', 'compe#confirm("<cr>")', { expr = true })
-vim.api.nvim_set_keymap('i', '<c-space>', 'compe#complete()', { expr = true })
-EOF
+lua require('lsp-config')
+lua require('compe-config')
