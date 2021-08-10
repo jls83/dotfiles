@@ -1,0 +1,1178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>devices</key>
+	<array>
+		<dict>
+			<key>buttons</key>
+			<dict>
+				<key>00</key>
+				<dict>
+					<key>cmd</key>
+					<integer>1</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>01</key>
+				<dict>
+					<key>cmd</key>
+					<integer>2</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>02</key>
+				<dict>
+					<key>cmd</key>
+					<integer>30</integer>
+				</dict>
+				<key>03</key>
+				<dict>
+					<key>cmd</key>
+					<integer>31</integer>
+				</dict>
+				<key>08</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>09</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>cmd</key>
+					<integer>20</integer>
+					<key>cnt</key>
+					<integer>3</integer>
+				</dict>
+			</dict>
+			<key>dict version</key>
+			<integer>3</integer>
+			<key>driver enabled</key>
+			<true/>
+			<key>factory setting</key>
+			<true/>
+			<key>options</key>
+			<dict>
+				<key>accelerate</key>
+				<true/>
+				<key>acceleration</key>
+				<real>1</real>
+				<key>inertial scroll</key>
+				<false/>
+				<key>invert wheel</key>
+				<false/>
+				<key>invert x</key>
+				<false/>
+				<key>invert y</key>
+				<false/>
+				<key>jump</key>
+				<false/>
+				<key>single</key>
+				<false/>
+				<key>single keys</key>
+				<integer>0</integer>
+				<key>slow</key>
+				<false/>
+				<key>slow keys</key>
+				<integer>0</integer>
+				<key>speed</key>
+				<integer>400</integer>
+				<key>swap xy</key>
+				<false/>
+			</dict>
+			<key>param</key>
+			<dict>
+				<key>countDecay</key>
+				<integer>40</integer>
+				<key>countStop</key>
+				<integer>500</integer>
+				<key>timeDecay</key>
+				<integer>60</integer>
+				<key>timeStop</key>
+				<integer>60</integer>
+				<key>triggerTime</key>
+				<integer>150</integer>
+			</dict>
+			<key>settings name</key>
+			<string>All Applications</string>
+			<key>target app</key>
+			<dict>
+				<key>app bundle id</key>
+				<string></string>
+				<key>app bundle name</key>
+				<string></string>
+				<key>app executable</key>
+				<string></string>
+				<key>app signature</key>
+				<string></string>
+			</dict>
+			<key>target device</key>
+			<dict>
+				<key>device product id</key>
+				<integer>0</integer>
+				<key>device vendor id</key>
+				<integer>0</integer>
+				<key>device version max</key>
+				<integer>0</integer>
+				<key>device version min</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>buttons</key>
+			<dict>
+				<key>00</key>
+				<dict>
+					<key>cmd</key>
+					<integer>1</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>01</key>
+				<dict>
+					<key>cmd</key>
+					<integer>2</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>02</key>
+				<dict>
+					<key>cmd</key>
+					<integer>30</integer>
+				</dict>
+				<key>03</key>
+				<dict>
+					<key>cmd</key>
+					<integer>31</integer>
+				</dict>
+				<key>08</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>09</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>cmd</key>
+					<integer>20</integer>
+					<key>cnt</key>
+					<integer>3</integer>
+				</dict>
+			</dict>
+			<key>dict version</key>
+			<integer>3</integer>
+			<key>driver enabled</key>
+			<true/>
+			<key>factory setting</key>
+			<true/>
+			<key>options</key>
+			<dict>
+				<key>accelerate</key>
+				<true/>
+				<key>acceleration</key>
+				<real>1</real>
+				<key>inertial scroll</key>
+				<false/>
+				<key>invert wheel</key>
+				<false/>
+				<key>invert x</key>
+				<false/>
+				<key>invert y</key>
+				<false/>
+				<key>jump</key>
+				<false/>
+				<key>single</key>
+				<false/>
+				<key>single keys</key>
+				<integer>0</integer>
+				<key>slow</key>
+				<false/>
+				<key>slow keys</key>
+				<integer>0</integer>
+				<key>speed</key>
+				<integer>400</integer>
+				<key>swap xy</key>
+				<false/>
+			</dict>
+			<key>param</key>
+			<dict>
+				<key>countDecay</key>
+				<integer>40</integer>
+				<key>countStop</key>
+				<integer>500</integer>
+				<key>timeDecay</key>
+				<integer>60</integer>
+				<key>timeStop</key>
+				<integer>60</integer>
+				<key>triggerTime</key>
+				<integer>150</integer>
+			</dict>
+			<key>settings name</key>
+			<string>All Applications</string>
+			<key>target app</key>
+			<dict>
+				<key>app bundle id</key>
+				<string></string>
+				<key>app bundle name</key>
+				<string></string>
+				<key>app executable</key>
+				<string></string>
+				<key>app signature</key>
+				<string></string>
+			</dict>
+			<key>target device</key>
+			<dict>
+				<key>device product id</key>
+				<integer>4128</integer>
+				<key>device vendor id</key>
+				<integer>1149</integer>
+				<key>device version max</key>
+				<integer>0</integer>
+				<key>device version min</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>buttons</key>
+			<dict>
+				<key>00</key>
+				<dict>
+					<key>cmd</key>
+					<integer>1</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>01</key>
+				<dict>
+					<key>cmd</key>
+					<integer>2</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>02</key>
+				<dict>
+					<key>cmd</key>
+					<integer>30</integer>
+				</dict>
+				<key>03</key>
+				<dict>
+					<key>cmd</key>
+					<integer>31</integer>
+				</dict>
+				<key>08</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>09</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>cmd</key>
+					<integer>20</integer>
+					<key>cnt</key>
+					<integer>3</integer>
+				</dict>
+			</dict>
+			<key>dict version</key>
+			<integer>3</integer>
+			<key>driver enabled</key>
+			<true/>
+			<key>factory setting</key>
+			<true/>
+			<key>options</key>
+			<dict>
+				<key>accelerate</key>
+				<true/>
+				<key>acceleration</key>
+				<real>1</real>
+				<key>inertial scroll</key>
+				<false/>
+				<key>invert wheel</key>
+				<false/>
+				<key>invert x</key>
+				<false/>
+				<key>invert y</key>
+				<false/>
+				<key>jump</key>
+				<false/>
+				<key>single</key>
+				<false/>
+				<key>single keys</key>
+				<integer>0</integer>
+				<key>slow</key>
+				<false/>
+				<key>slow keys</key>
+				<integer>0</integer>
+				<key>speed</key>
+				<integer>400</integer>
+				<key>swap xy</key>
+				<false/>
+			</dict>
+			<key>param</key>
+			<dict>
+				<key>countDecay</key>
+				<integer>40</integer>
+				<key>countStop</key>
+				<integer>500</integer>
+				<key>timeDecay</key>
+				<integer>60</integer>
+				<key>timeStop</key>
+				<integer>60</integer>
+				<key>triggerTime</key>
+				<integer>150</integer>
+			</dict>
+			<key>settings name</key>
+			<string>All Applications</string>
+			<key>target app</key>
+			<dict>
+				<key>app bundle id</key>
+				<string></string>
+				<key>app bundle name</key>
+				<string></string>
+				<key>app executable</key>
+				<string></string>
+				<key>app signature</key>
+				<string></string>
+			</dict>
+			<key>target device</key>
+			<dict>
+				<key>device product id</key>
+				<integer>8257</integer>
+				<key>device vendor id</key>
+				<integer>1149</integer>
+				<key>device version max</key>
+				<integer>0</integer>
+				<key>device version min</key>
+				<integer>263</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>buttons</key>
+			<dict>
+				<key>00</key>
+				<dict>
+					<key>cmd</key>
+					<integer>1</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>01</key>
+				<dict>
+					<key>cmd</key>
+					<integer>2</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>02</key>
+				<dict>
+					<key>cmd</key>
+					<integer>30</integer>
+				</dict>
+				<key>03</key>
+				<dict>
+					<key>cmd</key>
+					<integer>31</integer>
+				</dict>
+				<key>08</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>09</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>cmd</key>
+					<integer>20</integer>
+					<key>cnt</key>
+					<integer>3</integer>
+				</dict>
+			</dict>
+			<key>dict version</key>
+			<integer>3</integer>
+			<key>driver enabled</key>
+			<true/>
+			<key>factory setting</key>
+			<true/>
+			<key>options</key>
+			<dict>
+				<key>accelerate</key>
+				<true/>
+				<key>acceleration</key>
+				<real>1</real>
+				<key>inertial scroll</key>
+				<false/>
+				<key>invert wheel</key>
+				<false/>
+				<key>invert x</key>
+				<false/>
+				<key>invert y</key>
+				<false/>
+				<key>jump</key>
+				<false/>
+				<key>single</key>
+				<false/>
+				<key>single keys</key>
+				<integer>0</integer>
+				<key>slow</key>
+				<false/>
+				<key>slow keys</key>
+				<integer>0</integer>
+				<key>speed</key>
+				<integer>400</integer>
+				<key>swap xy</key>
+				<false/>
+			</dict>
+			<key>param</key>
+			<dict>
+				<key>countDecay</key>
+				<integer>40</integer>
+				<key>countStop</key>
+				<integer>500</integer>
+				<key>timeDecay</key>
+				<integer>60</integer>
+				<key>timeStop</key>
+				<integer>60</integer>
+				<key>triggerTime</key>
+				<integer>150</integer>
+			</dict>
+			<key>settings name</key>
+			<string>All Applications</string>
+			<key>target app</key>
+			<dict>
+				<key>app bundle id</key>
+				<string></string>
+				<key>app bundle name</key>
+				<string></string>
+				<key>app executable</key>
+				<string></string>
+				<key>app signature</key>
+				<string></string>
+			</dict>
+			<key>target device</key>
+			<dict>
+				<key>device product id</key>
+				<integer>8257</integer>
+				<key>device vendor id</key>
+				<integer>1149</integer>
+				<key>device version max</key>
+				<integer>262</integer>
+				<key>device version min</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>buttons</key>
+			<dict>
+				<key>00</key>
+				<dict>
+					<key>cmd</key>
+					<integer>1</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>01</key>
+				<dict>
+					<key>cmd</key>
+					<integer>2</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>02</key>
+				<dict>
+					<key>cmd</key>
+					<integer>30</integer>
+				</dict>
+				<key>03</key>
+				<dict>
+					<key>cmd</key>
+					<integer>31</integer>
+				</dict>
+				<key>08</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>09</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>cmd</key>
+					<integer>20</integer>
+					<key>cnt</key>
+					<integer>3</integer>
+				</dict>
+			</dict>
+			<key>dict version</key>
+			<integer>3</integer>
+			<key>driver enabled</key>
+			<true/>
+			<key>factory setting</key>
+			<true/>
+			<key>options</key>
+			<dict>
+				<key>accelerate</key>
+				<true/>
+				<key>acceleration</key>
+				<real>1</real>
+				<key>inertial scroll</key>
+				<false/>
+				<key>invert wheel</key>
+				<false/>
+				<key>invert x</key>
+				<false/>
+				<key>invert y</key>
+				<false/>
+				<key>jump</key>
+				<false/>
+				<key>single</key>
+				<false/>
+				<key>single keys</key>
+				<integer>0</integer>
+				<key>slow</key>
+				<false/>
+				<key>slow keys</key>
+				<integer>0</integer>
+				<key>speed</key>
+				<integer>400</integer>
+				<key>swap xy</key>
+				<false/>
+			</dict>
+			<key>param</key>
+			<dict>
+				<key>countDecay</key>
+				<integer>40</integer>
+				<key>countStop</key>
+				<integer>500</integer>
+				<key>timeDecay</key>
+				<integer>60</integer>
+				<key>timeStop</key>
+				<integer>60</integer>
+				<key>triggerTime</key>
+				<integer>150</integer>
+			</dict>
+			<key>settings name</key>
+			<string>All Applications</string>
+			<key>target app</key>
+			<dict>
+				<key>app bundle id</key>
+				<string></string>
+				<key>app bundle name</key>
+				<string></string>
+				<key>app executable</key>
+				<string></string>
+				<key>app signature</key>
+				<string></string>
+			</dict>
+			<key>target device</key>
+			<dict>
+				<key>device product id</key>
+				<integer>4130</integer>
+				<key>device vendor id</key>
+				<integer>1149</integer>
+				<key>device version max</key>
+				<integer>0</integer>
+				<key>device version min</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>buttons</key>
+			<dict>
+				<key>00</key>
+				<dict>
+					<key>cmd</key>
+					<integer>1</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>01</key>
+				<dict>
+					<key>cmd</key>
+					<integer>2</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>02</key>
+				<dict>
+					<key>cmd</key>
+					<integer>30</integer>
+				</dict>
+				<key>03</key>
+				<dict>
+					<key>cmd</key>
+					<integer>31</integer>
+				</dict>
+				<key>08</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>09</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>cmd</key>
+					<integer>20</integer>
+					<key>cnt</key>
+					<integer>3</integer>
+				</dict>
+			</dict>
+			<key>dict version</key>
+			<integer>3</integer>
+			<key>driver enabled</key>
+			<true/>
+			<key>factory setting</key>
+			<true/>
+			<key>options</key>
+			<dict>
+				<key>accelerate</key>
+				<true/>
+				<key>acceleration</key>
+				<real>1</real>
+				<key>inertial scroll</key>
+				<false/>
+				<key>invert wheel</key>
+				<false/>
+				<key>invert x</key>
+				<false/>
+				<key>invert y</key>
+				<false/>
+				<key>jump</key>
+				<false/>
+				<key>single</key>
+				<false/>
+				<key>single keys</key>
+				<integer>0</integer>
+				<key>slow</key>
+				<false/>
+				<key>slow keys</key>
+				<integer>0</integer>
+				<key>speed</key>
+				<integer>400</integer>
+				<key>swap xy</key>
+				<false/>
+			</dict>
+			<key>param</key>
+			<dict>
+				<key>countDecay</key>
+				<integer>40</integer>
+				<key>countStop</key>
+				<integer>500</integer>
+				<key>timeDecay</key>
+				<integer>60</integer>
+				<key>timeStop</key>
+				<integer>60</integer>
+				<key>triggerTime</key>
+				<integer>150</integer>
+			</dict>
+			<key>settings name</key>
+			<string>All Applications</string>
+			<key>target app</key>
+			<dict>
+				<key>app bundle id</key>
+				<string></string>
+				<key>app bundle name</key>
+				<string></string>
+				<key>app executable</key>
+				<string></string>
+				<key>app signature</key>
+				<string></string>
+			</dict>
+			<key>target device</key>
+			<dict>
+				<key>device product id</key>
+				<integer>8264</integer>
+				<key>device vendor id</key>
+				<integer>1149</integer>
+				<key>device version max</key>
+				<integer>0</integer>
+				<key>device version min</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>buttons</key>
+			<dict>
+				<key>00</key>
+				<dict>
+					<key>cmd</key>
+					<integer>1</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>01</key>
+				<dict>
+					<key>cmd</key>
+					<integer>2</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>02</key>
+				<dict>
+					<key>cmd</key>
+					<integer>30</integer>
+				</dict>
+				<key>03</key>
+				<dict>
+					<key>cmd</key>
+					<integer>31</integer>
+				</dict>
+				<key>08</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>09</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>cmd</key>
+					<integer>20</integer>
+					<key>cnt</key>
+					<integer>3</integer>
+				</dict>
+			</dict>
+			<key>dict version</key>
+			<integer>3</integer>
+			<key>driver enabled</key>
+			<true/>
+			<key>factory setting</key>
+			<true/>
+			<key>options</key>
+			<dict>
+				<key>accelerate</key>
+				<true/>
+				<key>acceleration</key>
+				<real>1</real>
+				<key>inertial scroll</key>
+				<false/>
+				<key>invert wheel</key>
+				<false/>
+				<key>invert x</key>
+				<false/>
+				<key>invert y</key>
+				<false/>
+				<key>jump</key>
+				<false/>
+				<key>single</key>
+				<false/>
+				<key>single keys</key>
+				<integer>0</integer>
+				<key>slow</key>
+				<false/>
+				<key>slow keys</key>
+				<integer>0</integer>
+				<key>speed</key>
+				<integer>400</integer>
+				<key>swap xy</key>
+				<false/>
+			</dict>
+			<key>param</key>
+			<dict>
+				<key>countDecay</key>
+				<integer>40</integer>
+				<key>countStop</key>
+				<integer>500</integer>
+				<key>timeDecay</key>
+				<integer>60</integer>
+				<key>timeStop</key>
+				<integer>60</integer>
+				<key>triggerTime</key>
+				<integer>150</integer>
+			</dict>
+			<key>settings name</key>
+			<string>All Applications</string>
+			<key>target app</key>
+			<dict>
+				<key>app bundle id</key>
+				<string></string>
+				<key>app bundle name</key>
+				<string></string>
+				<key>app executable</key>
+				<string></string>
+				<key>app signature</key>
+				<string></string>
+			</dict>
+			<key>target device</key>
+			<dict>
+				<key>device product id</key>
+				<integer>32770</integer>
+				<key>device vendor id</key>
+				<integer>1149</integer>
+				<key>device version max</key>
+				<integer>0</integer>
+				<key>device version min</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>buttons</key>
+			<dict>
+				<key>00</key>
+				<dict>
+					<key>cmd</key>
+					<integer>1</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>01</key>
+				<dict>
+					<key>cmd</key>
+					<integer>2</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>02</key>
+				<dict>
+					<key>cmd</key>
+					<integer>30</integer>
+				</dict>
+				<key>03</key>
+				<dict>
+					<key>cmd</key>
+					<integer>3</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>08</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>09</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>cmd</key>
+					<integer>20</integer>
+					<key>cnt</key>
+					<integer>1</integer>
+				</dict>
+			</dict>
+			<key>dict version</key>
+			<integer>3</integer>
+			<key>driver enabled</key>
+			<true/>
+			<key>factory setting</key>
+			<true/>
+			<key>options</key>
+			<dict>
+				<key>accelerate</key>
+				<true/>
+				<key>acceleration</key>
+				<real>0.60000002384185791</real>
+				<key>inertial scroll</key>
+				<false/>
+				<key>invert wheel</key>
+				<false/>
+				<key>invert x</key>
+				<false/>
+				<key>invert y</key>
+				<false/>
+				<key>jump</key>
+				<false/>
+				<key>single</key>
+				<true/>
+				<key>single keys</key>
+				<integer>0</integer>
+				<key>slow</key>
+				<false/>
+				<key>slow keys</key>
+				<integer>0</integer>
+				<key>speed</key>
+				<integer>260</integer>
+				<key>swap xy</key>
+				<false/>
+			</dict>
+			<key>param</key>
+			<dict>
+				<key>countDecay</key>
+				<integer>40</integer>
+				<key>countStop</key>
+				<integer>500</integer>
+				<key>timeDecay</key>
+				<integer>60</integer>
+				<key>timeStop</key>
+				<integer>60</integer>
+				<key>triggerTime</key>
+				<integer>150</integer>
+			</dict>
+			<key>settings name</key>
+			<string>All Applications</string>
+			<key>target app</key>
+			<dict>
+				<key>app bundle id</key>
+				<string></string>
+				<key>app bundle name</key>
+				<string></string>
+				<key>app executable</key>
+				<string></string>
+				<key>app signature</key>
+				<string></string>
+			</dict>
+			<key>target device</key>
+			<dict>
+				<key>device product id</key>
+				<integer>32792</integer>
+				<key>device vendor id</key>
+				<integer>1149</integer>
+				<key>device version max</key>
+				<integer>0</integer>
+				<key>device version min</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>buttons</key>
+			<dict>
+				<key>00</key>
+				<dict>
+					<key>cmd</key>
+					<integer>1</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>01</key>
+				<dict>
+					<key>cmd</key>
+					<integer>2</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>02</key>
+				<dict>
+					<key>cmd</key>
+					<integer>30</integer>
+				</dict>
+				<key>03</key>
+				<dict>
+					<key>cmd</key>
+					<integer>3</integer>
+					<key>mod</key>
+					<integer>0</integer>
+				</dict>
+				<key>08</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>09</key>
+				<dict>
+					<key>cmd</key>
+					<integer>0</integer>
+				</dict>
+				<key>12</key>
+				<dict>
+					<key>cmd</key>
+					<integer>20</integer>
+					<key>cnt</key>
+					<integer>8</integer>
+				</dict>
+			</dict>
+			<key>dict version</key>
+			<integer>3</integer>
+			<key>driver enabled</key>
+			<true/>
+			<key>factory setting</key>
+			<false/>
+			<key>options</key>
+			<dict>
+				<key>accelerate</key>
+				<true/>
+				<key>acceleration</key>
+				<real>0.60000002384185791</real>
+				<key>inertial scroll</key>
+				<false/>
+				<key>invert wheel</key>
+				<false/>
+				<key>invert x</key>
+				<false/>
+				<key>invert y</key>
+				<false/>
+				<key>jump</key>
+				<false/>
+				<key>single</key>
+				<false/>
+				<key>single keys</key>
+				<integer>0</integer>
+				<key>slow</key>
+				<false/>
+				<key>slow keys</key>
+				<integer>0</integer>
+				<key>speed</key>
+				<integer>230</integer>
+				<key>swap xy</key>
+				<false/>
+			</dict>
+			<key>param</key>
+			<dict>
+				<key>countDecay</key>
+				<integer>40</integer>
+				<key>countStop</key>
+				<integer>500</integer>
+				<key>timeDecay</key>
+				<integer>60</integer>
+				<key>timeStop</key>
+				<integer>60</integer>
+				<key>triggerTime</key>
+				<integer>150</integer>
+			</dict>
+			<key>settings name</key>
+			<string>PyCharm</string>
+			<key>target app</key>
+			<dict>
+				<key>app bundle id</key>
+				<string>com.jetbrains.pycharm</string>
+				<key>app bundle name</key>
+				<string>PyCharm</string>
+				<key>app executable</key>
+				<string>pycharm</string>
+				<key>app signature</key>
+				<string>????</string>
+			</dict>
+			<key>target device</key>
+			<dict>
+				<key>device product id</key>
+				<integer>32792</integer>
+				<key>device vendor id</key>
+				<integer>1149</integer>
+				<key>device version max</key>
+				<integer>0</integer>
+				<key>device version min</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+	</array>
+	<key>snippets</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Text snippet 1</string>
+			<key>text</key>
+			<string>Kensington TrackballWorks</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Text snippet 2</string>
+			<key>text</key>
+			<string>Kensington TrackballWorks</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Text snippet 3</string>
+			<key>text</key>
+			<string>Kensington TrackballWorks</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Text snippet 4</string>
+			<key>text</key>
+			<string>Kensington TrackballWorks</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Text snippet 5</string>
+			<key>text</key>
+			<string>Kensington TrackballWorks</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Text snippet 6</string>
+			<key>text</key>
+			<string>Kensington TrackballWorks</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Text snippet 7</string>
+			<key>text</key>
+			<string>Kensington TrackballWorks</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Text snippet 8</string>
+			<key>text</key>
+			<string>Kensington TrackballWorks</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Text snippet 9</string>
+			<key>text</key>
+			<string>Kensington TrackballWorks</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Text snippet 10</string>
+			<key>text</key>
+			<string>Kensington TrackballWorks</string>
+		</dict>
+	</array>
+	<key>support</key>
+	<dict>
+		<key>architecture</key>
+		<string>x64</string>
+		<key>connected devices</key>
+		<array>
+			<dict>
+				<key>product id</key>
+				<string>8018</string>
+				<key>product name</key>
+				<string>Expert Wireless TB</string>
+				<key>product version</key>
+				<string>0102</string>
+				<key>vendor id</key>
+				<string>047d</string>
+				<key>vendor name</key>
+				<string>Kensington</string>
+			</dict>
+			<dict>
+				<key>product id</key>
+				<string>8018</string>
+				<key>product name</key>
+				<string>Expert Wireless TB</string>
+				<key>product version</key>
+				<string>0102</string>
+				<key>vendor id</key>
+				<string>047d</string>
+				<key>vendor name</key>
+				<string>Kensington</string>
+			</dict>
+		</array>
+		<key>date</key>
+		<string>2020-04-28 15:02:54 +0000</string>
+		<key>driver version</key>
+		<string>1.5.0</string>
+		<key>mac os version</key>
+		<string>Version 10.14.6 (Build 18G4032)</string>
+	</dict>
+	<key>version</key>
+	<integer>3</integer>
+</dict>
+</plist>
