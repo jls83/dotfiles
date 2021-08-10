@@ -34,6 +34,9 @@ autocmd Filetype *.html,*.ps1,*.sql,*.yml setlocal tabstop=2 shiftwidth=2 softta
 
 let g:markdown_fenced_languages = ['python', 'javascript', 'yaml', 'sh', 'html', 'go', 'clojure', 'typescript']
 
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
 " This is terrifying to me.
 let g:python3_host_prog = '/Users/jls83/.virtualenvs/py3nvim/bin/python'
 let g:node_host_prog = '/Users/jls83/.nvm/versions/node/v14.17.0/bin/neovim-node-host'
@@ -82,8 +85,8 @@ Plug 'mxw/vim-jsx'
 Plug 'cespare/vim-toml'
 
 " These two go together; meh
-Plug 'kalekundert/vim-coiled-snake'
-Plug 'Konfekt/FastFold'
+" Plug 'kalekundert/vim-coiled-snake'
+" Plug 'Konfekt/FastFold'
 
 " Only in Neovim:
 Plug 'radenling/vim-dispatch-neovim'
@@ -293,3 +296,32 @@ set shortmess+=c
 
 lua require('lsp-config')
 lua require('compe-config')
+
+" I honestly don't know.
+function! GetSpaces(foldLevel)
+    if &expandtab == 1
+        " Indenting with spaces
+        let str = repeat(" ", a:foldLevel / (&shiftwidth + 1) - 1)
+        return str
+    elseif &expandtab == 0
+        " Indenting with tabs
+        return repeat(" ", indent(v:foldstart) - (indent(v:foldstart) / &shiftwidth))
+    endif
+endfunction
+
+function! MyFoldText()
+    let startLineText = getline(v:foldstart)
+    let endLineText = trim(getline(v:foldend))
+    let indentation = GetSpaces(foldlevel("."))
+    let spaces = repeat(" ", 200)
+
+    let str = indentation . startLineText . "..." . endLineText . spaces
+
+    return str
+endfunction
+
+" Custom display for text when folding
+set foldtext=MyFoldText()
+
+" TODO: This can cause the folds to freak out or some reason?
+nnoremap zf zcVzCzo
