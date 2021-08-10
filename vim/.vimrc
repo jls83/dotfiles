@@ -48,18 +48,6 @@ let g:vim_json_conceal = 0
 " let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 "
 " Plug.vim plugins {{{1
-" NOTE: I'm not sure this is the right place for this...
-let g:coc_global_extensions = [
-    \'coc-angular',
-    \'coc-conjure',
-    \'coc-eslint',
-    \'coc-json',
-    \'coc-python',
-    \'coc-tsserver',
-    \'coc-diagnostic',
-    \'coc-ultisnips',
-\]
-
 call plug#begin()
 " I am dead without these
 Plug 'tpope/vim-surround'
@@ -224,34 +212,9 @@ endfunction
 nnoremap <silent><leader>ga :call <SID>BlameToggle()<CR>
 " }}}1
 
-" CoC items {{{1
-" function! s:check_back_space() abort
-"   let col = col('.') - 1
-"   return !col || getline('.')[col - 1]  =~# '\s'
-" endfunction
-
-" inoremap <silent><expr> <TAB> pumvisible()
-"             \ ? "\<C-n>"
-"             \ : <SID>check_back_space()
-"                 \ ? "\<TAB>"
-"                 \ : coc#refresh()
-" inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-" " CoC Go-Tos
-" nmap <silent> <leader>gd <Plug>(coc-definition)
-" nmap <silent> <leader>u <Plug>(coc-references)
-" }}}1
-
 " Notational Velocity items {{{1
 " TODO: Map over the `vimwiki_list` items here instead
 let g:nv_search_paths = ['~/vimwiki']
-" }}}1
-
-" CoC Eslint & Prettier items {{{1
-" NOTE: I've also added config items to the CoC Config file for this so
-" `eslint --fix` runs when running Prettier
-nnoremap <leader>qp <Plug>(coc-format-selected)
-vnoremap <leader>qp <Plug>(coc-format-selected)
 " }}}1
 
 " Honestly, weird stuff
