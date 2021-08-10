@@ -229,7 +229,10 @@ function! CopySelectionNoLeadingIndent() range
     let min_indent = 0xFFFFFFFE
     for line_num in range(line("'<"), line("'>"))
         let local_indent = indent(line_num)
-        if local_indent < min_indent
+        " If the line is empty don't check the indent level, as it should be
+        " zero
+        let local_length = strwidth(getline(line_num))
+        if (local_indent < min_indent) && (local_length > 0)
             let min_indent = local_indent
         endif
     endfor
