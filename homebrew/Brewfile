@@ -1,20 +1,29 @@
+# vim: ft=ruby:
+
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
+
+# For yabai, skhd
 tap "koekeishiya/formulae"
+
 brew "bat"
-brew "bzip2"
 brew "fd"
 brew "fzf"
 brew "git-delta"
 brew "neovim"
-brew "pyenv"
-brew "pyenv-virtualenv"
 brew "ripgrep"
 brew "stow"
 brew "tmux"
+
+# Explicit bzip and zlib steps are to work around a pyenv bug
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "bzip2"
 brew "zlib"
+
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
+
 cask "alacritty"
