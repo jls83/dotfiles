@@ -123,3 +123,8 @@ countdownThing() {
 }
 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+# TODO: Ehhhhh
+export LDFLAGS="-L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib"
+export CPPFLAGS="-I$(brew --prefix zlib)/include -I$(brew --prefix bzip2)/include"
+eval "$(pyenv virtualenv-init -)"
