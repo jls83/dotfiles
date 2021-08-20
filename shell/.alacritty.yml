@@ -28,7 +28,7 @@ window:
     padding:
         x: 10
         y: 10
-    decorations: buttonless
+    decorations: none
 
 cursor:
     style:
