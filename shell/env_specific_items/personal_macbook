@@ -8,7 +8,7 @@ eval "$(pyenv init - --no-rehash)"
 export GOPATH="/Users/jls83/projects/go_projects"
 
 fzfGitViewAndCdAll() {
-    DIRS=("/Users/jls83/projects")
+    DIRS=("/Users/jls83/other_projects")
     fzfDirectorySwitcher $DIRS
 }
 alias repos=fzfGitViewAndCdAll
