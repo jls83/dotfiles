@@ -291,7 +291,7 @@ au FileType plantuml let g:plantuml_previewer#plantuml_jar_path = get(
 " Native LSP stuff here
 let g:diagnostic_enable_virtual_text = 1
 
-set completeopt=menuone,noinsert,noselect
+set completeopt=menuone,noselect
 set shortmess+=c
 
 lua require('lsp-config')
