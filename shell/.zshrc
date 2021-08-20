@@ -127,7 +127,6 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 # TODO: Ehhhhh
 export LDFLAGS="-L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib"
 export CPPFLAGS="-I$(brew --prefix zlib)/include -I$(brew --prefix bzip2)/include"
-eval "$(pyenv virtualenv-init -)"
 
 # Created by `pipx` on 2021-08-20 01:41:41
 export PATH="$PATH:/Users/jls83/.local/bin"

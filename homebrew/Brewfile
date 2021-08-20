@@ -13,13 +13,13 @@ brew "fd"
 brew "fzf"
 brew "git-delta"
 brew "neovim"
+brew "pipx"
 brew "ripgrep"
 brew "stow"
 brew "tmux"
 
 # Explicit bzip and zlib steps are to work around a pyenv bug
 brew "pyenv"
-brew "pyenv-virtualenv"
 brew "bzip2"
 brew "zlib"
 
