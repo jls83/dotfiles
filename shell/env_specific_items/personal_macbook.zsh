@@ -1,5 +1,3 @@
-# vim: syntax=zsh
-
 # PyEnv junk
 export PATH="/Users/jls83/.pyenv:$PATH"
 eval "$(pyenv init - --no-rehash)"

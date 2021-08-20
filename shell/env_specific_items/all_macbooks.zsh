@@ -1,5 +1,3 @@
-# vim: syntax=zsh
-
 maccopy() {
     cat $1 | pbcopy
 }

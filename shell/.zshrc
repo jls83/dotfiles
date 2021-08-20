@@ -20,19 +20,19 @@ source $ZSH/oh-my-zsh.sh
 case `uname` in
     "Darwin")
         # There are certain items that are global for all Mac computers
-        source ~/env_specific_items/all_macbooks
+        source ~/env_specific_items/all_macbooks.zsh
         # I set a $MACHINE_TYPE env variable in the local bash_profile files
         case "$MACHINE_TYPE" in
             "personal")
-                source ~/env_specific_items/personal_macbook
+                source ~/env_specific_items/personal_macbook.zsh
             ;;
             "work")
-                source ~/env_specific_items/work_macbook
+                source ~/env_specific_items/work_macbook.zsh
             ;;
         esac
         ;;
     "Linux")
-        source ~/env_specific_items/thinkpad
+        source ~/env_specific_items/thinkpad.zsh
     ;;
 esac
 

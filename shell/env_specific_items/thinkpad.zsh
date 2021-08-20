@@ -1,5 +1,3 @@
-# vim: syntax=zsh
-
 export PATH="/home/jls83/.pyenv/bin:$PATH"
 export DOTNET_CLI_TELEMETRY_OUTPUT_OPTOUT=1
 
