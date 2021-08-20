@@ -54,3 +54,30 @@
     ```sh
     nvim +PlugInstall +qall
     ```
+6. Install Node provider
+    ```sh
+    npm install -g neovim
+    ```
+
+### Language Server Setup
+__NOTE:__ This may differ based on what you need for each machine. This is the current setup for the personal MacBook.
+
+```sh
+# Pyright
+npm install -g pyright
+
+# Typescript Language Server
+npm install -g typescript-language-server
+
+# Clojure LSP; We keep this separate from the `Brewfile`
+brew install clojure-lsp/brew/clojure-lsp-native
+
+# Rust Analyzer; note the platform type in the file name
+curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-apple-darwin.gz | \
+gunzip -c - > ~/.local/bin/rust-analyzer && \
+chmod +x ~/.local/bin/rust-analyzer
+
+# clangd; comes along with LLVM in homebrew, keep this separate as well
+brew install llvm
+```
+

@@ -13,8 +13,8 @@ local on_attach = function(_, bufnr)
     buf_set_keymap('n', '<leader>u', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
 end
 
-local servers = {'jedi_language_server', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd'}
--- local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer'}
+local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd'}
+-- local servers = {'jedi_language_server', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd'}
 
 for _, lsp in ipairs(servers) do
     local config = {
@@ -24,9 +24,9 @@ for _, lsp in ipairs(servers) do
         },
     }
     if lsp == 'pyright' then
-        config['cmd'] = {'/Users/jls83/.nvm/versions/node/v14.17.0/bin/pyright-langserver', '--stdio'}
+        config['cmd'] = {'/usr/local/bin/pyright-langserver', '--stdio'}
     elseif lsp == 'tsserver' then
-        config['cmd'] = {'/Users/jls83/.nvm/versions/node/v14.17.0/bin/typescript-language-server', '--stdio'}
+        config['cmd'] = {'/usr/local/bin/typescript-language-server', '--stdio'}
         config['analysis'] = {
             typeCheckingMode = 'off',
         }
