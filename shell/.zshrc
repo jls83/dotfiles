@@ -130,3 +130,9 @@ export CPPFLAGS="-I$(brew --prefix zlib)/include -I$(brew --prefix bzip2)/includ
 
 # Created by `pipx` on 2021-08-20 01:41:41
 export PATH="$PATH:/Users/jls83/.local/bin"
+
+# TODO: Make this machine-type specific
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/Users/jls83/.local/pipx/venvs/virtualenvwrapper/bin/python
+export VIRTUALENVWRAPPER_SCRIPT=/Users/jls83/.local/pipx/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh
+source /Users/jls83/.local/pipx/venvs/virtualenvwrapper/bin/virtualenvwrapper_lazy.sh
