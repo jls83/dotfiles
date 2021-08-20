@@ -36,7 +36,6 @@ case `uname` in
     ;;
 esac
 
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 AUTOENV_ENABLE_LEAVE="True"
 
@@ -44,15 +43,21 @@ AUTOENV_ENABLE_LEAVE="True"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.ghcup/bin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 [ -f $HOME/.ghcup/env ] && source $HOME/.ghcup/env
+
+# PyEnv-specific items
+export PATH="$HOME/.pyenv:$PATH"
+eval "$(pyenv init - --no-rehash)"
 
 # Workaround for pyenv/bzip2/zlib issue: https://github.com/pyenv/pyenv/issues/1746#issuecomment-738749297
 export LDFLAGS="-L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib"
 export CPPFLAGS="-I$(brew --prefix zlib)/include -I$(brew --prefix bzip2)/include"
 
-# TODO: Make this machine-type specific
+# virtualenvwrapper-specific items
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=$HOME/.local/pipx/venvs/virtualenvwrapper/bin/python
 export VIRTUALENVWRAPPER_SCRIPT=$HOME/.local/pipx/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh

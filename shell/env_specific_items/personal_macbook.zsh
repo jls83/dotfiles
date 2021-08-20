@@ -1,10 +1,4 @@
-# PyEnv junk
-export PATH="/Users/jls83/.pyenv:$PATH"
-eval "$(pyenv init - --no-rehash)"
-
-# Go junk
-export GOPATH="/Users/jls83/projects/go_projects"
-
+# TODO: Re-think this!
 fzfGitViewAndCdAll() {
     DIRS=("/Users/jls83/other_projects")
     fzfDirectorySwitcher $DIRS

@@ -1,4 +1,5 @@
-export PATH="/home/jls83/.pyenv/bin:$PATH"
+# TODO: BIG TIME refactor is in order here.
+
 export DOTNET_CLI_TELEMETRY_OUTPUT_OPTOUT=1
 
 alias ipython='python -m IPython'
@@ -10,7 +11,6 @@ xclipCopy() {
 alias wcp=xclipCopy
 
 # PyEnv Junk
-eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export PYENV_ROOT="/home/jls83/.pyenv"
 export PIPENV_PYTHON="$PYENV_ROOT/shims/python"

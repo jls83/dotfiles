@@ -1,11 +1,5 @@
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-
-# PyEnv junk
-export PATH="/Users/jls83/.pyenv:$PATH"
-eval "$(pyenv init - --no-rehash)"
-
-# Haskell junk
-export PATH="/Users/jls83/.ghcup/bin:$PATH"
+# NOTE: Just about all of these are YCharts-specific, and cannot/should not be used outside
+# of that context. They're here mostly as a historical record.
 
 ###################
 # ALIAS FUNCTIONS #
@@ -85,10 +79,6 @@ fzfGitViewAndCdYCharts() {
     fzfDirectorySwitcher $DIRS
 }
 alias yre=fzfGitViewAndCdYCharts
-
-convertMarkdownToDocx() {
-    pandoc -t docx $1 -o $2 --highlight-style tango
-}
 
 runManagementCommand() {
     all_management_commands=$(fd "management/commands.*py" -p -E '__init__*' -E '__pycache__')

@@ -52,6 +52,11 @@ countdownThing() {
     done
 }
 
+# TODO: Utils file?
+convertMarkdownToDocx() {
+    pandoc -t docx $1 -o $2 --highlight-style tango
+}
+
 ####################
 # EXPORTED ALIASES #
 ####################
