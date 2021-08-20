@@ -1,6 +1,9 @@
-# vim: syntax=zsh
-#
-# These are all cribbed from the fzf wiki directly - https://github.com/junegunn/fzf/wiki/examples
+# Do an `fd -d 1` on all directories in the incoming argument array, dump the result to `fzf`,
+# then `cd` to the resuilt
+# TODO: Move to utils?
+fzfDirectorySwitcher() {
+    cd $(fd . -d 1 $@ | fzf)
+}
 
 fzfGitLocalBranches() {
   local branches branch
@@ -8,9 +11,7 @@ fzfGitLocalBranches() {
   branch=$(echo "$branches" | fzf --preview 'git --no-pager log --pretty=oneline --abbrev-commit --no-decorate --color=always -n 10 develop..{}' --preview-window top:60%) &&
   git checkout $branch
 }
-alias gh=fzfGitLocalBranches
 
-# fbr - checkout git branch (including remote branches)
 fzfGitAllBranches() {
   local branches branch
   branches=$(git branch --all | grep -v HEAD) &&
@@ -18,10 +19,15 @@ fzfGitAllBranches() {
            fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
   git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
-alias ghr=fzfGitAllBranches
 
-# Do an `fd -d 1` on all directories in the incoming argument array, dump the result to `fzf`,
-# then `cd` to the resuilt
-fzfDirectorySwitcher() {
-    cd $(fd . -d 1 $@ | fzf)
+fzfFetchRemote() {
+    git fetch $(git remote -v | awk '{print $1}' | uniq | fzf)
 }
+
+####################
+# EXPORTED ALIASES #
+####################
+
+alias gfr=fzfFetchRemote
+alias gh=fzfGitLocalBranches
+alias ghr=fzfGitAllBranches
