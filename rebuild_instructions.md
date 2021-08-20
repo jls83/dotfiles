@@ -11,7 +11,12 @@
     ```sh
     brew bundle --file=~/other_projects/dotfiles/homebrew/Brewfile
     ```
-4. Run `stow` to get all dotfiles in place
+4. Add the appropriate `MACHINE_TYPE` to the `~/.bash_profile` file
+    ```sh
+    # NOTE: See the .zshrc file for suppored MACHINE_TYPE options
+    echo "MACHINE_TYPE=personal" >> ~/.bash_profile
+    ```
+5. Run `stow` to get all dotfiles in place
     ```sh
     # NOTE I know there is a better way to do this.
     stow -d ~/other_projects/dotfiles -t ~ git
@@ -36,7 +41,7 @@
     ```
 3. Create a virtualenv for NeoVim & install `pynvim`
     ```sh
-    virtualenv --python=/Users/jls83/.pyenv/versions/3.7.11/bin/python3 ~/.virtualenvs/py3nvim
+    virtualenv --python=$HOME/.pyenv/versions/3.7.11/bin/python3 ~/.virtualenvs/py3nvim
     workon py3nvim && pip install pynvim
     ```
 4. Install `vim-plug`:
