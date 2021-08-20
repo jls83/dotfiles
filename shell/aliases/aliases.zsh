@@ -42,6 +42,16 @@ getLinesInRange() {
     sed -n -e "$2,$3 p" -e "$3 q" $1;
 }
 
+# TODO: Utils file?
+countdownThing() {
+    seconds=$1
+    while [ $seconds -gt 0 ]; do
+       echo -ne "$seconds\033[0K\r"
+       sleep 1
+       : $((seconds--))
+    done
+}
+
 ####################
 # EXPORTED ALIASES #
 ####################
