@@ -72,7 +72,8 @@ npm install -g typescript-language-server
 brew install clojure-lsp/brew/clojure-lsp-native
 
 # Rust Analyzer; note the platform type in the file name
-curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-apple-darwin.gz | \
+PLATFORM_SUFFIX=x86_64-apple-darwin
+curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-$PLATFORM_SUFFIX.gz | \
 gunzip -c - > ~/.local/bin/rust-analyzer && \
 chmod +x ~/.local/bin/rust-analyzer
 
