@@ -22,15 +22,10 @@
     ```
 6. Run `stow` to get all dotfiles in place
     ```sh
-    # NOTE I know there is a better way to do this.
-    stow -d ~/other_projects/dotfiles -t ~ git
-    stow -d ~/other_projects/dotfiles -t ~ homebrew
-    stow -d ~/other_projects/dotfiles -t ~ intellij
-    stow -d ~/other_projects/dotfiles -t ~ shell
-    stow -d ~/other_projects/dotfiles -t ~ taskwarrior
-    stow -d ~/other_projects/dotfiles -t ~ tmux
-    stow -d ~/other_projects/dotfiles -t ~ vim
-    stow -d ~/other_projects/dotfiles -t ~ yabai
+    for SUB_DIR in $(fd . --type directory --max-depth 1 ~/other_projects/dotfiles)
+    do
+        stow -d ~/other_projects/dotfiles -t ~ $(basename $SUB_DIR)
+    done
     ```
 
 ## NeoVim Setup
