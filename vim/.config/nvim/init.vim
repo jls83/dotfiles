@@ -10,6 +10,7 @@ nnoremap Y y$
 
 nnoremap <leader>y :%y*<CR>
 vnoremap <leader>y "*y
+nnoremap <leader>p "*p
 
 set tabstop=4
 set softtabstop=4
@@ -219,9 +220,6 @@ nnoremap <silent><leader>ga :call <SID>BlameToggle()<CR>
 " TODO: Map over the `vimwiki_list` items here instead
 let g:nv_search_paths = ['~/vimwiki']
 " }}}1
-
-" Honestly, weird stuff
-nnoremap <leader>p :silent !open -a PyCharm %<CR>
 
 function! CopySelectionNoLeadingIndent() range
     " Keep a reference to the current `modified` status, as our changes will
