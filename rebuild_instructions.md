@@ -16,7 +16,11 @@
     # NOTE: See the .zshrc file for suppored MACHINE_TYPE options
     echo "MACHINE_TYPE=personal" >> ~/.bash_profile
     ```
-5. Run `stow` to get all dotfiles in place
+5. Install `oh-my-zsh`
+    ```sh
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    ```
+6. Run `stow` to get all dotfiles in place
     ```sh
     # NOTE I know there is a better way to do this.
     stow -d ~/other_projects/dotfiles -t ~ git
