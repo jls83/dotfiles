@@ -93,8 +93,8 @@ Plug 'cespare/vim-toml'
 Plug 'radenling/vim-dispatch-neovim'
 
 " Testing these
-" Plug 'Yggdroot/indentLine'
-Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'Yggdroot/indentLine'
+" Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'preservim/tagbar'
@@ -327,4 +327,8 @@ nnoremap zf zcVzCzo
 
 " Indent Blankline items
 " TODO: Figure this out better :P
-lua require('indent-blankline-config')
+" lua require('indent-blankline-config')
+
+" indentLine Stuff; TODO: will be removed!
+let g:indentLine_setColors = 0
+let g:indentLine_enabled = 1
