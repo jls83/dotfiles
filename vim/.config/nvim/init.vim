@@ -103,6 +103,7 @@ Plug 'nvim-treesitter/playground'
 Plug 'aklt/plantuml-syntax'
 Plug 'tyru/open-browser.vim'
 Plug 'weirongxu/plantuml-previewer.vim'
+Plug 'SmiteshP/nvim-gps'
 
 " I have disabled these
 " Plug 'AndrewRadev/splitjoin.vim'
@@ -123,14 +124,22 @@ hi Normal guibg=NONE ctermbg=NONE
 " }}}1
 
 " Lightline settings {{{1
+
+func! NvimGps() abort
+    return luaeval("require'nvim-gps'.is_available()") ?
+        \ luaeval("require'nvim-gps'.get_location()") : ''
+endf
+
+
 let g:lightline = {
     \ 'colorscheme': 'gruvbox',
     \ 'active': {
     \     'left': [ [ 'mode', 'paste' ],
-    \               [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+    \               [ 'gitbranch', 'readonly', 'filename', 'modified', 'gps_loc' ] ]
     \ },
     \ 'component_function': {
     \     'gitbranch': 'fugitive#head',
+    \     'gps_loc': 'NvimGps',
     \ },
     \ }
 " Doesn't make sense to have Vim do modelines if lightline is handling it
@@ -295,6 +304,7 @@ set shortmess+=c
 
 lua require('lsp-config')
 lua require('compe-config')
+lua require('gps-config')
 
 " I honestly don't know.
 function! GetSpaces(foldLevel)
@@ -332,3 +342,4 @@ nnoremap zf zcVzCzo
 " indentLine Stuff; TODO: will be removed!
 let g:indentLine_setColors = 0
 let g:indentLine_enabled = 1
+
