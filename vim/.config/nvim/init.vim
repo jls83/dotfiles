@@ -39,7 +39,7 @@ set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 
 " This is terrifying to me.
-let g:python3_host_prog = '/Users/jls83/.virtualenvs/py3nvim/bin/python'
+let g:python3_host_prog = '$HOME/.virtualenvs/py3nvim/bin/python'
 let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 
 " This is annoying to me
