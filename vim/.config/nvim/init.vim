@@ -156,14 +156,7 @@ let main_wiki.syntax = 'markdown'
 let main_wiki.ext = '.md'
 " }}}2
 
-"" Manager Wiki {{{2
-let manager_wiki = {}
-let manager_wiki.path = '~/manager_stuff/wiki'
-let manager_wiki.syntax = 'markdown'
-let manager_wiki.ext = '.md'
-" }}}2
-
-let g:vimwiki_list = [main_wiki, manager_wiki]
+let g:vimwiki_list = [main_wiki]
 let g:vimwiki_global_ext = 0 " don't use vimwiki syntax for all MD files
 " }}}1
 
