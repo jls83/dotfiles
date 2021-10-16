@@ -32,10 +32,17 @@ case `uname` in
         esac
         ;;
     "Linux")
+        # I set a $MACHINE_TYPE env variable in the local bash_profile files
+        case "$MACHINE_TYPE" in
+        "glinux")
+            source ~/glinux.zsh
+        ;;
+        "banana")
         source ~/env_specific_items/thinkpad.zsh
+        ;;
+    esac
     ;;
 esac
-
 
 AUTOENV_ENABLE_LEAVE="True"
 
@@ -50,16 +57,8 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 [ -f $HOME/.ghcup/env ] && source $HOME/.ghcup/env
 
 # PyEnv-specific items
-export PATH="$HOME/.pyenv:$PATH"
+export PATH="$HOME/.pyenv:$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init - --no-rehash)"
-
-# Workaround for pyenv/bzip2/zlib issue: https://github.com/pyenv/pyenv/issues/1746#issuecomment-738749297
-export LDFLAGS="-L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib"
-export CPPFLAGS="-I$(brew --prefix zlib)/include -I$(brew --prefix bzip2)/include"
-
-# TODO: Hmmmmm
-# export LDFLAGS="-L/usr/local/opt/llvm/lib"
-# export CPPFLAGS="-I/usr/local/opt/llvm/include"
 
 # virtualenvwrapper-specific items
 export WORKON_HOME=$HOME/.virtualenvs

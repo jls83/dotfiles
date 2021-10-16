@@ -33,7 +33,7 @@ filetype plugin indent on
 " Filetype-specific tab info
 autocmd Filetype *.html,*.ps1,*.sql,*.yml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
-let g:markdown_fenced_languages = ['python', 'javascript', 'yaml', 'sh', 'html', 'go', 'clojure', 'typescript']
+let g:markdown_fenced_languages = ['python', 'javascript', 'yaml', 'sh', 'html', 'go', 'clojure', 'typescript', 'proto', 'sql']
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
@@ -57,7 +57,7 @@ call plug#begin()
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'commit': '3f75a83' }
 Plug 'junegunn/fzf.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'neovim/nvim-lspconfig'
@@ -67,7 +67,6 @@ Plug 'hrsh7th/nvim-compe'
 " I am mildly inconvenienced without these
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-Plug 'scrooloose/nerdtree'
 Plug 'easymotion/vim-easymotion'
 " Plug 'jls83/vimwiki', {'branch': 'mixed_backlinks'}
 Plug 'vimwiki/vimwiki', {'branch': 'dev'}
@@ -104,6 +103,8 @@ Plug 'aklt/plantuml-syntax'
 Plug 'tyru/open-browser.vim'
 Plug 'weirongxu/plantuml-previewer.vim'
 Plug 'SmiteshP/nvim-gps'
+Plug 'tpope/vim-vinegar'
+Plug 'ojroques/vim-oscyank'
 
 " I have disabled these
 " Plug 'AndrewRadev/splitjoin.vim'
@@ -158,12 +159,6 @@ let main_wiki.ext = '.md'
 
 let g:vimwiki_list = [main_wiki]
 let g:vimwiki_global_ext = 0 " don't use vimwiki syntax for all MD files
-" }}}1
-
-" NerdTree items {{{1
-let NERDTreeShowHidden=1
-nnoremap <silent><leader>1 :NERDTreeToggle<CR>
-nnoremap <silent><leader>sip :NERDTreeFind<CR>
 " }}}1
 
 " fzf-vim items {{{1
@@ -333,6 +328,10 @@ nnoremap zf zcVzCzo
 " lua require('indent-blankline-config')
 
 " indentLine Stuff; TODO: will be removed!
-let g:indentLine_setColors = 0
+let g:indentLine_setColors = 1
 let g:indentLine_enabled = 1
 
+if $MACHINE_TYPE == "glinux"
+  " Google-specific items here
+  source $HOME/.config/nvim/my_google.vim
+endif
