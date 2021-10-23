@@ -16,12 +16,17 @@ end
 local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd'}
 -- local servers = {'jedi_language_server', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd'}
 
+-- TODO: Will need to merge this with the server-side `capabilities` I think
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 for _, lsp in ipairs(servers) do
     local config = {
         on_attach = on_attach,
         flags = {
             debounce_text_changes = 150,
         },
+        capabilities = capabilities,
     }
     if lsp == 'pyright' then
         config['cmd'] = {'/usr/local/bin/pyright-langserver', '--stdio'}

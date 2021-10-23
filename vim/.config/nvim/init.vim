@@ -62,7 +62,15 @@ Plug 'junegunn/fzf.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/diagnostic-nvim'
-Plug 'hrsh7th/nvim-compe'
+
+" Testing out the newest version of this completion plugin
+" Plug 'hrsh7th/nvim-compe'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+Plug 'onsails/lspkind-nvim'
 
 " I am mildly inconvenienced without these
 Plug 'tpope/vim-fugitive'
@@ -291,8 +299,9 @@ set completeopt=menuone,noselect
 set shortmess+=c
 
 lua require('lsp-config')
-lua require('compe-config')
+lua require('cmp-config')
 lua require('gps-config')
+" lua require('compe-config')
 
 " I honestly don't know.
 function! GetSpaces(foldLevel)
