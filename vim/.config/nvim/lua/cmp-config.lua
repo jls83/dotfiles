@@ -34,10 +34,23 @@ cmp.setup({
     },
     sources = cmp.config.sources({
         -- NOTE: Order here determines priority in completion menu
-        { name = 'nvim_lsp'},
-        { name = 'ultisnips', keyword_length = 2 },
-        { name = 'buffer' },
-        { name = 'path' },
+        {
+            name = 'nvim_lsp',
+            max_item_count = 10,
+        },
+        {
+            name = 'ultisnips',
+            keyword_length = 2,
+            max_item_count = 10,
+        },
+        {
+            name = 'buffer',
+            max_item_count = 10,
+        },
+        {
+            name = 'path',
+            max_item_count = 10,
+        },
     }),
     formatting = {
         format = lspkind.cmp_format({
@@ -49,6 +62,10 @@ cmp.setup({
                 path = "[Path]",
             },
         }),
+    },
+    documentation = {
+        -- Clockwise from top left!
+        border = { "+", "-", "+", "|", "+", "-", "+", "|" },
     },
     experimental = {
         native_menu = false,
