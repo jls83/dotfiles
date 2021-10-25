@@ -26,10 +26,11 @@ cmp.setup({
     mapping = {
         ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
         ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
-        ['<CR>'] = cmp.mapping.confirm({
-            behavior = cmp.ConfirmBehavior.Replace,
-            select = true,
-        }),
+        -- NOTE: I'm not sure if I need a `confirm` mapping, but FOR SURE it's not <CR>
+        -- ['<CR>'] = cmp.mapping.confirm({
+        --     behavior = cmp.ConfirmBehavior.Replace,
+        --     select = true,
+        -- }),
     },
     sources = cmp.config.sources({
         -- NOTE: Order here determines priority in completion menu
