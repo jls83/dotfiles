@@ -186,9 +186,9 @@ nnoremap <silent> <leader>b :Buffers<CR>
 " No <CR> at the end to allow me to enter in items; add a space at the end to
 " immediately enter text
 nnoremap <leader>f :Rg 
-vnoremap <leader>f y:Rg <C-r>"<CR>
+vnoremap <leader>f "zy:Rg <C-r>z<CR>
 nnoremap <leader>t :Lines 
-vnoremap <leader>t y:Lines <C-r>"<CR>
+vnoremap <leader>t "zy:Lines <C-r>z<CR>
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
