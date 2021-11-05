@@ -31,7 +31,7 @@ syntax enable
 filetype plugin indent on
 
 " Filetype-specific tab info
-autocmd Filetype *.html,*.ps1,*.sql,*.yml setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype *.html,*.ps1,*.sql,*.yml,*.cc setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 let g:markdown_fenced_languages = ['python', 'javascript', 'yaml', 'sh', 'html', 'go', 'clojure', 'typescript', 'proto', 'sql']
 
@@ -121,6 +121,15 @@ Plug 'ojroques/vim-oscyank'
 "
 " Plug 'file://'.expand('~/other_projects/nvim-panko'), {'branch': 'main'}
 Plug 'bryall/contextprint.nvim', {'branch': 'main'}
+
+" Let's try it out, why not
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+if $MACHINE_TYPE == "glinux"
+  " Google-specific plugins here
+  source $HOME/.config/nvim/my_google_plugins.vim
+endif
 
 call plug#end()
 " }}}1
@@ -301,6 +310,7 @@ set shortmess+=c
 lua require('lsp-config')
 lua require('cmp-config')
 lua require('gps-config')
+lua require('treesitter-config')
 " lua require('compe-config')
 
 " I honestly don't know.
