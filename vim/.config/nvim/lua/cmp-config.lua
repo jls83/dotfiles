@@ -1,22 +1,6 @@
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 
--- local tab_complete = function(fallback)
---     if cmp.visible() then
---         cmp.mapping.select_next_item()
---     else
---         fallback()
---     end
--- end
-
--- local shift_tab_complete = function(fallback)
---     if cmp.visible() then
---         cmp.mapping.select_prev_item()
---     else
---         fallback()
---     end
--- end
-
 cmp.setup({
     snippet = {
         expand = function(args)
@@ -46,6 +30,16 @@ cmp.setup({
         {
             name = 'buffer',
             max_item_count = 10,
+            option = {
+                -- Add all visible buffers as a completion source
+                get_bufnrs = function()
+                    local bufs = {}
+                    for _, win in ipairs(vim.api.nvim_list_wins()) do
+                        bufs[vim.api.nvim_win_get_buf(win)] = true
+                    end
+                    return vim.tbl_keys(bufs)
+                end,
+            },
         },
         {
             name = 'path',
