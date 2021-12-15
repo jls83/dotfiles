@@ -30,8 +30,11 @@ syntax on
 syntax enable
 filetype plugin indent on
 
-" Filetype-specific tab info
-autocmd Filetype *.html,*.ps1,*.sql,*.yml,*.cc setlocal tabstop=2 shiftwidth=2 softtabstop=2
+" FileType-specific tab info
+autocmd FileType *.html,*.ps1,*.sql,*.yml,*.cc setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
+" FileType-specific comment string info
+autocmd FileType c,cpp setlocal commentstring=//\ %s
 
 let g:markdown_fenced_languages = ['python', 'javascript', 'yaml', 'sh', 'html', 'go', 'clojure', 'typescript', 'proto', 'sql']
 
@@ -286,7 +289,7 @@ augroup END
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 augroup rainbow_lisp
     autocmd!
-    autocmd Filetype clojure RainbowParentheses
+    autocmd FileType clojure RainbowParentheses
 augroup END
 
 " UltiSnips stuff
