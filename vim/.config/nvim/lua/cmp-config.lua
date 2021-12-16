@@ -2,6 +2,9 @@ local cmp = require('cmp')
 local lspkind = require('lspkind')
 
 cmp.setup({
+    -- Essentially only for rust_analyzer sources that jump to the middle of the menu for
+    -- whatever reason!
+    preselect = cmp.PreselectMode.None,
     snippet = {
         expand = function(args)
             vim.fn["UltiSnips#Anon"](args.body)
