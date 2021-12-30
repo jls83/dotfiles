@@ -26,6 +26,8 @@ set signcolumn=yes
 set list
 set listchars=tab:▸\ ,eol:¬
 
+set matchpairs+=<:>
+
 syntax on
 syntax enable
 filetype plugin indent on
