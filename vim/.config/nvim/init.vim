@@ -130,6 +130,7 @@ Plug 'bryall/contextprint.nvim', {'branch': 'main'}
 " Let's try it out, why not
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 if $MACHINE_TYPE == "glinux"
   " Google-specific plugins here
@@ -316,6 +317,7 @@ lua require('lsp-config')
 lua require('cmp-config')
 lua require('gps-config')
 lua require('treesitter-config')
+lua require('telescope-config')
 " lua require('compe-config')
 
 " I honestly don't know.
