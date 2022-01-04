@@ -130,6 +130,7 @@ Plug 'bryall/contextprint.nvim', {'branch': 'main'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'kyazdani42/nvim-web-devicons'
 
 if $MACHINE_TYPE == "glinux"
   " Google-specific plugins here
@@ -360,3 +361,17 @@ if $MACHINE_TYPE == "glinux"
   " Google-specific items here
   source $HOME/.config/nvim/my_google.vim
 endif
+
+" TODO: Move this to a 'diagnostic-config.lua' or similar
+lua << EOF
+local signs = {
+  Error = " ",
+  Warn = " ",
+  Hint = " ",
+  Info = " "
+}
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+EOF
