@@ -66,7 +66,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() }, 'commit': '3f75a83' }
 Plug 'junegunn/fzf.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/diagnostic-nvim'
 
 " Testing out the newest version of this completion plugin
 " Plug 'hrsh7th/nvim-compe'
