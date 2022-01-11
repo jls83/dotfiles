@@ -318,6 +318,7 @@ lua require('cmp-config')
 lua require('gps-config')
 lua require('treesitter-config')
 lua require('telescope-config')
+lua require('diagnostic-config')
 " lua require('compe-config')
 
 " I honestly don't know.
@@ -361,24 +362,6 @@ if $MACHINE_TYPE == "glinux"
   " Google-specific items here
   source $HOME/.config/nvim/my_google.vim
 endif
-
-" TODO: Move this to a 'diagnostic-config.lua' or similar
-lua << EOF
-local signs = {
-  Error = " ",
-  Warn = " ",
-  Hint = " ",
-  Info = " "
-}
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
-
-local opts = { noremap=true, silent=true }
-vim.api.nvim_set_keymap('n', '[g', '<cmd>lua vim.diagnostic.goto_prev({})<CR>', opts)
-vim.api.nvim_set_keymap('n', ']g', '<cmd>lua vim.diagnostic.goto_next({})<CR>', opts)
-EOF
 
 " Other keybindings
 nnoremap <leader>u <cmd>lua require('telescope.builtin') lsp_references()<cr>
