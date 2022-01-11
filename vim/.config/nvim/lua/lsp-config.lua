@@ -10,7 +10,6 @@ local on_attach = function(_, bufnr)
     buf_set_keymap('n', '<leader>gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
     buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
     buf_set_keymap('n', '<C-k>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-    buf_set_keymap('n', '<leader>u', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
 end
 
 local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd'}
