@@ -114,7 +114,6 @@ Plug 'nvim-treesitter/playground'
 Plug 'aklt/plantuml-syntax'
 Plug 'tyru/open-browser.vim'
 Plug 'weirongxu/plantuml-previewer.vim'
-Plug 'SmiteshP/nvim-gps'
 Plug 'tpope/vim-vinegar'
 Plug 'ojroques/vim-oscyank'
 
@@ -149,21 +148,14 @@ hi Normal guibg=NONE ctermbg=NONE
 
 " Lightline settings {{{1
 
-func! NvimGps() abort
-    return luaeval("require'nvim-gps'.is_available()") ?
-        \ luaeval("require'nvim-gps'.get_location()") : ''
-endf
-
-
 let g:lightline = {
     \ 'colorscheme': 'gruvbox',
     \ 'active': {
     \     'left': [ [ 'mode', 'paste' ],
-    \               [ 'gitbranch', 'readonly', 'filename', 'modified', 'gps_loc' ] ]
+    \               [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
     \ },
     \ 'component_function': {
     \     'gitbranch': 'fugitive#head',
-    \     'gps_loc': 'NvimGps',
     \ },
     \ }
 " Doesn't make sense to have Vim do modelines if lightline is handling it
@@ -315,7 +307,6 @@ set shortmess+=c
 
 lua require('lsp-config')
 lua require('cmp-config')
-lua require('gps-config')
 lua require('treesitter-config')
 lua require('telescope-config')
 lua require('diagnostic-config')
