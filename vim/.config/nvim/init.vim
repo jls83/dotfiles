@@ -364,4 +364,4 @@ if $MACHINE_TYPE == "glinux"
 endif
 
 " Other keybindings
-nnoremap <leader>u <cmd>lua require('telescope.builtin') lsp_references()<cr>
+nnoremap <leader>u <cmd>lua require('telescope.builtin').lsp_references()<cr>
