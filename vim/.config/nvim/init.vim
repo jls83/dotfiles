@@ -105,7 +105,6 @@ Plug 'radenling/vim-dispatch-neovim'
 
 " Testing these
 Plug 'Yggdroot/indentLine'
-" Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'preservim/tagbar'
@@ -341,11 +340,7 @@ set foldtext=MyFoldText()
 " TODO: This can cause the folds to freak out or some reason?
 nnoremap zf zcVzCzo
 
-" Indent Blankline items
-" TODO: Figure this out better :P
-" lua require('indent-blankline-config')
-
-" indentLine Stuff; TODO: will be removed!
+" indentLine Stuff
 let g:indentLine_setColors = 1
 let g:indentLine_enabled = 1
 
