@@ -67,8 +67,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'neovim/nvim-lspconfig'
 
-" Testing out the newest version of this completion plugin
-" Plug 'hrsh7th/nvim-compe'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -309,7 +307,6 @@ lua require('cmp-config')
 lua require('treesitter-config')
 lua require('telescope-config')
 lua require('diagnostic-config')
-" lua require('compe-config')
 
 " I honestly don't know.
 function! GetSpaces(foldLevel)
