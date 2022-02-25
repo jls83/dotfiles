@@ -60,10 +60,6 @@ cmp.setup({
             },
         }),
     },
-    documentation = {
-        -- Clockwise from top left!
-        border = { "+", "-", "+", "|", "+", "-", "+", "|" },
-    },
     experimental = {
         native_menu = false,
     },
