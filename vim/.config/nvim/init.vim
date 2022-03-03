@@ -130,7 +130,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 
 if $MACHINE_TYPE == "glinux"
   " Google-specific plugins here
-  source $HOME/.config/nvim/my_google_plugins.vim
+  source $HOME/.config/nvim/google/my_google_plugins.vim
 endif
 
 call plug#end()
@@ -307,6 +307,9 @@ lua require('cmp-config')
 lua require('treesitter-config')
 lua require('telescope-config')
 lua require('diagnostic-config')
+if $MACHINE_TYPE == "glinux"
+  lua require('google.telescope-codesearch-config')
+endif
 
 " I honestly don't know.
 function! GetSpaces(foldLevel)
@@ -343,8 +346,5 @@ let g:indentLine_enabled = 1
 
 if $MACHINE_TYPE == "glinux"
   " Google-specific items here
-  source $HOME/.config/nvim/my_google.vim
+  source $HOME/.config/nvim/google/my_google.vim
 endif
-
-" Other keybindings
-nnoremap <leader>u <cmd>lua require('telescope.builtin').lsp_references()<cr>
