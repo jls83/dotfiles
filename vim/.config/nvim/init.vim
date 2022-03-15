@@ -78,8 +78,8 @@ Plug 'onsails/lspkind-nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'easymotion/vim-easymotion'
-" Plug 'jls83/vimwiki', {'branch': 'mixed_backlinks'}
-Plug 'vimwiki/vimwiki', {'branch': 'dev'}
+Plug 'jls83/vimwiki', {'branch': 'mixed_backlinks'}
+" Plug 'vimwiki/vimwiki', {'branch': 'dev'}
 Plug 'itchyny/lightline.vim'
 
 " Clojure stuff
