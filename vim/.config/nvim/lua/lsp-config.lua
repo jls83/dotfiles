@@ -37,6 +37,8 @@ for _, lsp in ipairs(servers) do
         config['analysis'] = {
             typeCheckingMode = 'off',
         }
+    elseif lsp == 'clangd' then
+        config['cmd'] = {'/Library/Developer/CommandLineTools/usr/bin/clangd', '--stdio'}
     end
 
     nvim_lsp[lsp].setup(config)
