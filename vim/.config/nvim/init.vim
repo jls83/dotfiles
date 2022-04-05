@@ -105,12 +105,7 @@ Plug 'radenling/vim-dispatch-neovim'
 Plug 'Yggdroot/indentLine'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
-Plug 'preservim/tagbar'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
-Plug 'aklt/plantuml-syntax'
-Plug 'tyru/open-browser.vim'
-Plug 'weirongxu/plantuml-previewer.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'ojroques/vim-oscyank'
 
@@ -120,7 +115,6 @@ Plug 'ojroques/vim-oscyank'
 " Plug 'prettier/vim-prettier'
 "
 " Plug 'file://'.expand('~/other_projects/nvim-panko'), {'branch': 'main'}
-Plug 'bryall/contextprint.nvim', {'branch': 'main'}
 
 " Let's try it out, why not
 Plug 'nvim-lua/plenary.nvim'
