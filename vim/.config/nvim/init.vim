@@ -56,8 +56,8 @@ let g:vim_json_conceal = 0
 " let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 " let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 "
-" Plugins live in a separate VimScript file (for now...)
-source $HOME/.config/nvim/plugins.vim
+" Plugins now live in a separate lua file
+lua require('plugins')
 
 " Color scheme settings {{{1
 colorscheme gruvbox

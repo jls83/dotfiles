@@ -38,7 +38,7 @@ return require('packer').startup(function()
     use {
         'clojure-vim/vim-jack-in',
         ft = {'clojure'},
-        requires = { 'tpope/vim-dispatch', ft = {'clojure'} }
+        requires = { 'tpope/vim-dispatch', ft = {'clojure'} },
         requires = { 'radenling/vim-dispatch-neovim', ft = {'clojure'} }
     }
     use {

@@ -37,10 +37,6 @@ cursor:
 
 background_opacity: 0.9
 
-mouse:
-    hints:
-        modifiers: control
-
 draw_bold_text_with_bright_colors: true
 colors:
     # Copied from iTerm2's Tango Dark scheme
@@ -68,3 +64,26 @@ colors:
     cursor:
         text:       CellBackground
         cursor:     CellForeground
+
+hints:
+    enabled:
+      - regex: "(magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`¬]+"
+        command: open
+        post_processing: true
+        mouse:
+            enabled: true
+            mods: Control
+      # Open Google-specific URLs with ctrl+click
+      - regex: "(go/|g/|b/|cl/|cs/|t/|shortn/|slides/|docs/|yaqs/|google3/|mail/)[^\u0001-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`¬]+"
+        command: /Users/josephsanders/open_go_links.sh
+        post_processing: true
+        mouse:
+            enabled: true
+            mods: Control
+      # Open `who/` entries for the target user
+      - regex: "[a-zA-Z]+@"
+        command: /Users/josephsanders/open_who_links.sh
+        post_processing: true
+        mouse:
+            enabled: true
+            mods: Control
