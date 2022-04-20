@@ -100,7 +100,7 @@ let g:vimwiki_global_ext = 0 " don't use vimwiki syntax for all MD files
 let g:fzf_layout = { 'down': '40%' }
 
 nnoremap <silent> <C-p> :GFiles<CR>
-nnoremap <silent> <leader>b :Buffers<CR>
+
 " No <CR> at the end to allow me to enter in items; add a space at the end to
 " immediately enter text
 nnoremap <leader>f :Rg 
