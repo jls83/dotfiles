@@ -90,8 +90,7 @@ return require('packer').startup(function()
     }
 
     if vim.env.MACHINE_TYPE == 'glinux' then
-        require('google.plugins')
-        table.insert(plugin_arrays, google_plugins)
+        table.insert(plugin_arrays, require('google.plugins'))
     end
 
     for _, plugins in ipairs(plugin_arrays) do
