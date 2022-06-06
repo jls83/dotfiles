@@ -28,9 +28,8 @@ mkdirAndCd() {
     mkdir -p $1 && cd $1
 }
 
-# TODO: How can I pass args to `rg` here?
 ripgrepWithPager() {
-    rg -p $1 | less
+    rg -p $@ | less
 }
 
 diffWithDelta() {
