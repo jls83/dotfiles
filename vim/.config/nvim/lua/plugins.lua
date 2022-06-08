@@ -80,7 +80,9 @@ language_specific_plugins = {
     'cespare/vim-toml',
 }
 
-testing_plugins = {}
+testing_plugins = {
+    { 'nvim-treesitter/nvim-treesitter-context' },
+}
 
 return require('packer').startup(function()
     plugin_arrays = {

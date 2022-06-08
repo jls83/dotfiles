@@ -75,7 +75,7 @@ let g:lightline = {
     \               [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
     \ },
     \ 'component_function': {
-    \     'gitbranch': 'fugitive#head',
+    \     'gitbranch': 'FugitiveHead',
     \ },
     \ }
 " Doesn't make sense to have Vim do modelines if lightline is handling it
