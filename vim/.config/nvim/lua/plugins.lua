@@ -29,10 +29,10 @@ base_plugins = {
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
-    'quangnguyen30192/cmp-nvim-ultisnips',
+    -- 'quangnguyen30192/cmp-nvim-ultisnips',
     'onsails/lspkind-nvim',
     'honza/vim-snippets',
-    'SirVer/ultisnips',
+    --'SirVer/ultisnips',
 
     -- Telescope items
     {
