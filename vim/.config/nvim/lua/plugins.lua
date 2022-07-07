@@ -29,10 +29,10 @@ base_plugins = {
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
-    -- 'quangnguyen30192/cmp-nvim-ultisnips',
+    'quangnguyen30192/cmp-nvim-ultisnips',
     'onsails/lspkind-nvim',
     'honza/vim-snippets',
-    --'SirVer/ultisnips',
+    'SirVer/ultisnips',
 
     -- Telescope items
     {
@@ -81,7 +81,7 @@ language_specific_plugins = {
 }
 
 testing_plugins = {
-    { 'nvim-treesitter/nvim-treesitter-context' },
+    -- { 'nvim-treesitter/nvim-treesitter-context' },
 }
 
 return require('packer').startup(function()
