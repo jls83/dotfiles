@@ -51,7 +51,8 @@ cmp.setup({
     }),
     formatting = {
         format = lspkind.cmp_format({
-            with_text = true, 
+            mode = 'symbol_text',
+            maxwidth = 40,
             menu = {
                 nvim_lsp = "[LSP]",
                 ultisnips = "[UltiSnips]",
