@@ -7,17 +7,13 @@ cmp.setup({
     preselect = cmp.PreselectMode.None,
     snippet = {
         expand = function(args)
-            vim.fn["UltiSnips#Anon"](args.body)
+            require('luasnip').lsp_expand(args.body)
         end,
     },
     mapping = {
         ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
         ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
-        -- NOTE: I'm not sure if I need a `confirm` mapping, but FOR SURE it's not <CR>
-        -- ['<CR>'] = cmp.mapping.confirm({
-        --     behavior = cmp.ConfirmBehavior.Replace,
-        --     select = true,
-        -- }),
+        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
     },
     sources = cmp.config.sources({
         -- NOTE: Order here determines priority in completion menu
@@ -26,7 +22,7 @@ cmp.setup({
             max_item_count = 10,
         },
         {
-            name = 'ultisnips',
+            name = 'luasnip',
             keyword_length = 2,
             max_item_count = 10,
         },
@@ -55,7 +51,7 @@ cmp.setup({
             maxwidth = 40,
             menu = {
                 nvim_lsp = "[LSP]",
-                ultisnips = "[UltiSnips]",
+                luasnip = "[LuaSnip]",
                 buffer = "[Buffer]",
                 path = "[Path]",
             },

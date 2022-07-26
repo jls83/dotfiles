@@ -212,10 +212,6 @@ augroup rainbow_lisp
     autocmd FileType clojure RainbowParentheses
 augroup END
 
-" UltiSnips stuff
-" Add a weird override to not blow away regular tab completion
-let g:UltiSnipsExpandTrigger="<c-s-tab>"
-
 " Some other stuff I'm working on
 
 au FileType plantuml let g:plantuml_previewer#plantuml_jar_path = get(
@@ -235,6 +231,9 @@ lua require('cmp-config')
 lua require('treesitter-config')
 lua require('telescope-config')
 lua require('diagnostic-config')
+lua require('luasnip-config')
+
+" Some machine-specific items here
 if $MACHINE_TYPE == "glinux"
   lua require('google.telescope-codesearch-config')
 endif
