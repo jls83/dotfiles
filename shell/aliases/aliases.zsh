@@ -56,6 +56,10 @@ convertMarkdownToDocx() {
     pandoc -t docx $1 -o $2 --highlight-style tango
 }
 
+vimwikiRipgrepSearch() {
+    rg -l $@ ~/vimwiki | fzf --preview 'bat --color=always {}'
+}
+
 ####################
 # EXPORTED ALIASES #
 ####################
