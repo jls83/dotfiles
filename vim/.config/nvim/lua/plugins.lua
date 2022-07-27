@@ -26,12 +26,12 @@ base_plugins = {
     -- LSP, Completion, and Snippets plugins
     'neovim/nvim-lspconfig',
     'hrsh7th/nvim-cmp',
-    { 'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp' },
-    { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' },
-    { 'hrsh7th/cmp-path', after = 'nvim-cmp' },
-    'onsails/lspkind-nvim',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'saadparwaiz1/cmp_luasnip',
     'L3MON4D3/LuaSnip',
-    { 'saadparwaiz1/cmp_luasnip', after = 'nvim-cmp' },
+    'onsails/lspkind-nvim',
 
     -- Telescope items
     {
