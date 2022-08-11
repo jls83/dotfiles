@@ -50,29 +50,18 @@ base_plugins = {
 
 language_specific_plugins = {
     -- Clojure items
-    {
-        'Olical/conjure',
-        tag = 'v4.9.0',
-        ft = {'clojure'}
-    },
+    { 'Olical/conjure', ft = {'clojure'} },
     {
         'clojure-vim/vim-jack-in',
         ft = {'clojure'},
         requires = { 'tpope/vim-dispatch', ft = {'clojure'} },
         requires = { 'radenling/vim-dispatch-neovim', ft = {'clojure'} }
     },
-    {
-        'guns/vim-sexp',
-        ft = {'clojure'}
-    },
-    {
-        'tpope/vim-sexp-mappings-for-regular-people',
-        ft = {'clojure'}
-    },
-    {
-        'junegunn/rainbow_parentheses.vim',
-        ft = {'clojure'}
-    },
+    { 'guns/vim-sexp', ft = {'clojure'} },
+    { 'tpope/vim-sexp-mappings-for-regular-people', ft = {'clojure'} },
+    -- For whatever reason, this plugin doesn't like to be lazy-loaded. Keep it
+    -- with the other Clojure plugins anyway, though.
+    'junegunn/rainbow_parentheses.vim',
 
     -- Other language-specific items
     'mxw/vim-jsx',
