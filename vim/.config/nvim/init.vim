@@ -42,6 +42,17 @@ let g:markdown_fenced_languages = ['python', 'javascript', 'yaml', 'sh', 'html',
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
+set foldlevelstart=99
+
+" Custom display for text when folding
+function! MyFoldText()
+    let lineCount = (v:foldend - v:foldstart) + 1
+    return getline(v:foldstart) . '...' . trim(getline(v:foldend)) . '    (' . lineCount . ')'
+endfunction
+
+set foldtext=MyFoldText()
+set fillchars=fold:\ 
+
 
 " This is terrifying to me.
 let g:python3_host_prog = '$HOME/.virtualenvs/py3nvim/bin/python'
@@ -237,32 +248,6 @@ lua require('luasnip-config')
 if $MACHINE_TYPE == "glinux"
   lua require('google.telescope-codesearch-config')
 endif
-
-" I honestly don't know.
-function! GetSpaces(foldLevel)
-    if &expandtab == 1
-        " Indenting with spaces
-        let str = repeat(" ", a:foldLevel / (&shiftwidth + 1) - 1)
-        return str
-    elseif &expandtab == 0
-        " Indenting with tabs
-        return repeat(" ", indent(v:foldstart) - (indent(v:foldstart) / &shiftwidth))
-    endif
-endfunction
-
-function! MyFoldText()
-    let startLineText = getline(v:foldstart)
-    let endLineText = trim(getline(v:foldend))
-    let indentation = GetSpaces(foldlevel("."))
-    let spaces = repeat(" ", 200)
-
-    let str = indentation . startLineText . "..." . endLineText . spaces
-
-    return str
-endfunction
-
-" Custom display for text when folding
-set foldtext=MyFoldText()
 
 " TODO: This can cause the folds to freak out or some reason?
 nnoremap zf zcVzCzo
