@@ -260,3 +260,17 @@ if $MACHINE_TYPE == "glinux"
   " Google-specific items here
   source $HOME/.config/nvim/google/my_google.vim
 endif
+
+" TODO: Should this go somewhere else?
+" TODO: Expand for C files as well?
+function! ToggleHeaderAndImplFile() abort
+    let file_extension = expand("%:e")
+    if file_extension == "cc"
+        edit %<.h
+    elseif file_extension == "h"
+        edit %<.cc
+    else
+        echom "File ext not supported"
+    endif
+endfunction
+nnoremap <silent><leader>gh :call ToggleHeaderAndImplFile()<cr>
