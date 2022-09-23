@@ -60,6 +60,11 @@ vimwikiRipgrepSearch() {
     rg -l $@ ~/vimwiki | fzf --preview 'bat --color=always {}'
 }
 
+screenSessionFzf() {
+    SELECTED_SESSION=$(screen -ls | awk 'NR > 2 {print last} {last=$0}' | fzf | awk '{print $1;}')
+    screen -r $SELECTED_SESSION
+}
+
 ####################
 # EXPORTED ALIASES #
 ####################
