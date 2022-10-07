@@ -1,6 +1,7 @@
 local luasnip = require('luasnip')
 local snippet = luasnip.s
 local t = luasnip.text_node
+local fmt = require("luasnip.extras.fmt").fmt
 
 luasnip.config.set_config({
     history = true,
@@ -8,7 +9,7 @@ luasnip.config.set_config({
 })
 
 luasnip.add_snippets("all", {
-    snippet("vwdate", t(os.date("%Y-%m-%d (%A)")));
+    snippet("vwhead", fmt("# {}\n\n## Today's Activity\n* ", { os.date("%Y-%m-%d (%A)") }));
 })
 
 -- Keymaps stolen from TJ DeVries
