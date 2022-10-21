@@ -1,4 +1,21 @@
 require('nvim-treesitter.configs').setup({
+    ensure_installed = {
+        'clojure',
+        'cpp',
+        'dart',
+        'html',
+        'javascript',
+        'json',
+        'lua',
+        'markdown',
+        -- 'proto',
+        'python',
+        'rust',
+        'scss',
+        -- 'sql',
+        'typescript',
+        'vim',
+    },
     indent = { enable = false },
     highlight = { enable = true },
 })

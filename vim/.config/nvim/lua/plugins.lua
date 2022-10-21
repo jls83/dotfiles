@@ -42,7 +42,12 @@ base_plugins = {
     'kyazdani42/nvim-web-devicons',
 
     -- Other items
-    { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
+    {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+        -- HTML highlighting is broken in master, this commit seems to work
+        commit = 'd3833c037042c7ac31f54d297578653257772a6d',
+    },
     'ojroques/vim-oscyank',
     'easymotion/vim-easymotion',
 
