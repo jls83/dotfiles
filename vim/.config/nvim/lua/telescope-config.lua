@@ -2,6 +2,9 @@
 -- load_extension, somewhere after setup function:
 require('telescope').load_extension('fzf')
 
+vim.api.nvim_set_hl(0, "TelescopeSelection", {link = "CursorLine"})
+vim.api.nvim_set_hl(0, "TelescopeSelectionCaret", {link = "TelescopeSelection"})
+
 function my_buffer_window()
     require('telescope.builtin')
     .buffers({
