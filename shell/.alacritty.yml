@@ -12,9 +12,9 @@ font:
         family: Inconsolata Oblique
         style: Oblique
 
-    # bold_italic:
-    #     family: Menlo
-    #     style: Bold-Italic
+    bold_italic:
+        family: InconsolataLGC Nerd Font Mono
+        style: BoldItalic
 
     offset:
         x: 0
