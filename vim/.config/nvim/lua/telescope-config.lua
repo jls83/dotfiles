@@ -18,7 +18,8 @@ end
 function my_lsp_references()
     require('telescope.builtin')
     .lsp_references({
-        layout_strategy = 'vertical',
+        layout_strategy = 'horizontal',
+        show_line=false,
     })
 end
 
