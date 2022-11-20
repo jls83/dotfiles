@@ -45,8 +45,8 @@ base_plugins = {
     {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
-        -- HTML highlighting is broken in master, this commit seems to work
-        commit = 'd3833c037042c7ac31f54d297578653257772a6d',
+        -- Weird issues with the TSError junk; remove after upgrading neovim to v0.8
+        commit = '4cccb6f494eb255b32a290d37c35ca12584c74d0',
     },
     'ojroques/vim-oscyank',
     'easymotion/vim-easymotion',
