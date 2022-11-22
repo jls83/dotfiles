@@ -1,6 +1,7 @@
 local luasnip = require('luasnip')
 local snippet = luasnip.s
-local t = luasnip.text_node
+local text = luasnip.text_node
+local insert = luasnip.insert_node
 local fmt = require("luasnip.extras.fmt").fmt
 
 luasnip.config.set_config({
@@ -8,18 +9,31 @@ luasnip.config.set_config({
     updateevents = "TextChanged,TextChangedI"
 })
 
+local vwhead = snippet("vwhead", fmt("# {}\n\n## Today's Activity\n* ", { os.date("%Y-%m-%d (%A)") }))
+
+local review_snip = snippet(
+    "creview",
+    {
+        text("Reviewed cl/"),
+        insert(1), -- CL number
+        text(" for "),
+        insert(2), -- LDAP
+        text("@"),
+    })
+
 luasnip.add_snippets("all", {
-    snippet("vwhead", fmt("# {}\n\n## Today's Activity\n* ", { os.date("%Y-%m-%d (%A)") }));
+    vwhead,
+    review_snip,
 })
 
 -- Keymaps stolen from TJ DeVries
-vim.keymap.set({ "i", "s" }, "<c-k>", function()
+vim.keymap.set({ "i", "s" }, "<c-j>", function()
   if luasnip.expand_or_jumpable() then
     luasnip.expand_or_jump()
   end
 end, { silent = true })
 
-vim.keymap.set({ "i", "s" }, "<c-j>", function()
+vim.keymap.set({ "i", "s" }, "<c-k>", function()
   if luasnip.jumpable(-1) then
     luasnip.jump(-1)
   end
