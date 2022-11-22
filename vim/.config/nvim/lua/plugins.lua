@@ -48,7 +48,7 @@ base_plugins = {
         -- Weird issues with the TSError junk; remove after upgrading neovim to v0.8
         commit = '4cccb6f494eb255b32a290d37c35ca12584c74d0',
     },
-    'ojroques/vim-oscyank',
+    { 'jls83/vim-oscyank', branch = 'fix_visual_range' },
     'easymotion/vim-easymotion',
 
 }
