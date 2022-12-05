@@ -27,4 +27,12 @@ require('nvim-treesitter.configs').setup({
             node_decremental = "grm",
         },
     },
+    -- textobjects = {
+    --     enable = true,
+    --     set_jumps = true,
+    --     goto_next_start = {
+    --         ["]m"] = "@function.outer",
+    --         ["]]"] = { query = "@class.outer", desc = "Next class start" },
+    --     }
+    -- },
 })
