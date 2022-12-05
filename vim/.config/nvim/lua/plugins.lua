@@ -76,6 +76,7 @@ language_specific_plugins = {
 
 testing_plugins = {
     -- { 'nvim-treesitter/nvim-treesitter-context' },
+    'hrsh7th/cmp-nvim-lua',
 }
 
 return require('packer').startup(function()

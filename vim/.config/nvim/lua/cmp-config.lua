@@ -44,6 +44,10 @@ cmp.setup({
             name = 'path',
             max_item_count = 10,
         },
+        {
+            name = 'nvim_lua',
+            max_item_count = 10,
+        },
     }),
     formatting = {
         format = lspkind.cmp_format({
@@ -54,6 +58,7 @@ cmp.setup({
                 luasnip = "[LuaSnip]",
                 buffer = "[Buffer]",
                 path = "[Path]",
+                nvim_lua = "[NeoVim]",
             },
         }),
     },
