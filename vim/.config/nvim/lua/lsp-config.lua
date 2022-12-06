@@ -6,7 +6,6 @@ local on_attach = function(_, bufnr)
 
     local opts = { noremap=true, silent=true }
 
-    -- buf_set_keymap('n', '<leader>gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
     buf_set_keymap('n', '<leader>gd', '<Cmd>lua require("telescope.builtin").lsp_definitions()<CR>', opts)
     buf_set_keymap('n', '<leader>gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
     buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
@@ -14,11 +13,15 @@ local on_attach = function(_, bufnr)
 end
 
 local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd'}
--- local servers = {'jedi_language_server', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd'}
 
--- TODO: Will need to merge this with the server-side `capabilities` I think
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+local base_capabilities = vim.lsp.protocol.make_client_capabilities()
+local cmp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+local capabilities = vim.tbl_deep_extend(
+    'force',
+    base_capabilities,
+    cmp_capabilities
+)
 
 for _, lsp in ipairs(servers) do
     local config = {
@@ -36,7 +39,7 @@ for _, lsp in ipairs(servers) do
             typeCheckingMode = 'off',
         }
     elseif lsp == 'clangd' then
-        config['cmd'] = {'/Library/Developer/CommandLineTools/usr/bin/clangd', '--stdio'}
+        config['cmd'] = {'/usr/local/opt/llvm/bin/clangd', '--stdio'}
     end
 
     nvim_lsp[lsp].setup(config)
