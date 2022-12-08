@@ -1,6 +1,6 @@
 local telescope = require('telescope')
 local builtin = require('telescope.builtin')
-require('entry_display_thing')
+require('entry-display-creator')
 
 telescope.setup({
     pickers = {
