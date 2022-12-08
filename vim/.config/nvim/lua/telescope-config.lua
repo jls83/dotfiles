@@ -1,5 +1,6 @@
 local telescope = require('telescope')
 local builtin = require('telescope.builtin')
+require('entry_display_thing')
 
 telescope.setup({
     pickers = {
@@ -27,6 +28,7 @@ function my_lsp_references()
     .lsp_references({
         layout_strategy = 'horizontal',
         show_line=false,
+        entry_maker = makeEntryThing({}),
     })
 end
 
