@@ -4,3 +4,4 @@ fzfGitViewAndCdAll() {
     fzfDirectorySwitcher $DIRS
 }
 alias repos=fzfGitViewAndCdAll
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
