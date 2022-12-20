@@ -28,6 +28,8 @@ set listchars=tab:▸\ ,eol:¬
 
 set matchpairs+=<:>
 
+set mouse=
+
 syntax on
 syntax enable
 filetype plugin indent on
