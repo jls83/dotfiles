@@ -20,7 +20,7 @@ base_plugins = {
     'tpope/vim-rhubarb',
 
     -- fzf plugins
-    { 'junegunn/fzf', run = function() vim.fn["fzf#install"]() end, commit = '3f75a83' },
+    { 'junegunn/fzf', run = function() vim.fn["fzf#install"]() end },
     'junegunn/fzf.vim',
 
     -- LSP, Completion, and Snippets plugins
@@ -45,8 +45,6 @@ base_plugins = {
     {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
-        -- Weird issues with the TSError junk; remove after upgrading neovim to v0.8
-        commit = '4cccb6f494eb255b32a290d37c35ca12584c74d0',
     },
     'nvim-treesitter/nvim-treesitter-textobjects',
     'nvim-treesitter/playground',
@@ -76,7 +74,6 @@ language_specific_plugins = {
 }
 
 testing_plugins = {
-    -- { 'nvim-treesitter/nvim-treesitter-context' },
     'hrsh7th/cmp-nvim-lua',
     'j-hui/fidget.nvim',
     'SmiteshP/nvim-navic',
