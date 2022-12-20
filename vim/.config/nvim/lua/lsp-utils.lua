@@ -9,22 +9,20 @@ require('fidget').setup({
     },
 })
 
-
 M.on_attach = function(client, bufnr)
-    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-    local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+    local opts = { silent = true, buffer = bufnr }
 
-    local opts = { noremap=true, silent=true }
-
-    buf_set_keymap('n', '<leader>gd', '<Cmd>lua require("telescope.builtin").lsp_definitions()<CR>', opts)
-    buf_set_keymap('n', '<leader>gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-    buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-    buf_set_keymap('n', '<C-k>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+    vim.keymap.set('n', '<leader>gd', function()
+        return require('telescope.builtin').lsp_definitions()
+    end, opts)
+    vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, opts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
 
     if client.server_capabilities.documentSymbolProvider then
         navic.attach(client, bufnr)
     else
-        print("Not possible here")
+        print("Can't use navic here")
     end
 end
 
