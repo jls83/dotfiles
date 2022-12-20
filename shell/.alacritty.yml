@@ -73,7 +73,7 @@ hints:
             enabled: true
             mods: Control
       # Open Google-specific URLs with ctrl+click
-      - regex: "(go/|g/|b/|cl/|cs/|t/|shortn/|slides/|docs/|yaqs/|google3/|mail/|scripts2/|gpaste/|meme/)[^\u0001-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`¬]+"
+      - regex: "(go/|g/|b/|cl/|cs/|t/|shortn/|slides/|docs/|yaqs/|google3/|mail/|scripts2/|gpaste/|meme/|omg/)[^\u0001-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`¬]+"
         command: /Users/josephsanders/open_go_links.sh
         post_processing: true
         mouse:
