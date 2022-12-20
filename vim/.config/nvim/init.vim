@@ -70,13 +70,6 @@ let g:vim_json_conceal = 0
 " Plugins now live in a separate lua file
 lua require('plugins')
 
-" Color scheme settings {{{1
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
-set background=dark
-hi Normal guibg=NONE ctermbg=NONE
-" }}}1
-
 " VimWiki settings {{{1
 " Have to do this as a hack to allow for the double bracket link syntax
 autocmd VimEnter * let g:vimwiki_syntaxlocal_vars['markdown']['Link1'] = g:vimwiki_syntaxlocal_vars['default']['Link1']
@@ -221,12 +214,14 @@ let g:diagnostic_enable_virtual_text = 1
 set completeopt=menuone,noselect
 set shortmess+=c
 
+lua require('colorscheme-config')
 lua require('lsp-config')
 lua require('cmp-config')
 lua require('treesitter-config')
 lua require('telescope-config')
 lua require('diagnostic-config')
 lua require('luasnip-config')
+lua require('lualine-config')
 
 " Some machine-specific items here
 if $MACHINE_TYPE == "glinux"
@@ -258,23 +253,3 @@ function! ToggleHeaderAndImplFile() abort
     endif
 endfunction
 nnoremap <silent><leader>gh :call ToggleHeaderAndImplFile()<cr>
-
-" TODO: break this out into a separate file
-lua << EOF
-vim.opt.showmode = false
-local navic = require('nvim-navic')
-require('lualine').setup({
-    options = {
-        theme = 'gruvbox',
-        component_separators = { left = '', right = '' },
-        section_separators = { left = '', right = '' },
-    },
-    sections = {
-        lualine_c = {
-            'filename',
-            { navic.get_location, cond = navic.is_available },
-        },
-        lualine_y = {},
-    },
-})
-EOF

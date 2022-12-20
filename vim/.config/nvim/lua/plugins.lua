@@ -2,8 +2,8 @@ base_plugins = {
     'wbthomason/packer.nvim',
 
     -- Appearance plugins
-    'gruvbox-community/gruvbox',
-    'itchyny/lightline.vim',
+    'ellisonleao/gruvbox.nvim',
+    'nvim-lualine/lualine.nvim',
 
     -- Editing plugins
     'tpope/vim-surround',
@@ -77,7 +77,6 @@ testing_plugins = {
     'hrsh7th/cmp-nvim-lua',
     'j-hui/fidget.nvim',
     'SmiteshP/nvim-navic',
-    'nvim-lualine/lualine.nvim',
 }
 
 return require('packer').startup(function()
