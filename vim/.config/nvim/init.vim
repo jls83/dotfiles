@@ -218,7 +218,6 @@ set completeopt=menuone,noselect
 set shortmess+=c
 
 lua require('colorscheme-config')
-lua require('lsp-config')
 lua require('cmp-config')
 lua require('treesitter-config')
 lua require('telescope-config')
