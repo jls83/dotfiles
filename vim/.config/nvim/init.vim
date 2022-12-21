@@ -225,6 +225,9 @@ lua require('diagnostic-config')
 lua require('luasnip-config')
 lua require('lualine-config')
 
+" TODO: Not sure why?
+lua require('mason').setup()
+
 " Some machine-specific items here
 if $MACHINE_TYPE == "glinux"
   lua require('google.telescope-codesearch-config')
