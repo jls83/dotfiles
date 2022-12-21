@@ -2,7 +2,12 @@ local nvim_lsp = require('lspconfig')
 local configs = require('lspconfig.configs')
 local lsp_utils = require('lsp-utils')
 
-local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd'}
+local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd', 'sumneko_lua'}
+
+require('mason').setup()
+require('mason-lspconfig').setup({
+    ensure_installed = servers,
+})
 
 for _, lsp in ipairs(servers) do
     local config = {
@@ -12,10 +17,11 @@ for _, lsp in ipairs(servers) do
         },
         capabilities = lsp_utils.capabilities,
     }
-    if lsp == 'pyright' then
-        config['cmd'] = {'/usr/local/bin/pyright-langserver', '--stdio'}
-    elseif lsp == 'tsserver' then
-        config['cmd'] = {'/usr/local/bin/typescript-language-server', '--stdio'}
+    -- if lsp == 'pyright' then
+    --     config['cmd'] = {'/usr/local/bin/pyright-langserver', '--stdio'}
+    -- elseif lsp == 'tsserver' then
+    if lsp == 'tsserver' then
+        -- config['cmd'] = {'/usr/local/bin/typescript-language-server', '--stdio'}
         config['analysis'] = {
             typeCheckingMode = 'off',
         }

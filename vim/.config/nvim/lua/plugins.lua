@@ -36,7 +36,7 @@ base_plugins = {
     -- Telescope items
     {
       'nvim-telescope/telescope.nvim',
-      requires = { {'nvim-lua/plenary.nvim'} }
+      requires = { 'nvim-lua/plenary.nvim' }
     },
     { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' },
     'kyazdani42/nvim-web-devicons',
@@ -77,6 +77,11 @@ testing_plugins = {
     'hrsh7th/cmp-nvim-lua',
     'j-hui/fidget.nvim',
     'SmiteshP/nvim-navic',
+    'williamboman/mason.nvim',
+    {
+        'williamboman/mason-lspconfig.nvim',
+        requires = { 'williamboman/mason.nvim' },
+    },
 }
 
 return require('packer').startup(function()
