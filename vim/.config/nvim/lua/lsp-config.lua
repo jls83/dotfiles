@@ -4,10 +4,7 @@ local lsp_utils = require('lsp-utils')
 
 local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd', 'sumneko_lua'}
 
-require('mason').setup()
-require('mason-lspconfig').setup({
-    ensure_installed = servers,
-})
+lsp_utils.mason_setup(servers)
 
 for _, lsp in ipairs(servers) do
     local config = {

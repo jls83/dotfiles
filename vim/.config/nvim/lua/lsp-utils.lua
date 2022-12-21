@@ -36,4 +36,11 @@ M.capabilities = vim.tbl_deep_extend(
     cmp_capabilities
 )
 
+M.mason_setup = function(servers)
+    require('mason').setup()
+    require('mason-lspconfig').setup({
+        ensure_installed = servers,
+    })
+end
+
 return M
