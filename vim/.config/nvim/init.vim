@@ -231,6 +231,9 @@ lua require('mason').setup()
 " Some machine-specific items here
 if $MACHINE_TYPE == "glinux"
   lua require('google.telescope-codesearch-config')
+  lua require('google.lsp-config')
+else
+  lua require('lsp-config')
 endif
 
 " TODO: This can cause the folds to freak out or some reason?
