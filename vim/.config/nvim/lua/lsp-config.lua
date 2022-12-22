@@ -1,5 +1,4 @@
 local nvim_lsp = require('lspconfig')
-local configs = require('lspconfig.configs')
 local lsp_utils = require('lsp-utils')
 
 local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd', 'sumneko_lua'}
@@ -21,6 +20,15 @@ for _, lsp in ipairs(servers) do
         -- config['cmd'] = {'/usr/local/bin/typescript-language-server', '--stdio'}
         config['analysis'] = {
             typeCheckingMode = 'off',
+        }
+    elseif lsp == 'sumneko_lua' then
+        config['settings'] = {
+            Lua = {
+                diagnostics = {
+                    -- Get the language server to recognize the `vim` global
+                    globals = {'vim'},
+                },
+            },
         }
     end
 
