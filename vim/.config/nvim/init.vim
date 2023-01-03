@@ -40,9 +40,6 @@ autocmd FileType *.html,*.ps1,*.sql,*.yml,*.cc setlocal tabstop=2 shiftwidth=2 s
 " FileType-specific comment string info
 autocmd FileType c,cpp setlocal commentstring=//\ %s
 
-let g:markdown_fenced_languages = ['python', 'javascript', 'yaml', 'sh', 'html',
-    \ 'go', 'clojure', 'typescript', 'proto', 'sql', 'cpp', 'dart']
-
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 set foldlevelstart=99
