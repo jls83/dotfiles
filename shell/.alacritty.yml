@@ -28,6 +28,7 @@ window:
     padding:
         x: 10
         y: 10
+    dynamic_padding: true
     decorations: none
     opacity: 0.9
 
