@@ -26,7 +26,7 @@ telescope.setup({
 -- load_extension, somewhere after setup function:
 telescope.load_extension('fzf')
 
-function my_lsp_references()
+local function my_lsp_references()
     require('telescope.builtin')
     .lsp_references({
         layout_strategy = 'horizontal',
@@ -35,5 +35,7 @@ function my_lsp_references()
     })
 end
 
-vim.keymap.set('n', '<leader>b', builtin.buffers, {noremap = true, silent = true})
-vim.keymap.set('n', '<leader>u', my_lsp_references, {noremap = true, silent = true})
+local map_opts = { silent = true }
+
+vim.keymap.set('n', '<leader>b', builtin.buffers, map_opts)
+vim.keymap.set('n', '<leader>u', my_lsp_references, map_opts)
