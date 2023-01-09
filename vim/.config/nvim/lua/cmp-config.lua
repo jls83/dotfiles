@@ -53,6 +53,7 @@ cmp.setup({
         format = lspkind.cmp_format({
             mode = 'symbol_text',
             maxwidth = 40,
+            ellipsis_char = '...',
             menu = {
                 nvim_lsp = "[LSP]",
                 luasnip = "[LuaSnip]",
