@@ -43,41 +43,19 @@
     virtualenv --python=$HOME/.pyenv/versions/3.7.11/bin/python3 ~/.virtualenvs/py3nvim
     workon py3nvim && pip install pynvim
     ```
-4. Install `vim-plug`:
-    ```sh
-    # Copied from the vim-plug README: https://github.com/junegunn/vim-plug/blob/master/README.md#unix-linux
-    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-    ```
-5. Install all NeoVim plugins
-    ```sh
-    nvim +PlugInstall +qall
-    ```
-6. Install Node provider
+4. Install Node provider
     ```sh
     npm install -g neovim
     ```
+5. Install `packer.nvim`
+    ```sh
+    # Copied from the packer.nvim README: https://github.com/wbthomason/packer.nvim#quickstart
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+    ```
+6. Install all NeoVim plugins
+    ```sh
+    nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+    ```
 
 ### Language Server Setup
-__NOTE:__ This may differ based on what you need for each machine. This is the current setup for the personal MacBook.
-
-```sh
-# Pyright
-npm install -g pyright
-
-# Typescript Language Server
-npm install -g typescript-language-server
-
-# Clojure LSP; We keep this separate from the `Brewfile`
-brew install clojure-lsp/brew/clojure-lsp-native
-
-# Rust Analyzer; note the platform type in the file name
-PLATFORM_SUFFIX=x86_64-apple-darwin
-curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-$PLATFORM_SUFFIX.gz | \
-gunzip -c - > ~/.local/bin/rust-analyzer && \
-chmod +x ~/.local/bin/rust-analyzer
-
-# clangd; comes along with LLVM in homebrew, keep this separate as well
-brew install llvm
-```
-
+This used to be manual, but mason.nvim takes care of all of this!
