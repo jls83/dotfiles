@@ -49,8 +49,6 @@ base_plugins = {
     'nvim-treesitter/nvim-treesitter-textobjects',
     'nvim-treesitter/playground',
     { 'jls83/vim-oscyank', branch = 'fix_visual_range' },
-    'easymotion/vim-easymotion',
-
 }
 
 language_specific_plugins = {
@@ -83,6 +81,10 @@ testing_plugins = {
         requires = { 'williamboman/mason.nvim' },
     },
     'simrat39/symbols-outline.nvim',
+    {
+        'phaazon/hop.nvim',
+        branch = 'v2',
+    },
 }
 
 return require('packer').startup(function()
