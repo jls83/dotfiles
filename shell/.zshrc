@@ -35,7 +35,7 @@ case `uname` in
         # I set a $MACHINE_TYPE env variable in the local bash_profile files
         case "$MACHINE_TYPE" in
         "glinux")
-            source ~/glinux.zsh
+            source ~/env_specific_items/glinux.zsh
         ;;
         "banana")
         source ~/env_specific_items/thinkpad.zsh
