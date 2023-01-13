@@ -82,6 +82,7 @@ testing_plugins = {
         'williamboman/mason-lspconfig.nvim',
         requires = { 'williamboman/mason.nvim' },
     },
+    'simrat39/symbols-outline.nvim',
 }
 
 return require('packer').startup(function()

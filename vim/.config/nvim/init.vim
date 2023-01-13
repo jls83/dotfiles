@@ -221,6 +221,8 @@ lua require('telescope-config')
 lua require('diagnostic-config')
 lua require('luasnip-config')
 lua require('lualine-config')
+lua require('hop-config')
+lua require('symbols-outline-config')
 
 " TODO: Not sure why?
 lua require('mason').setup()
