@@ -9,12 +9,12 @@ font:
         style: Bold
 
     italic:
-        family: Inconsolata Oblique
-        style: Oblique
+        family: Inconsolata Nerd Font Mono
+        style: Regular Oblique
 
     bold_italic:
-        family: InconsolataLGC Nerd Font Mono
-        style: BoldItalic
+        family: Inconsolata Nerd Font Mono
+        style: Bold Oblique
 
     offset:
         x: 0
