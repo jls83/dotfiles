@@ -43,7 +43,8 @@ base_plugins = {
 
     -- Other items
     {
-        'nvim-treesitter/nvim-treesitter',
+        'jls83/nvim-treesitter',
+        branch = 'vimwiki_compat',
         run = ':TSUpdate',
     },
     'nvim-treesitter/nvim-treesitter-textobjects',
