@@ -21,7 +21,7 @@ set relativenumber
 set number
 set showcmd
 set cursorline
-set signcolumn=yes
+set signcolumn
 
 set list
 set listchars=tab:▸\ ,eol:¬
