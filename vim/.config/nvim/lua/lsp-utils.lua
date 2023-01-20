@@ -2,13 +2,6 @@ M = {}
 
 local navic = require('nvim-navic')
 
--- NOTE: This may not be the best place...
-require('fidget').setup({
-    text = {
-        spinner = "dots",
-    },
-})
-
 M.on_attach = function(client, bufnr)
     local opts = { silent = true, buffer = bufnr }
 
@@ -25,7 +18,6 @@ M.on_attach = function(client, bufnr)
         print("Can't use navic here")
     end
 end
-
 
 local base_capabilities = vim.lsp.protocol.make_client_capabilities()
 local cmp_capabilities = require('cmp_nvim_lsp').default_capabilities()

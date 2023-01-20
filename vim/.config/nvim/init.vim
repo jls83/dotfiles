@@ -53,7 +53,6 @@ endfunction
 set foldtext=MyFoldText()
 set fillchars=fold:\ 
 
-
 " This is terrifying to me.
 let g:python3_host_prog = '$HOME/.virtualenvs/py3nvim/bin/python'
 let g:node_host_prog = '/usr/local/bin/neovim-node-host'
@@ -208,31 +207,14 @@ au FileType plantuml let g:plantuml_previewer#plantuml_jar_path = get(
 \  0
 \)
 
-" Native LSP stuff here
-let g:diagnostic_enable_virtual_text = 1
-
 set completeopt=menuone,noselect
 set shortmess+=c
 
-lua require('colorscheme-config')
-lua require('cmp-config')
-lua require('treesitter-config')
-lua require('telescope-config')
-lua require('diagnostic-config')
-lua require('luasnip-config')
-lua require('lualine-config')
-lua require('hop-config')
-lua require('symbols-outline-config')
-
-" TODO: Not sure why?
-lua require('mason').setup()
-
 " Some machine-specific items here
 if $MACHINE_TYPE == "glinux"
+  source $HOME/.config/nvim/google/my_google.vim
   lua require('google.telescope-codesearch-config')
   lua require('google.lsp-config')
-else
-  lua require('lsp-config')
 endif
 
 " TODO: This can cause the folds to freak out or some reason?
@@ -241,11 +223,6 @@ nnoremap zf zcVzCzo
 " indentLine Stuff
 let g:indentLine_setColors = 1
 let g:indentLine_enabled = 1
-
-if $MACHINE_TYPE == "glinux"
-  " Google-specific items here
-  source $HOME/.config/nvim/google/my_google.vim
-endif
 
 " TODO: Should this go somewhere else?
 " TODO: Expand for C files as well?
