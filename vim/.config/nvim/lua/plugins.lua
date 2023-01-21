@@ -1,4 +1,4 @@
-base_plugins = {
+local base_plugins = {
     'wbthomason/packer.nvim',
 
     -- Appearance plugins
@@ -52,14 +52,16 @@ base_plugins = {
     { 'jls83/vim-oscyank', branch = 'fix_visual_range' },
 }
 
-language_specific_plugins = {
+local language_specific_plugins = {
     -- Clojure items
     { 'Olical/conjure', ft = {'clojure'} },
     {
         'clojure-vim/vim-jack-in',
         ft = {'clojure'},
-        requires = { 'tpope/vim-dispatch', ft = {'clojure'} },
-        requires = { 'radenling/vim-dispatch-neovim', ft = {'clojure'} }
+        requires = {
+            'tpope/vim-dispatch',
+            'radenling/vim-dispatch-neovim',
+        },
     },
     { 'guns/vim-sexp', ft = {'clojure'} },
     { 'tpope/vim-sexp-mappings-for-regular-people', ft = {'clojure'} },
@@ -72,7 +74,7 @@ language_specific_plugins = {
     'cespare/vim-toml',
 }
 
-testing_plugins = {
+local testing_plugins = {
     'hrsh7th/cmp-nvim-lua',
     'j-hui/fidget.nvim',
     'SmiteshP/nvim-navic',
@@ -89,7 +91,7 @@ testing_plugins = {
 }
 
 return require('packer').startup(function()
-    plugin_arrays = {
+    local plugin_arrays = {
         base_plugins,
         language_specific_plugins,
         testing_plugins,
