@@ -54,7 +54,7 @@ local base_plugins = {
 
 local language_specific_plugins = {
     -- Clojure items
-    { 'Olical/conjure', ft = {'clojure'} },
+    { 'Olical/conjure', ft = {'clojure', 'lua'} },
     {
         'clojure-vim/vim-jack-in',
         ft = {'clojure'},

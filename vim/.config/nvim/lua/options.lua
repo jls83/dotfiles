@@ -33,3 +33,6 @@ vim.g.vim_json_conceal = 0
 
 vim.opt.completeopt = {"menuone", "noselect"}
 vim.opt.shortmess:append("c")
+
+-- TODO: explain and/or move to a plugin file
+vim.g['conjure#extract#tree_sitter#enabled'] = true
