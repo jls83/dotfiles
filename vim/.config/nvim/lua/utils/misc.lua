@@ -5,9 +5,9 @@ M.foldText = function()
   local start_line = vim.fn.getline(vim.v.foldstart)
   local end_line = vim.fn.getline(vim.v.foldend)
 
-
   return string.format(
-    "%s...%s...(%d)",
+    "%s %s...(%d)",
+    vim.v.folddashes,
     start_line,
     end_line,
     line_count

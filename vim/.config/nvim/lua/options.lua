@@ -11,9 +11,6 @@ vim.opt.showcmd = true
 vim.opt.cursorline = true
 vim.opt.signcolumn = 'yes'
 
-vim.opt.foldtext = 'v:require("utils.misc").foldText()'
-vim.opt.fillchars= 'fold: '
-
 vim.opt.list = true
 vim.opt.listchars:append("tab:▸ ")
 vim.opt.listchars:append("eol:¬")
@@ -25,6 +22,8 @@ vim.opt.mouse = ""
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevelstart = 99
+vim.opt.foldtext = 'v:lua.require("utils.misc").foldText()'
+vim.opt.fillchars= 'fold: '
 
 vim.g.python3_host_prog = '$HOME/.virtualenvs/py3nvim/bin/python'
 vim.g.node_host_prog = '/usr/local/bin/neovim-node-host'
