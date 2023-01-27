@@ -88,6 +88,10 @@ local testing_plugins = {
         'phaazon/hop.nvim',
         branch = 'v2',
     },
+    {
+        'nvim-telescope/telescope-frecency.nvim',
+        requires = { 'kkharji/sqlite.lua' },
+    },
 }
 
 return require('packer').startup(function()
