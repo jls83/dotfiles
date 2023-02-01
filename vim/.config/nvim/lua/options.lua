@@ -36,3 +36,4 @@ vim.opt.shortmess:append("c")
 
 -- TODO: explain and/or move to a plugin file
 vim.g['conjure#extract#tree_sitter#enabled'] = true
+vim.g['netrw_bufsettings'] ='noma nomod nobl nowrap ro nu rnu'
