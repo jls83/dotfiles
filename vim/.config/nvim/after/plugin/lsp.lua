@@ -4,7 +4,7 @@ if vim.env.MACHINE_TYPE == 'glinux' then
 end
 
 local nvim_lsp = require('lspconfig')
-local lsp_utils = require('lsp-utils')
+local lsp_utils = require('utils.lsp')
 
 local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd', 'sumneko_lua'}
 
