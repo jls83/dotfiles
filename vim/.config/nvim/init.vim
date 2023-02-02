@@ -111,11 +111,13 @@ augroup END
 set completeopt=menuone,noselect
 set shortmess+=c
 
+lua require('plugins')
+
 " Some machine-specific items here
 if $MACHINE_TYPE == "glinux"
   source $HOME/.config/nvim/google/my_google.vim
-  lua require('google.telescope-codesearch-config')
-  lua require('google.lsp-config')
+  " lua require('google.telescope-codesearch-config')
+  " lua require('google.lsp-config')
 endif
 
 " TODO: This can cause the folds to freak out or some reason?

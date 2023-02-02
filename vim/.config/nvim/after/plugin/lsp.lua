@@ -1,3 +1,8 @@
+-- TODO: Move this to `master`; rethink
+if vim.env.MACHINE_TYPE == 'glinux' then
+    return
+end
+
 local nvim_lsp = require('lspconfig')
 local lsp_utils = require('lsp-utils')
 
