@@ -1,6 +1,6 @@
 local telescope = require('telescope')
 local builtin = require('telescope.builtin')
-require('entry-display-creator')
+require('utils.entry-display-creator')
 
 telescope.setup({
     defaults = {
