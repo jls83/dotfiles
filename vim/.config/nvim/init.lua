@@ -5,7 +5,7 @@ require('plugins')
 local Keymap = require("utils.keymap")
 
 if vim.env.MACHINE_TYPE == 'glinux' then
-  vim.cmd('source', '$HOME/.config/nvim/google/my_google.vim')
+  vim.cmd('source $HOME/.config/nvim/google/my_google.vim')
 end
 
 local numbertoggle_group = vim.api.nvim_create_augroup("numbertoggle", {
