@@ -88,6 +88,15 @@ local testing_plugins = {
         'phaazon/hop.nvim',
         branch = 'v2',
     },
+    {
+        'glepnir/lspsaga.nvim',
+        branch = 'main',
+        -- TODO: Move!
+        config = function()
+          require('lspsaga').setup({})
+        end,
+        requires = { 'kyazdani42/nvim-web-devicons' },
+    }
 }
 
 return require('packer').startup(function()
