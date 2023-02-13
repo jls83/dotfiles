@@ -10,6 +10,7 @@ local base_plugins = {
     'tpope/vim-commentary',
     'tpope/vim-repeat',
     'tpope/vim-vinegar',
+    { 'phaazon/hop.nvim', branch = 'v2' },
 
     -- Vimwiki items
     { 'jls83/vimwiki', branch = 'mixed_backlinks' },
@@ -29,9 +30,17 @@ local base_plugins = {
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
+    'hrsh7th/cmp-nvim-lua',
     'saadparwaiz1/cmp_luasnip',
     'L3MON4D3/LuaSnip',
     'onsails/lspkind-nvim',
+    'j-hui/fidget.nvim',
+    'SmiteshP/nvim-navic',
+    'williamboman/mason.nvim',
+    {
+        'williamboman/mason-lspconfig.nvim',
+        requires = { 'williamboman/mason.nvim' },
+    },
 
     -- Telescope items
     {
@@ -75,19 +84,6 @@ local language_specific_plugins = {
 }
 
 local testing_plugins = {
-    'hrsh7th/cmp-nvim-lua',
-    'j-hui/fidget.nvim',
-    'SmiteshP/nvim-navic',
-    'williamboman/mason.nvim',
-    {
-        'williamboman/mason-lspconfig.nvim',
-        requires = { 'williamboman/mason.nvim' },
-    },
-    'simrat39/symbols-outline.nvim',
-    {
-        'phaazon/hop.nvim',
-        branch = 'v2',
-    },
     {
         'glepnir/lspsaga.nvim',
         branch = 'main',
