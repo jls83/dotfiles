@@ -39,3 +39,72 @@ local map_opts = { silent = true }
 
 vim.keymap.set('n', '<leader>b', builtin.buffers, map_opts)
 vim.keymap.set('n', '<leader>u', my_lsp_references, map_opts)
+
+local galileo = require('galileo')
+telescope.load_extension('galileo')
+
+local g_constants = require('galileo.constants')
+
+local other_projects_dir = '/Users/jls83/other_projects'
+local cg = '(' .. g_constants.posix_portable_filename .. ')'
+
+galileo.setup({
+  patterns = {
+    -- C++ items
+    {
+      pattern = other_projects_dir .. '/' .. cg .. '/' .. cg .. [[\.h]],
+      subs = {
+        other_projects_dir .. '/${1}/${2}.cc',
+        other_projects_dir .. '/${1}/${2}_test.cc',
+      },
+    },
+    {
+      pattern = [[/Users/jls83/other_projects/([a-z_]+)/([a-z]+)\.cc]],
+      subs = {
+        '/Users/jls83/other_projects/${1}/${2}.h',
+        '/Users/jls83/other_projects/${1}/${2}_test.cc',
+      },
+    },
+    {
+      pattern = [[/Users/jls83/other_projects/(?P<project_name>[a-z_]+)/(?P<module_name>[a-z]+)_test\.cc]],
+      subs = {
+        '/Users/jls83/other_projects/${project_name}/${module_name}.h',
+        '/Users/jls83/other_projects/${project_name}/${module_name}.cc',
+      },
+    },
+    -- Dart items
+    {
+      pattern = [[/Users/jls83/other_projects/([a-z_]+)/lib/([a-z]+)\.dart]],
+      subs = {
+        '/Users/jls83/other_projects/${1}/lib/${2}.template.html',
+        '/Users/jls83/other_projects/${1}/lib/${2}.scss',
+        '/Users/jls83/other_projects/${1}/tests/${2}_test.dart',
+      },
+    },
+    {
+      pattern = [[/Users/jls83/other_projects/([a-z_]+)/lib/([a-z]+)\.template\.html]],
+      subs = {
+        '/Users/jls83/other_projects/${1}/lib/${2}.dart',
+        '/Users/jls83/other_projects/${1}/lib/${2}.scss',
+        '/Users/jls83/other_projects/${1}/tests/${2}_test.dart',
+      },
+    },
+    {
+      pattern = [[/Users/jls83/other_projects/([a-z_]+)/lib/([a-z]+)\.scss]],
+      subs = {
+        '/Users/jls83/other_projects/${1}/lib/${2}.template.html',
+        '/Users/jls83/other_projects/${1}/lib/${2}.dart',
+        '/Users/jls83/other_projects/${1}/tests/${2}_test.dart',
+      },
+    },
+    {
+      pattern = [[/Users/jls83/other_projects/([a-z_]+)/tests/([a-z]+)_test\.dart]],
+      subs = {
+        '/Users/jls83/other_projects/${1}/lib/${2}.template.html',
+        '/Users/jls83/other_projects/${1}/lib/${2}.scss',
+        '/Users/jls83/other_projects/${1}/lib/${2}.dart',
+      },
+    },
+  },
+})
+

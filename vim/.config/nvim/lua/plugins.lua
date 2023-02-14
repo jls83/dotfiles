@@ -92,7 +92,8 @@ local testing_plugins = {
           require('lspsaga').setup({})
         end,
         requires = { 'kyazdani42/nvim-web-devicons' },
-    }
+    },
+    '~/other_projects/galileo.nvim',
 }
 
 return require('packer').startup(function()
