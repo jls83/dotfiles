@@ -1,5 +1,5 @@
 local gruvbox = require('gruvbox')
-local palette = require('gruvbox.palette')
+local palette = require('gruvbox.palette').colors
 
 local telescope_borders = {
   fg = palette.dark2,
