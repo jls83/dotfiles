@@ -6,7 +6,7 @@ end
 local nvim_lsp = require('lspconfig')
 local lsp_utils = require('utils.lsp')
 
-local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd', 'sumneko_lua'}
+local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd', 'lua_ls'}
 
 lsp_utils.mason_setup(servers)
 
@@ -26,7 +26,7 @@ for _, lsp in ipairs(servers) do
         config['analysis'] = {
             typeCheckingMode = 'off',
         }
-    elseif lsp == 'sumneko_lua' then
+    elseif lsp == 'lua_ls' then
         config['settings'] = {
             Lua = {
                 diagnostics = {
