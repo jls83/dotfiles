@@ -93,7 +93,7 @@ local testing_plugins = {
         end,
         requires = { 'kyazdani42/nvim-web-devicons' },
     },
-    '~/other_projects/galileo.nvim',
+    'jls83/galileo.nvim',
 }
 
 return require('packer').startup(function()
