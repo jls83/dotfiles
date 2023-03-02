@@ -94,6 +94,11 @@ local testing_plugins = {
         requires = { 'kyazdani42/nvim-web-devicons' },
     },
     'jls83/galileo.nvim',
+    'mfussenegger/nvim-dap',
+    {
+        'rcarriga/nvim-dap-ui',
+        requires = { 'mfussenegger/nvim-dap' },
+    },
 }
 
 return require('packer').startup(function()
