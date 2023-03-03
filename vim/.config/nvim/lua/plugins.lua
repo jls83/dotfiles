@@ -99,6 +99,10 @@ local testing_plugins = {
         'rcarriga/nvim-dap-ui',
         requires = { 'mfussenegger/nvim-dap' },
     },
+    {
+        'kevinhwang91/nvim-ufo',
+        requires = 'kevinhwang91/promise-async',
+    }
 }
 
 return require('packer').startup(function()

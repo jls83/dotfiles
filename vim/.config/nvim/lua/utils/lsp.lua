@@ -21,11 +21,20 @@ end
 
 local base_capabilities = vim.lsp.protocol.make_client_capabilities()
 local cmp_capabilities = require('cmp_nvim_lsp').default_capabilities()
+local ufo_capabilities = {
+  textDocument = {
+    foldingRange = {
+      dynamicRegistration = false,
+      lineFoldingOnly = true,
+    },
+  },
+}
 
 M.capabilities = vim.tbl_deep_extend(
     'force',
     base_capabilities,
-    cmp_capabilities
+    cmp_capabilities,
+    ufo_capabilities
 )
 
 M.mason_setup = function(servers)
