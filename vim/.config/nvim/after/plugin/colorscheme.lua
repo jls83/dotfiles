@@ -11,11 +11,25 @@ local telescope_titles = {
   bold = true,
 }
 
+local cursorLineBg = palette.dark0
+
 local color_overrides = {
   -- General overrides
-  SignColumn = { bg = palette.dark1 },
   String = { italic = false },
   Operator = { italic = false },
+  Folded = { fg = palette.gray, bg = palette.dark0_soft, italic = true },
+  FoldColumn = { fg = palette.gray, bg = cursorLineBg },
+  CursorLine = { bg = cursorLineBg },
+  CursorLineNr = { fg = palette.yellow, bg = cursorLineBg },
+  SignColumn = { bg = cursorLineBg },
+
+  -- Sign overrides
+  GruvboxRedSign = { fg = palette.red, bg = cursorLineBg, reverse = false },
+  GruvboxYellowSign = { fg = palette.yellow, bg = cursorLineBg, reverse = false },
+  GruvboxBlueSign = { fg = palette.blue, bg = cursorLineBg, reverse = false },
+  GruvboxAquaSign = { fg = palette.aqua, bg = cursorLineBg, reverse = false },
+  GruvboxPurpleSign = { fg = palette.purple, bg = cursorLineBg, reverse = false },
+  GruvboxOrangeSign = { fg = palette.orange, bg = cursorLineBg, reverse = false },
 
   -- Treesitter items
   ["@include.rust"] = { link = "Keyword" },

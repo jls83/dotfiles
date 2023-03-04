@@ -24,7 +24,7 @@ vim.opt.mouse = ""
 -- vim.opt.foldtext = 'v:lua.require("utils.misc").foldText()'
 -- vim.opt.fillchars= 'fold: '
 -- TODO: Explain
-vim.opt.foldcolumn = '1'
+vim.opt.foldcolumn = '0'
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
