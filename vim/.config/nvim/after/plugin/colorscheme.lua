@@ -76,3 +76,6 @@ gruvbox.setup({
   overrides = color_overrides,
 })
 vim.cmd([[colorscheme gruvbox]])
+
+-- Set some explicit overrides as well.
+vim.api.nvim_set_hl(0, 'WinBar', { bg = nil });
