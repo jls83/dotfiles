@@ -84,11 +84,6 @@ local language_specific_plugins = {
 }
 
 local testing_plugins = {
-    {
-        'glepnir/lspsaga.nvim',
-        branch = 'main',
-        requires = { 'kyazdani42/nvim-web-devicons' },
-    },
     'jls83/galileo.nvim',
     'mfussenegger/nvim-dap',
     {

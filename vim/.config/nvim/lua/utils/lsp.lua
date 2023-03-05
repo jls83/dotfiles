@@ -9,7 +9,7 @@ M.on_attach = function(client, bufnr)
         return require('telescope.builtin').lsp_definitions()
     end, opts)
     vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, opts)
-    -- vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
     vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
 
     if client.server_capabilities.documentSymbolProvider then

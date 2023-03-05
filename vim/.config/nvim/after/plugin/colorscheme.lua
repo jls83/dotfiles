@@ -67,6 +67,28 @@ local color_overrides = {
   TelescopeResultsDiffAdd = { fg = palette.bright_green },
   TelescopeResultsDiffChange = { fg = palette.neutral_yellow },
   TelescopeResultsDiffDelete = { fg = palette.bright_red },
+
+  NavicText = { fg = palette.light3 },
+  NavicSeparator = { fg = palette.neutral_aqua },
+
+  NavicIconsText = { link = "CmpItemKindText" },
+  NavicIconsMethod = { link = "CmpItemKindMethod" },
+  NavicIconsFunction = { link = "CmpItemKindFunction" },
+  NavicIconsConstructor = { link = "CmpItemKindConstructor" },
+  NavicIconsField = { link = "CmpItemKindField" },
+  NavicIconsClass = { link = "CmpItemKindClass" },
+  NavicIconsInterface = { link = "CmpItemKindInterface" },
+  NavicIconsModule = { link = "CmpItemKindModule" },
+  NavicIconsProperty = { link = "CmpItemKindProperty" },
+  NavicIconsValue = { link = "CmpItemKindValue" },
+  NavicIconsEnum = { link = "CmpItemKindEnum" },
+  NavicIconsKeyword = { link = "CmpItemKindKeyword" },
+  NavicIconsSnippet = { link = "CmpItemKindSnippet" },
+  NavicIconsFile = { link = "CmpItemKindFile" },
+  NavicIconsEnumMember = { link = "CmpItemKindEnumMember" },
+  NavicIconsConstant = { link = "CmpItemKindConstant" },
+  NavicIconsStruct = { link = "CmpItemKindStruct" },
+  NavicIconsTypeParameter = { link = "CmpItemKindTypeParameter" },
 }
 
 gruvbox.setup({
