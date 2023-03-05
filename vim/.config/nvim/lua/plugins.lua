@@ -87,10 +87,6 @@ local testing_plugins = {
     {
         'glepnir/lspsaga.nvim',
         branch = 'main',
-        -- TODO: Move!
-        config = function()
-          require('lspsaga').setup({})
-        end,
         requires = { 'kyazdani42/nvim-web-devicons' },
     },
     'jls83/galileo.nvim',
