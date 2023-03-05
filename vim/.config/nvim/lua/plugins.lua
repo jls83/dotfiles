@@ -6,7 +6,7 @@ local base_plugins = {
     'nvim-lualine/lualine.nvim',
 
     -- Editing plugins
-    'tpope/vim-surround',
+    -- 'tpope/vim-surround',
     'tpope/vim-commentary',
     'tpope/vim-repeat',
     'tpope/vim-vinegar',
@@ -93,7 +93,15 @@ local testing_plugins = {
     {
         'kevinhwang91/nvim-ufo',
         requires = 'kevinhwang91/promise-async',
-    }
+    },
+    {
+        "kylechui/nvim-surround",
+        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+        -- TODO: Move config
+        config = function()
+            require("nvim-surround").setup({})
+        end
+    },
 }
 
 return require('packer').startup(function()
