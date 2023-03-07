@@ -1,17 +1,35 @@
+local Keymap = require('utils.keymap')
+
 local hop = require('hop')
 hop.setup()
 
 local directions = require('hop.hint').HintDirection
 
-vim.keymap.set('n', '<leader><leader>f', function()
+Keymap.nnoremap(
+  '<leader><leader>f',
+  function()
     hop.hint_char1({ direction = directions.AFTER_CURSOR })
-end, { remap = true })
-vim.keymap.set('n', '<leader><leader>F', function()
+  end,
+  { remap = true }
+)
+Keymap.nnoremap(
+  '<leader><leader>F',
+  function()
     hop.hint_char1({ direction = directions.BEFORE_CURSOR })
-end, { remap = true })
-vim.keymap.set('n', '<leader><leader>t', function()
+  end,
+  { remap = true }
+)
+Keymap.nnoremap(
+  '<leader><leader>t',
+  function()
     hop.hint_char1({ direction = directions.AFTER_CURSOR, hint_offset = -1 })
-end, { remap = true })
-vim.keymap.set('n', '<leader><leader>T', function()
+  end,
+  { remap = true }
+)
+Keymap.nnoremap(
+  '<leader><leader>T',
+  function()
     hop.hint_char1({ direction = directions.BEFORE_CURSOR, hint_offset = 1 })
-end, { remap = true })
+  end,
+  { remap = true }
+)
