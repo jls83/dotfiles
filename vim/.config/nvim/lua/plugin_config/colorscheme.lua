@@ -17,7 +17,7 @@ local color_overrides = {
   -- General overrides
   String = { italic = false },
   Operator = { italic = false },
-  Folded = { fg = palette.gray, bg = palette.dark0_soft, italic = true },
+  Folded = { fg = palette.aqua, bg = palette.dark0_soft, italic = true },
   FoldColumn = { fg = palette.gray, bg = cursorLineBg },
   CursorLine = { bg = cursorLineBg },
   CursorLineNr = { fg = palette.yellow, bg = cursorLineBg },
@@ -89,6 +89,8 @@ local color_overrides = {
   NavicIconsConstant = { link = "CmpItemKindConstant" },
   NavicIconsStruct = { link = "CmpItemKindStruct" },
   NavicIconsTypeParameter = { link = "CmpItemKindTypeParameter" },
+
+  UfoCursorFoldedLine = { bg = cursorLineBg, italic = true },
 }
 
 gruvbox.setup({
@@ -101,3 +103,4 @@ vim.cmd([[colorscheme gruvbox]])
 
 -- Set some explicit overrides as well.
 vim.api.nvim_set_hl(0, 'WinBar', { bg = nil });
+vim.api.nvim_set_hl(0, 'Folded', { fg = palette.gray, bg = palette.dark0_soft, italic = true })

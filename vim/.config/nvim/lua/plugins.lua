@@ -91,7 +91,8 @@ local testing_plugins = {
         requires = { 'mfussenegger/nvim-dap' },
     },
     {
-        'kevinhwang91/nvim-ufo',
+        'jls83/nvim-ufo',
+        branch = 'use_default_hl_group',
         requires = 'kevinhwang91/promise-async',
     },
     {

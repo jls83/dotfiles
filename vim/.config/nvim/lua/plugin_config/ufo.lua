@@ -1,10 +1,21 @@
 local Keymap = require("utils.keymap")
 local ufo = require("ufo")
-local palette = require('gruvbox.palette').colors
+
+local fold_signs = {
+  '«',
+  '⇦',
+  '',
+  '↙',
+  '⏎',
+  '÷',
+  '±',
+  '',
+}
+
 
 local handler = function(virtText, lnum, endLnum, width, truncate)
   local newVirtText = {}
-  local suffix = ('  %d '):format(endLnum - lnum)
+  local suffix = (' ' ..  fold_signs[6] .. ' %d'):format(endLnum - lnum)
   local sufWidth = vim.fn.strdisplaywidth(suffix)
   local targetWidth = width - sufWidth
   local curWidth = 0
