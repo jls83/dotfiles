@@ -2,6 +2,28 @@ require('options')
 require('mappings')
 require('plugins')
 
+require('plugin_config.cmp')
+require('plugin_config.colorscheme')
+require('plugin_config.diagnostic')
+require('plugin_config.fidget')
+require('plugin_config.hop')
+require('plugin_config.lsp')
+require('plugin_config.lualine')
+require('plugin_config.luasnip')
+require('plugin_config.navic')
+require('plugin_config.telescope')
+require('plugin_config.treesitter')
+require('plugin_config.ufo')
+
+
+for _, viml_file in ipairs({
+  'lua/plugin_config/fugitive.vim',
+  'lua/plugin_config/fzf.vim',
+  'lua/plugin_config/indentline.vim',
+}) do
+  vim.cmd('source $HOME/.config/nvim/' .. viml_file)
+end
+
 local Keymap = require("utils.keymap")
 
 if vim.env.MACHINE_TYPE == 'glinux' then
