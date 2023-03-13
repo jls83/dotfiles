@@ -35,6 +35,7 @@ local color_overrides = {
   ["@include.rust"] = { link = "Keyword" },
   ["@type.qualifier"] = { link = "Keyword" },
   ["@type.builtin"] = { link = "Keyword" },
+  ["@namespace.cpp"] = { link = "Type" },
 
   -- Telescope items
   -- Part of the need for explicit overrides is an upstream issue in
