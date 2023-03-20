@@ -65,3 +65,5 @@ export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=$HOME/.local/pipx/venvs/virtualenvwrapper/bin/python
 export VIRTUALENVWRAPPER_SCRIPT=$HOME/.local/pipx/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh
 source $HOME/.local/pipx/venvs/virtualenvwrapper/bin/virtualenvwrapper_lazy.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
