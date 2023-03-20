@@ -23,6 +23,9 @@ local color_overrides = {
   CursorLineNr = { fg = palette.yellow, bg = cursorLineBg },
   SignColumn = { bg = cursorLineBg },
 
+  -- Indent-Blanklines items
+  IndentBlanklineContextChar = { fg = palette.faded_aqua },
+
   -- Sign overrides
   GruvboxRedSign = { fg = palette.red, bg = cursorLineBg, reverse = false },
   GruvboxYellowSign = { fg = palette.yellow, bg = cursorLineBg, reverse = false },

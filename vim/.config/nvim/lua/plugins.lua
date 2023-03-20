@@ -103,6 +103,7 @@ local testing_plugins = {
       require("nvim-surround").setup({})
     end
   },
+  "lukas-reineke/indent-blankline.nvim",
 }
 
 return require('packer').startup(function()
