@@ -25,6 +25,7 @@ local color_overrides = {
 
   -- Indent-Blanklines items
   IndentBlanklineContextChar = { fg = palette.faded_aqua },
+  IndentBlanklineChar = { fg = palette.dark0 },
 
   -- Sign overrides
   GruvboxRedSign = { fg = palette.red, bg = cursorLineBg, reverse = false },

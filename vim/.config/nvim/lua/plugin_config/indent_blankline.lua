@@ -6,5 +6,4 @@ ibl.setup({
   char = "║",
   context_char = "┃",
   use_treesitter = true,
-  use_treesitter_scope = true,
 })
