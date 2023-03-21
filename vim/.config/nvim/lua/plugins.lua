@@ -6,11 +6,18 @@ local base_plugins = {
   'nvim-lualine/lualine.nvim',
 
   -- Editing plugins
-  -- 'tpope/vim-surround',
   'tpope/vim-commentary',
   'tpope/vim-repeat',
   'tpope/vim-vinegar',
   { 'phaazon/hop.nvim', branch = 'v2' },
+  {
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    -- TODO: Move config
+    config = function()
+      require("nvim-surround").setup({})
+    end
+  },
 
   -- Vimwiki items
   { 'jls83/vimwiki', branch = 'mixed_backlinks' },
@@ -95,15 +102,11 @@ local testing_plugins = {
     branch = 'use_default_hl_group',
     requires = 'kevinhwang91/promise-async',
   },
-  {
-    "kylechui/nvim-surround",
-    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-    -- TODO: Move config
-    config = function()
-      require("nvim-surround").setup({})
-    end
-  },
   "lukas-reineke/indent-blankline.nvim",
+  {
+    'mfussenegger/nvim-treehopper',
+    requires = 'mfussenegger/nvim-treehopper',
+  },
 }
 
 return require('packer').startup(function()
