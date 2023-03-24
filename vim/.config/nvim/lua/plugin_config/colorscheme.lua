@@ -44,7 +44,7 @@ local color_overrides = {
   -- Telescope items
   -- Part of the need for explicit overrides is an upstream issue in
   -- gruvbox.nvim.
-  TelescopePromptBorder = { fg = palette.faded_aqua },
+  TelescopePromptBorder = { fg = palette.dark2 },
   TelescopePromptTitle = {
     fg = palette.dark0_hard,
     bg = palette.faded_aqua,

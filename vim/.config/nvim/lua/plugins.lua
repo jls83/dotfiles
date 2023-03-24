@@ -2,7 +2,10 @@ local base_plugins = {
   'wbthomason/packer.nvim',
 
   -- Appearance plugins
-  'ellisonleao/gruvbox.nvim',
+  {
+    'ellisonleao/gruvbox.nvim',
+    commit = 'f03cea2',
+  },
   'nvim-lualine/lualine.nvim',
 
   -- Editing plugins
