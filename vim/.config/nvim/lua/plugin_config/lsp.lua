@@ -4,9 +4,9 @@ if vim.env.MACHINE_TYPE == 'glinux' then
 end
 
 local nvim_lsp = require('lspconfig')
-local lsp_utils = require('lsp-utils')
+local lsp_utils = require('utils.lsp')
 
-local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd', 'sumneko_lua'}
+local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd', 'lua_ls'}
 
 lsp_utils.mason_setup(servers)
 
@@ -26,12 +26,19 @@ for _, lsp in ipairs(servers) do
         config['analysis'] = {
             typeCheckingMode = 'off',
         }
-    elseif lsp == 'sumneko_lua' then
+    elseif lsp == 'lua_ls' then
         config['settings'] = {
             Lua = {
                 diagnostics = {
                     -- Get the language server to recognize the `vim` global
                     globals = {'vim'},
+                },
+                workspace = {
+                    library = vim.api.nvim_get_runtime_file('', true),
+                    checkThirdParty = false,
+                },
+                telemetry = {
+                    enable = false,
                 },
             },
         }

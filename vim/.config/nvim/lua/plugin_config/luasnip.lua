@@ -11,6 +11,8 @@ luasnip.config.set_config({
 
 local vwhead = snippet("vwhead", fmt("# {}\n\n## Today's Activity\n* ", { os.date("%Y-%m-%d (%A)") }))
 
+local tdate = snippet("tdate", text(os.date("%Y-%m-%d")))
+
 local review_snip = snippet(
     "creview",
     {
@@ -24,6 +26,7 @@ local review_snip = snippet(
 luasnip.add_snippets("all", {
     vwhead,
     review_snip,
+    tdate,
 })
 
 -- Keymaps stolen from TJ DeVries
