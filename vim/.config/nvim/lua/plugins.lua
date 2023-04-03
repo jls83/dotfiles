@@ -22,10 +22,6 @@ local base_plugins = {
     end
   },
 
-  -- Vimwiki items
-  { 'jls83/vimwiki', branch = 'mixed_backlinks' },
-  -- { 'vimwiki/vimwiki', branch = 'dev' },
-
   -- Git plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
@@ -61,14 +57,8 @@ local base_plugins = {
   'kyazdani42/nvim-web-devicons',
 
   -- Other items
-  {
-    'jls83/nvim-treesitter',
-    branch = 'vimwiki_compat',
-    run = ':TSUpdate',
-  },
   'nvim-treesitter/nvim-treesitter-textobjects',
   'nvim-treesitter/playground',
-  { 'jls83/vim-oscyank', branch = 'fix_visual_range' },
 }
 
 local language_specific_plugins = {
@@ -100,11 +90,6 @@ local testing_plugins = {
     'rcarriga/nvim-dap-ui',
     requires = { 'mfussenegger/nvim-dap' },
   },
-  {
-    'jls83/nvim-ufo',
-    branch = 'use_default_hl_group',
-    requires = 'kevinhwang91/promise-async',
-  },
   "lukas-reineke/indent-blankline.nvim",
   {
     'mfussenegger/nvim-treehopper',
@@ -112,11 +97,28 @@ local testing_plugins = {
   },
 }
 
+local forked_plugins = {
+  {
+    'jls83/nvim-ufo',
+    branch = 'use_default_hl_group',
+    requires = 'kevinhwang91/promise-async',
+  },
+  { 'jls83/vimwiki', branch = 'mixed_backlinks' },
+  {
+    'jls83/nvim-treesitter',
+    branch = 'vimwiki_compat',
+    run = ':TSUpdate',
+  },
+  { 'jls83/vim-oscyank', branch = 'fix_visual_range' },
+  
+}
+
 return require('packer').startup(function()
   local plugin_arrays = {
     base_plugins,
     language_specific_plugins,
     testing_plugins,
+    forked_plugins,
   }
 
   if vim.env.MACHINE_TYPE == 'glinux' then
