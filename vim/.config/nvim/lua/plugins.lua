@@ -4,7 +4,6 @@ local base_plugins = {
   -- Appearance plugins
   {
     'ellisonleao/gruvbox.nvim',
-    commit = 'f03cea2',
   },
   'nvim-lualine/lualine.nvim',
 

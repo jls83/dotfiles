@@ -41,3 +41,16 @@ vim.opt.shortmess:append("c")
 -- TODO: explain and/or move to a plugin file
 vim.g['conjure#extract#tree_sitter#enabled'] = true
 vim.g['netrw_bufsettings'] ='noma nomod nobl nowrap ro nu rnu'
+
+vim.opt.fillchars = {
+  vert = '║',
+  horiz = '═',
+  horizup = '╩',
+  horizdown = '╦',
+  vertleft = '╣',
+  vertright = '╠',
+  verthoriz = '╬',
+}
+
+-- Enable global statusline
+vim.opt.laststatus = 3

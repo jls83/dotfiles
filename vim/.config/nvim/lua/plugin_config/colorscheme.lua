@@ -22,6 +22,7 @@ local color_overrides = {
   CursorLine = { bg = cursorLineBg },
   CursorLineNr = { fg = palette.yellow, bg = cursorLineBg },
   SignColumn = { bg = cursorLineBg },
+  WinSeparator = { fg = palette.faded_aqua },
 
   -- Indent-Blanklines items
   IndentBlanklineContextChar = { fg = palette.faded_aqua },
