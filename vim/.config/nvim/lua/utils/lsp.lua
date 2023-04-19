@@ -1,6 +1,7 @@
 M = {}
 
 local navic = require('nvim-navic')
+local navbuddy = require('nvim-navbuddy')
 
 M.on_attach = function(client, bufnr)
     local opts = { silent = true, buffer = bufnr }
@@ -14,6 +15,8 @@ M.on_attach = function(client, bufnr)
 
     if client.server_capabilities.documentSymbolProvider then
         navic.attach(client, bufnr)
+        -- TODO: Does this require documentSymbolProvider also?
+        navbuddy.attach(client, bufnr)
     else
         print("Can't use navic here")
     end
