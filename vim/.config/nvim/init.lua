@@ -20,8 +20,8 @@ require('plugin_config.ufo')
 
 for _, viml_file in ipairs({
   'lua/plugin_config/fugitive.vim',
-  'lua/plugin_config/fzf.vim',
-  'lua/plugin_config/indentline.vim',
+  -- 'lua/plugin_config/fzf.vim',
+  -- 'lua/plugin_config/indentline.vim',
 }) do
   vim.cmd('source $HOME/.config/nvim/' .. viml_file)
 end
