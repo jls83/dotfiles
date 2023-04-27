@@ -19,6 +19,16 @@ telescope.setup({
             sort_mru = true,
             ignore_current_buffer = true,
         },
+        live_grep = {
+            additional_args = function(opts)
+                return {'--hidden'}
+            end,
+        },
+        grep_string = {
+            additional_args = function(opts)
+                return {'--hidden'}
+            end,
+        },
     },
 })
 
@@ -40,8 +50,10 @@ local map_opts = { silent = true }
 vim.keymap.set('n', '<leader>b', builtin.buffers, map_opts)
 vim.keymap.set('n', '<leader>u', my_lsp_references, map_opts)
 vim.keymap.set('n', '<C-p>', builtin.find_files, map_opts)
-vim.keymap.set({'n', 'v'}, '<leader>f', builtin.live_grep, map_opts)
-vim.keymap.set({'n', 'v'}, '<leader>t', function() builtin.live_grep({grep_open_files=true}) end, map_opts)
+vim.keymap.set('n', '<leader>f', builtin.live_grep, map_opts)
+vim.keymap.set('n', '<leader>t', function() builtin.live_grep({grep_open_files=true}) end, map_opts)
+vim.keymap.set('v', '<leader>f', builtin.grep_string, map_opts)
+vim.keymap.set('v', '<leader>t', function() builtin.grep_string({grep_open_files=true}) end, map_opts)
 
 local galileo = require('galileo')
 telescope.load_extension('galileo')
