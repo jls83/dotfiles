@@ -1,5 +1,5 @@
 font:
-    size: 18.0
+    size: 20.0
     normal:
         family: Inconsolata Nerd Font Mono
         style: Regular
@@ -18,7 +18,7 @@ font:
 
     offset:
         x: 0
-        y: 2
+        y: 3
 
 window:
     dimensions:
@@ -30,7 +30,7 @@ window:
         y: 10
     dynamic_padding: true
     decorations: none
-    opacity: 0.9
+    opacity: 1
 
 cursor:
     style:
@@ -67,23 +67,44 @@ colors:
 
 hints:
     enabled:
-      - regex: "(magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`¬]+"
-        command: open
+      # - regex: "(magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`¬]+"
+      #   command: /Users/josephsanders/open_all_links.sh
+      #   post_processing: true
+      #   mouse:
+      #       enabled: true
+      #       mods: Control
+      #   binding:
+      #       key: U
+      #       mods: Control|Shift
+
+      # # Open Google-specific URLs with ctrl+click
+      # - regex: "(go/|g/|b/|cl/|cs/|t/|shortn/|slides/|docs/|yaqs/|google3/|mail/|scripts2/|gpaste/|meme/|omg/)[^\u0001-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`¬]+"
+      #   command: /Users/josephsanders/open_all_links.sh
+      #   post_processing: true
+      #   mouse:
+      #       enabled: true
+      #       mods: Control
+      #   binding:
+      #       key: G
+      #       mods: Control|Shift
+
+      # # Open `who/` entries for the target user
+      # - regex: "[a-zA-Z]+@"
+      #   command: /Users/josephsanders/open_all_links.sh
+      #   post_processing: true
+      #   mouse:
+      #       enabled: true
+      #       mods: Control
+      #   binding:
+      #       key: W
+      #       mods: Control|Shift
+
+      - regex: "((magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:|go/|g/|b/|cl/|cs/|t/|shortn/|slides/|docs/|yaqs/|google3/|mail/|scripts2/|gpaste/|meme/|omg/)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`¬]+|[a-zA-Z]+@)"
+        command: /Users/josephsanders/open_all_links.sh
         post_processing: true
         mouse:
             enabled: true
             mods: Control
-      # Open Google-specific URLs with ctrl+click
-      - regex: "(go/|g/|b/|cl/|cs/|t/|shortn/|slides/|docs/|yaqs/|google3/|mail/|scripts2/|gpaste/|meme/|omg/)[^\u0001-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`¬]+"
-        command: /Users/josephsanders/open_go_links.sh
-        post_processing: true
-        mouse:
-            enabled: true
-            mods: Control
-      # Open `who/` entries for the target user
-      - regex: "[a-zA-Z]+@"
-        command: /Users/josephsanders/open_who_links.sh
-        post_processing: true
-        mouse:
-            enabled: true
-            mods: Control
+        binding:
+            key: U
+            mods: Control|Shift

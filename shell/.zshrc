@@ -1,4 +1,5 @@
 source ~/.bash_profile
+source ~/.zprofile
 
 source ~/aliases/aliases.zsh
 source ~/aliases/fzf_items.zsh
