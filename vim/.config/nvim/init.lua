@@ -17,11 +17,8 @@ require('plugin_config.telescope')
 require('plugin_config.treesitter')
 require('plugin_config.ufo')
 
-
 for _, viml_file in ipairs({
   'lua/plugin_config/fugitive.vim',
-  -- 'lua/plugin_config/fzf.vim',
-  -- 'lua/plugin_config/indentline.vim',
 }) do
   vim.cmd('source $HOME/.config/nvim/' .. viml_file)
 end
@@ -30,6 +27,9 @@ local Keymap = require("utils.keymap")
 
 if vim.env.MACHINE_TYPE == 'glinux' then
   vim.cmd('source $HOME/.config/nvim/google/my_google.vim')
+  require('google.plugin_config.lsp')
+  require('google.plugin_config.dap')
+  require('google.plugin_config.telescope')
 end
 
 local numbertoggle_group = vim.api.nvim_create_augroup("numbertoggle", {
