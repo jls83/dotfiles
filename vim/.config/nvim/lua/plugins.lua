@@ -56,7 +56,6 @@ local base_plugins = {
   'kyazdani42/nvim-web-devicons',
 
   -- Other items
-  'nvim-treesitter/nvim-treesitter-textobjects',
   'nvim-treesitter/playground',
 }
 
@@ -103,7 +102,7 @@ local testing_plugins = {
       -- 'numToStr/Comment.nvim',
       'nvim-telescope/telescope.nvim',
     }
-  }
+  },
 }
 
 local forked_plugins = {
