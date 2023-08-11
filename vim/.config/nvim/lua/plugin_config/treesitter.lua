@@ -20,7 +20,7 @@ require('nvim-treesitter.configs').setup({
     indent = { enable = false },
     highlight = { enable = true },
     incremental_selection = {
-        enable = true,
+        enable = false,
         keymaps = {
             init_selection = "<Enter>",
             node_incremental = "<Enter>",

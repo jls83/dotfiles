@@ -42,6 +42,12 @@ for _, lsp in ipairs(servers) do
                 },
             },
         }
+    elseif lsp == 'rust_analyzer' then
+        config['settings'] = {
+            ["rust-analyzer"] = {
+                procMacro = { enable = true, attributes = { enable = true } },
+            }
+        }
     end
 
     nvim_lsp[lsp].setup(config)
