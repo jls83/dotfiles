@@ -103,6 +103,7 @@ local testing_plugins = {
       'nvim-telescope/telescope.nvim',
     }
   },
+  'tpope/vim-dadbod',
 }
 
 local forked_plugins = {
