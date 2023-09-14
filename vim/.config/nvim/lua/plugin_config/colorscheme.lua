@@ -1,13 +1,19 @@
 local gruvbox = require('gruvbox')
 local palette = require('gruvbox.palette').colors
 
+local telescope_bg = palette.dark0_hard
+local telescope_accent = palette.faded_aqua
+local telescope_shadow = palette.dark2
+
 local telescope_borders = {
-  fg = palette.dark2,
+  fg = telescope_shadow,
+  bg = telescope_bg,
 }
 
 local telescope_titles = {
-  fg = palette.faded_aqua,
-  bg = nil,
+  fg = telescope_accent,
+  -- bg = nil,
+  bg = telescope_bg,
   bold = true,
 }
 
@@ -15,6 +21,8 @@ local cursorLineBg = palette.dark0
 
 local color_overrides = {
   -- General overrides
+  -- NormalFloat = { bg = palette.dark0_soft },
+  Normal = { bg = "#000000" },
   String = { italic = false },
   Operator = { italic = false },
   Folded = { fg = palette.aqua, bg = palette.dark0_soft, italic = true },
@@ -45,14 +53,17 @@ local color_overrides = {
   -- Telescope items
   -- Part of the need for explicit overrides is an upstream issue in
   -- gruvbox.nvim.
-  TelescopePromptBorder = { fg = palette.dark2 },
+  TelescopePromptBorder = {
+    fg = telescope_accent,
+    bg = telescope_bg
+  },
   TelescopePromptTitle = {
-    fg = palette.dark0_hard,
-    bg = palette.faded_aqua,
+    fg = telescope_bg,
+    bg = telescope_accent,
     bold = true,
   },
-  TelescopePromptNormal = { fg = palette.light1 },
-  TelescopePromptPrefix = { fg = palette.bright_red },
+  TelescopePromptNormal = { fg = palette.light1, bg = telescope_bg },
+  TelescopePromptPrefix = { fg = palette.bright_red, bg = telescope_bg },
 
   TelescopePreviewBorder = telescope_borders,
   TelescopePreviewTitle = telescope_titles;
@@ -62,17 +73,22 @@ local color_overrides = {
 
   TelescopeSelection = {
     fg = palette.light1,
-    bg = palette.dark1,
+    bg = telescope_shadow,
   },
 
   TelescopeSelectionCaret = {
     fg = palette.bright_green,
-    bg = palette.dark1,
+    bg = telescope_shadow,
   },
 
   TelescopeResultsDiffAdd = { fg = palette.bright_green },
   TelescopeResultsDiffChange = { fg = palette.neutral_yellow },
   TelescopeResultsDiffDelete = { fg = palette.bright_red },
+
+  TelescopeNormal = {
+    bg = telescope_bg,
+    fg = palette.light2,
+  },
 
   NavicText = { fg = palette.light3 },
   NavicSeparator = { fg = palette.neutral_aqua },
@@ -101,7 +117,7 @@ local color_overrides = {
 
 gruvbox.setup({
   contrast = '',
-  transparent_mode = true,
+  transparent_mode = false,
   invert_selection = true,
   overrides = color_overrides,
 })

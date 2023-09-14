@@ -6,6 +6,7 @@ telescope.setup({
     defaults = {
         -- top, right, bottom, left, NW, NE, SE, SW
         borderchars = {'═', '│', '═', '│', '╒', '╕', '╛', '╘'},
+        -- borderchars = {'━', '│', '─', '│', '┍', '┑', '┘', '└'},
         -- These are the true defaults:
         -- borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
     },
