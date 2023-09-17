@@ -39,7 +39,10 @@ local base_plugins = {
   'saadparwaiz1/cmp_luasnip',
   'L3MON4D3/LuaSnip',
   'onsails/lspkind-nvim',
-  'j-hui/fidget.nvim',
+  {
+    'j-hui/fidget.nvim',
+    tag = 'legacy',
+  },
   'SmiteshP/nvim-navic',
   'williamboman/mason.nvim',
   {
