@@ -16,7 +16,7 @@ Keymap.nnoremap("<leader>wl", "0f[wi../<ESC>")
 vim.api.nvim_create_autocmd(
   {"VimEnter"},
   {
-    pattern = "*",
+    pattern = "*/vimwiki/*/*.md",
     command = "let g:vimwiki_syntaxlocal_vars['markdown']['Link1'] = g:vimwiki_syntaxlocal_vars['default']['Link1']",
   }
 )
