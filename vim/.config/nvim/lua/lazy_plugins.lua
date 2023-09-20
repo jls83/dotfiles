@@ -143,10 +143,10 @@ local forked_plugins = {
     branch = "use_default_hl_group",
     dependencies = "kevinhwang91/promise-async",
   },
-  -- {
-  --   "jls83/vimwiki",
-  --   branch = "mixed_backlinks"
-  -- },
+  {
+    "jls83/vimwiki",
+    branch = "mixed_backlinks"
+  },
   {
     "jls83/nvim-treesitter",
     branch = "vimwiki_compat",

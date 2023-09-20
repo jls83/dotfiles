@@ -119,7 +119,7 @@ local forked_plugins = {
   {
     'jls83/nvim-treesitter',
     branch = 'vimwiki_compat',
-    run = ':TSUpdate',
+    build = ':TSUpdate',
   },
   { 'jls83/vim-oscyank', branch = 'fix_visual_range' },
   
