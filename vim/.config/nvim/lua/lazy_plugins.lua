@@ -17,6 +17,8 @@ local base_plugins = {
   -- Appearance plugins
   {
     "ellisonleao/gruvbox.nvim",
+    lazy = false,
+    priority = 1000,
   },
   "nvim-lualine/lualine.nvim",
 
@@ -27,8 +29,8 @@ local base_plugins = {
   { "phaazon/hop.nvim", branch = "v2" },
   {
     "kylechui/nvim-surround",
-    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
     -- TODO: Move config
+    event = "VeryLazy",
     config = true,
     -- require("nvim-surround").setup({})
     -- end
@@ -135,6 +137,12 @@ local testing_plugins = {
     }
   },
   "tpope/vim-dadbod",
+  {
+    url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    dependencies = {
+      "neovim/nvim-lspconfig",
+    },
+  },
 }
 
 local forked_plugins = {
