@@ -1,6 +1,6 @@
 require('options')
 require('mappings')
-require('plugins')
+require('lazy_plugins')
 
 require('plugin_config.cmp')
 require('plugin_config.colorscheme')
