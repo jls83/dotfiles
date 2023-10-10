@@ -36,3 +36,26 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
+-- TODO: Consider toggling `virtual_text` on/off as well.
+-- Toggles between `only_current_line` and fully off.
+local lsp_lines_toggle = function()
+  local current_state = vim.diagnostic.config().virtual_lines
+  if (current_state == false) then
+    vim.diagnostic.config({virtual_lines = { only_current_line = true }})
+  else
+    vim.diagnostic.config({virtual_lines = false})
+  end
+end
+
+-- Toggles between all diagnostics and fully off.
+local lsp_lines_full_toggle = function()
+  local current_state = vim.diagnostic.config().virtual_lines
+  if (current_state == true) then
+    vim.diagnostic.config({virtual_lines = { only_current_line = true }})
+  else
+    vim.diagnostic.config({virtual_lines = true})
+  end
+end
+
+vim.keymap.set('n', '<leader>l', lsp_lines_toggle, opts)
+vim.keymap.set('n', '<leader>L', lsp_lines_full_toggle, opts)
