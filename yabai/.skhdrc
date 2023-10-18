@@ -77,4 +77,4 @@ alt - t : yabai -m window --toggle float;\
 alt - l : yabai -m window --layer above
 
 # restart yabai
-shift + alt + cmd -r : brew services restart yabai
+shift + alt + cmd -r : yabai --restart-service
