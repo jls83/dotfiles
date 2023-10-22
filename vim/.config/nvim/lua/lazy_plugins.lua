@@ -143,6 +143,7 @@ local testing_plugins = {
       "neovim/nvim-lspconfig",
     },
   },
+  "andymass/vim-matchup",
 }
 
 local forked_plugins = {
