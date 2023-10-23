@@ -30,7 +30,7 @@ M.on_attach = function(client, bufnr)
       buffer = bufnr,
       callback = function()
         -- A number of our SQL files shouldn't be autoformatted.
-        if (vim.bo.filetype == 'googlesql') then
+        if (vim.bo.filetype == 'googlesql' or vim.bo.filetype == 'sql') then
           return
         end
         -- I am not a huge fan of the way lua_ls does formatting.
