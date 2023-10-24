@@ -112,6 +112,14 @@ local language_specific_plugins = {
   -- Other language-specific items
   "mxw/vim-jsx",
   "cespare/vim-toml",
+  {
+    "nvim-treesitter/nvim-treesitter",
+    -- branch = "vimwiki_compat",
+    build = ":TSUpdate",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter-textobjects",
+    },
+  },
 }
 
 local testing_plugins = {
@@ -155,11 +163,6 @@ local forked_plugins = {
   {
     "jls83/vimwiki",
     branch = "mixed_backlinks"
-  },
-  {
-    "jls83/nvim-treesitter",
-    branch = "vimwiki_compat",
-    build = ":TSUpdate",
   },
   {
     "jls83/vim-oscyank",
