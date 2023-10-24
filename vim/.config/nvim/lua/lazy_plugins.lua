@@ -129,7 +129,10 @@ local testing_plugins = {
     "rcarriga/nvim-dap-ui",
     dependencies = { "mfussenegger/nvim-dap" },
   },
-  "lukas-reineke/indent-blankline.nvim",
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    version = "v2.20.8",
+  },
   {
     "mfussenegger/nvim-treehopper",
     dependencies = "mfussenegger/nvim-treehopper",
