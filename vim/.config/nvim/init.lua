@@ -1,22 +1,22 @@
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
 require('options')
 require('mappings')
-require('lazy_plugins')
 
-require('plugin_config.cmp')
-require('plugin_config.colorscheme')
-require('plugin_config.diagnostic')
-require('plugin_config.fidget')
-require('plugin_config.hop')
-require('plugin_config.indent_blankline')
-require('plugin_config.lsp')
-require('plugin_config.lualine')
-require('plugin_config.luasnip')
-require('plugin_config.navbuddy')
-require('plugin_config.navic')
-require('plugin_config.telescope')
-require('plugin_config.treesitter')
-require('plugin_config.ufo')
-require('plugin_config.vimwiki')
+local lazy = require('lazy')
+
+lazy.setup('plugins')
 
 for _, viml_file in ipairs({
   'lua/plugin_config/fugitive.vim',
@@ -26,6 +26,7 @@ end
 
 if vim.env.MACHINE_TYPE == 'glinux' then
   vim.cmd('source $HOME/.config/nvim/google/my_google.vim')
+  -- Some config remains outside Lazy's files
   require('google.plugin_config.lsp')
   require('google.plugin_config.dap')
   require('google.plugin_config.telescope')
