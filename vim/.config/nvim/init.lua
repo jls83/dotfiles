@@ -18,12 +18,6 @@ local lazy = require('lazy')
 
 lazy.setup('plugins')
 
-for _, viml_file in ipairs({
-  'lua/plugin_config/fugitive.vim',
-}) do
-  vim.cmd('source $HOME/.config/nvim/' .. viml_file)
-end
-
 if vim.env.MACHINE_TYPE == 'glinux' then
   vim.cmd('source $HOME/.config/nvim/google/my_google.vim')
   -- Some config remains outside Lazy's files
