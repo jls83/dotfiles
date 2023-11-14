@@ -43,7 +43,10 @@ return {
   "cespare/vim-toml",
 
   -- Testing plugins
-  "jls83/galileo.nvim",
+  {
+    "jls83/galileo.nvim",
+    event = "VeryLazy",
+  },
   "mfussenegger/nvim-dap",
   {
     "rcarriga/nvim-dap-ui",
