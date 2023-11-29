@@ -1,7 +1,7 @@
 return {
   "jls83/vimwiki",
   branch = "mixed_backlinks",
-  config = function()
+  init = function()
     local Keymap = require("utils.keymap")
 
     vim.g.vimwiki_list = {

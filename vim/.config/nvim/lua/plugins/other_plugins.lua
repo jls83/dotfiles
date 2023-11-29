@@ -62,10 +62,6 @@ return {
 
   -- Forked plugins
   {
-    "jls83/vimwiki",
-    branch = "mixed_backlinks"
-  },
-  {
     "jls83/vim-oscyank",
     branch = "fix_visual_range"
   },
