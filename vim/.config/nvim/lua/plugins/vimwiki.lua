@@ -18,11 +18,16 @@ return {
     Keymap.nnoremap("<leader>wl", "0f[wi../<ESC>")
 
     vim.api.nvim_create_autocmd(
-    {"VimEnter"},
-    {
-      pattern = "*/vimwiki/*/*.md",
-      command = "let g:vimwiki_syntaxlocal_vars['markdown']['Link1'] = g:vimwiki_syntaxlocal_vars['default']['Link1']",
-    }
+      {"VimEnter"},
+      {
+        pattern = "*",
+        callback = function(_)
+          -- NOTE: It is endlessly irritating that I have to do this rather than a pure Lua solution.
+          vim.cmd([[
+            let g:vimwiki_syntaxlocal_vars['markdown']['Link1'] = g:vimwiki_syntaxlocal_vars['default']['Link1']
+          ]])
+        end,
+      }
     )
   end,
 }
