@@ -32,15 +32,15 @@ return {
       },
       indent = { enable = false },
       highlight = { enable = true },
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = "<Enter>",
-          node_incremental = "<Enter>",
-          node_decremental = "<BS>",
-          -- scope_incremental = "grc",
-        },
-      },
+      -- incremental_selection = {
+      --   enable = true,
+      --   keymaps = {
+      --     init_selection = "<Enter>",
+      --     node_incremental = "<Enter>",
+      --     node_decremental = "<BS>",
+      --     -- scope_incremental = "grc",
+      --   },
+      -- },
       textobjects = {
         select = {
           enable = true,
