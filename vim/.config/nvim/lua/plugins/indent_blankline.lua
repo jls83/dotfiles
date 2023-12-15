@@ -1,15 +1,17 @@
 return {
   "lukas-reineke/indent-blankline.nvim",
-  version = "v2.20.8",
-  config = function()
-    local ibl = require("indent_blankline")
-
-    ibl.setup({
-      show_current_context = true,
-      show_trailing_blankline_indent = false,
+  main = "ibl",
+  opts = {
+    scope = {
+      -- Left-aligned for niceness with the underline.
+      char = "▎",
+      highlight = "IndentBlanklineContextChar",
+      show_start = true,
+      show_end = true,
+    },
+    indent = {
       char = "║",
-      context_char = "┃",
-      use_treesitter = true,
-    })
-  end,
+      highlight = "IndentBlanklineChar",
+    }
+  },
 }

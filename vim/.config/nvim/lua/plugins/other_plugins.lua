@@ -52,10 +52,6 @@ return {
     "rcarriga/nvim-dap-ui",
     dependencies = { "mfussenegger/nvim-dap" },
   },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    version = "v2.20.8",
-  },
   "mfussenegger/nvim-treehopper",
   "tpope/vim-dadbod",
   "andymass/vim-matchup",
