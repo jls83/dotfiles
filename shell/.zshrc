@@ -37,7 +37,7 @@ case `uname` in
         case "$MACHINE_TYPE" in
         "glinux")
             # Swap out the prompt theme for remote machines.
-            # export ZSH_THEME="crcandy_edit_remote"
+            export ZSH_THEME="crcandy_edit_remote"
             source ~/env_specific_items/glinux.zsh
         ;;
         "banana")
