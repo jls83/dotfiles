@@ -1,9 +1,9 @@
 THEME_GREY="$FG[102]"
-THEME_YELLOW="$FG[221]"
-THEME_ORANGE="$FG[208]"
+THEME_YELLOW="$FG[226]"
+THEME_GREEN="$FG[040]"
 
-ARROW="${THEME_YELLOW}>>%{$reset_color%}"
-CLOCK="${THEME_ORANGE}%D{%H:%M:%S}%{$reset_color%}"
+ARROW="${THEME_GREEN}>>%{$reset_color%}"
+CLOCK="${THEME_YELLOW}%D{%H:%M:%S}%{$reset_color%}"
 DIRECTORY="%~"
 
 PROMPT=$'
