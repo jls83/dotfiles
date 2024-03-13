@@ -1,7 +1,7 @@
 return {
   "tpope/vim-commentary",
   "tpope/vim-repeat",
-  "tpope/vim-vinegar",
+  -- "tpope/vim-vinegar",
   {
     "kylechui/nvim-surround",
     -- TODO: Move config
@@ -61,4 +61,11 @@ return {
     "jls83/vim-oscyank",
     branch = "fix_visual_range"
   },
+  {
+    "stevearc/oil.nvim",
+    config = function()
+      require("oil").setup()
+    end,
+
+  }
 }

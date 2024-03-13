@@ -9,4 +9,5 @@ Keymap.nnoremap("<leader>y", ":%y*<CR>")
 Keymap.vnoremap("<leader>y", '"*y')
 Keymap.nnoremap("<leader>p", '"*p')
 
-Keymap.nnoremap("_", ':Vex<CR>')
+Keymap.nnoremap("-", '<CMD>Oil<CR>')
+Keymap.nnoremap("_", ':vsp<CR><CMD>Oil<CR>')
