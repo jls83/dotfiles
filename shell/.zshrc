@@ -14,7 +14,6 @@ plugins=(
 
 ZSH_DISABLE_COMPFIX=true
 export ZSH="$HOME/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
 export ZSH_THEME="crcandy_edit_local"
 
 # Source all of the environment-specific files here
@@ -36,8 +35,6 @@ case `uname` in
         # I set a $MACHINE_TYPE env variable in the local bash_profile files
         case "$MACHINE_TYPE" in
         "glinux")
-            # Swap out the prompt theme for remote machines.
-            export ZSH_THEME="crcandy_edit_remote"
             source ~/env_specific_items/glinux.zsh
         ;;
         "banana")
@@ -46,6 +43,9 @@ case `uname` in
     esac
     ;;
 esac
+
+# Make sure to source this after `ZSH_THEME` is set.
+source $ZSH/oh-my-zsh.sh
 
 AUTOENV_ENABLE_LEAVE="True"
 
