@@ -23,24 +23,16 @@ case `uname` in
         source ~/env_specific_items/all_macbooks.zsh
         # I set a $MACHINE_TYPE env variable in the local bash_profile files
         case "$MACHINE_TYPE" in
-            "personal")
-                source ~/env_specific_items/personal_macbook.zsh
-            ;;
-            "work")
-                source ~/env_specific_items/work_macbook.zsh
-            ;;
+            "personal") source ~/env_specific_items/personal_macbook.zsh ;;
+            "work") source ~/env_specific_items/work_macbook.zsh ;;
         esac
-        ;;
+    ;;
     "Linux")
         # I set a $MACHINE_TYPE env variable in the local bash_profile files
         case "$MACHINE_TYPE" in
-        "glinux")
-            source ~/env_specific_items/glinux.zsh
-        ;;
-        "banana")
-        source ~/env_specific_items/thinkpad.zsh
-        ;;
-    esac
+            "glinux") source ~/env_specific_items/glinux.zsh ;;
+            "banana") source ~/env_specific_items/thinkpad.zsh ;;
+        esac
     ;;
 esac
 
