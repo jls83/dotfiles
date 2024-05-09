@@ -1,15 +1,6 @@
 return {
   "tpope/vim-commentary",
   "tpope/vim-repeat",
-  -- "tpope/vim-vinegar",
-  {
-    "kylechui/nvim-surround",
-    -- TODO: Move config
-    event = "VeryLazy",
-    config = true,
-    -- require("nvim-surround").setup({})
-    -- end
-  },
   "tpope/vim-fugitive",
   "tpope/vim-rhubarb",
 
@@ -47,11 +38,6 @@ return {
     "jls83/galileo.nvim",
     event = "VeryLazy",
   },
-  "mfussenegger/nvim-dap",
-  {
-    "rcarriga/nvim-dap-ui",
-    dependencies = { "mfussenegger/nvim-dap" },
-  },
   "mfussenegger/nvim-treehopper",
   "tpope/vim-dadbod",
   "andymass/vim-matchup",
@@ -61,15 +47,4 @@ return {
     "jls83/vim-oscyank",
     branch = "fix_visual_range"
   },
-  {
-    "stevearc/oil.nvim",
-    config = function()
-      require("oil").setup({
-        view_options = {
-          show_hidden = true,
-        },
-      })
-    end,
-
-  }
 }

@@ -14,7 +14,8 @@ return {
     local nvim_lsp = require('lspconfig')
     local lsp_utils = require('utils.lsp')
 
-    local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd', 'lua_ls', 'java_language_server'}
+    -- local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd', 'lua_ls', 'java_language_server'}
+    local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd', 'lua_ls'}
 
     lsp_utils.mason_setup(servers)
 
