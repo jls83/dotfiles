@@ -22,7 +22,7 @@ if vim.env.MACHINE_TYPE == 'glinux' then
   vim.cmd('source $HOME/.config/nvim/google/my_google.vim')
   -- Some config remains outside Lazy's files
   require('google.plugin_config.lsp')
-  require('google.plugin_config.dap')
+  -- require('google.plugin_config.dap')
   require('google.plugin_config.telescope')
 end
 

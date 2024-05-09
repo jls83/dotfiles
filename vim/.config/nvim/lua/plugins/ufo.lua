@@ -1,7 +1,7 @@
 return {
-  "jls83/nvim-ufo",
+  -- TODO: switch back to using the original repo
+  "kevinhwang91/nvim-ufo",
   event = "VeryLazy",
-  branch = "use_default_hl_group",
   dependencies = "kevinhwang91/promise-async",
   config = function()
     local Keymap = require("utils.keymap")
@@ -49,7 +49,7 @@ return {
 
     ufo.setup({
       fold_virt_text_handler = handler,
-      close_fold_kinds = {'imports', 'comment'},
+      close_fold_kinds_for_ft = {'imports', 'comment'},
     })
 
     -- TODO: This can cause the folds to freak out or some reason?
