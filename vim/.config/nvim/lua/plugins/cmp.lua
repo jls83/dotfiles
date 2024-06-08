@@ -73,9 +73,6 @@ return {
           },
         }),
       },
-      experimental = {
-        native_menu = false,
-      },
     })
 
   end,
