@@ -1,8 +1,5 @@
 M = {}
 
-local navic = require('nvim-navic')
-local navbuddy = require('nvim-navbuddy')
-
 local lsp_formatting_augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 M.on_attach = function(client, bufnr)
@@ -14,14 +11,6 @@ M.on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, opts)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
   vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
-
-  if client.server_capabilities.documentSymbolProvider then
-    navic.attach(client, bufnr)
-    -- TODO: Does this require documentSymbolProvider also?
-    navbuddy.attach(client, bufnr)
-  else
-    print("Can't use navic here")
-  end
 
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_clear_autocmds({ group = lsp_formatting_augroup, buffer = bufnr })
