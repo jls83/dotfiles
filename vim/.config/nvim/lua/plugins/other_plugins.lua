@@ -41,7 +41,25 @@ return {
   "mfussenegger/nvim-treehopper",
   "tpope/vim-dadbod",
   "andymass/vim-matchup",
-
+  "nvim-telescope/telescope-ui-select.nvim",
+  {
+    "Bekaboo/dropbar.nvim",
+    dependencies = {
+      'nvim-telescope/telescope-fzf-native.nvim'
+    },
+    config = function()
+      require('dropbar').setup({
+        -- icons = { enable = false },
+        sources = {
+          path = {
+            -- relative_to = function(_, win)
+            --   return false
+            -- end,
+          },
+        },
+      })
+    end,
+  },
   -- Forked plugins
   {
     "jls83/vim-oscyank",

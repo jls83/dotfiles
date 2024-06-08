@@ -42,11 +42,19 @@ return {
           end,
         },
       },
+      extensions = {
+        ["ui-select"] = {
+          require("telescope.themes").get_cursor({
+            borderchars = {'═', '│', '═', '│', '╒', '╕', '╛', '╘'},
+          })
+        },
+      },
     })
 
     -- To get fzf loaded and working with telescope, you need to call
     -- load_extension, somewhere after setup function:
     telescope.load_extension('fzf')
+    telescope.load_extension('ui-select')
 
     local function my_lsp_references()
       require('telescope.builtin')
