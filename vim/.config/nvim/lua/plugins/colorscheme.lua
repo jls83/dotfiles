@@ -4,7 +4,6 @@ return {
   priority = 1000,
   config = function()
     local gruvbox = require('gruvbox')
-    -- local palette = require('gruvbox.palette').colors
     local palette = require('gruvbox').palette
 
     local telescope_bg = palette.dark0_hard
@@ -18,12 +17,12 @@ return {
 
     local telescope_titles = {
       fg = telescope_accent,
-      -- bg = nil,
       bg = telescope_bg,
       bold = true,
     }
 
     local cursorLineBg = palette.dark0
+    local fold_line_bg = palette.dark0_soft
 
     local color_overrides = {
       -- General overrides
@@ -31,24 +30,18 @@ return {
       Normal = { bg = "#000000" },
       String = { italic = false },
       Operator = { italic = false },
-      Folded = { fg = palette.aqua, bg = palette.dark0_soft, italic = true },
-      FoldColumn = { fg = palette.gray, bg = cursorLineBg },
+      Folded = { fg = palette.aqua, bg = fold_line_bg, italic = true },
+      FoldColumn = { fg = palette.gray, bg = "#000000" },
+      OtherWeirdness = { fg = palette.gray, bg = fold_line_bg },
       CursorLine = { bg = cursorLineBg },
       CursorLineNr = { fg = palette.yellow, bg = cursorLineBg },
-      SignColumn = { bg = cursorLineBg },
+      CursorLineFold = { fg = palette.gray, bg = cursorLineBg },
+      CursorLineSign = { fg = palette.gray, bg = cursorLineBg },
       WinSeparator = { fg = palette.faded_aqua },
 
       -- Indent-Blanklines items
       IndentBlanklineContextChar = { fg = palette.faded_aqua },
       IndentBlanklineChar = { fg = palette.dark0 },
-
-      -- Sign overrides
-      GruvboxRedSign = { fg = palette.red, bg = cursorLineBg, reverse = false },
-      GruvboxYellowSign = { fg = palette.yellow, bg = cursorLineBg, reverse = false },
-      GruvboxBlueSign = { fg = palette.blue, bg = cursorLineBg, reverse = false },
-      GruvboxAquaSign = { fg = palette.aqua, bg = cursorLineBg, reverse = false },
-      GruvboxPurpleSign = { fg = palette.purple, bg = cursorLineBg, reverse = false },
-      GruvboxOrangeSign = { fg = palette.orange, bg = cursorLineBg, reverse = false },
 
       -- Treesitter items
       ["@include.rust"] = { link = "Keyword" },
@@ -118,7 +111,6 @@ return {
       NavicIconsStruct = { link = "CmpItemKindStruct" },
       NavicIconsTypeParameter = { link = "CmpItemKindTypeParameter" },
 
-      UfoCursorFoldedLine = { bg = cursorLineBg, italic = true },
     }
 
     gruvbox.setup({
@@ -131,6 +123,6 @@ return {
 
     -- Set some explicit overrides as well.
     vim.api.nvim_set_hl(0, 'WinBar', { bg = nil });
-    vim.api.nvim_set_hl(0, 'Folded', { fg = palette.gray, bg = palette.dark0_soft, italic = true })
+    vim.api.nvim_set_hl(0, 'WinBarNC', { bg = nil });
   end,
 }
