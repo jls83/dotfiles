@@ -1,5 +1,7 @@
 return {
-  "luukvbaal/statuscol.nvim",
+  -- "luukvbaal/statuscol.nvim",
+  "jls83/statuscol.nvim",
+  branch = "modified_foldfunc",
   config = function()
     local builtin = require("statuscol.builtin")
     require("statuscol").setup({
