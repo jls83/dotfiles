@@ -45,7 +45,12 @@ return {
       extensions = {
         ["ui-select"] = {
           require("telescope.themes").get_cursor({
-            borderchars = {'═', '│', '═', '│', '╒', '╕', '╛', '╘'},
+            -- TODO: use this everywhere!
+            borderchars = {
+              prompt =  {'═', '│', ' ', '│', '╒', '╕', '│', '│'},
+              results = {'═', '│', '═', '│', '╞', '╡', '╛', '╘'},
+              preview = {'═', '│', '═', '│', '╒', '╕', '╛', '╘'},
+            },
           })
         },
       },
@@ -55,6 +60,8 @@ return {
     -- load_extension, somewhere after setup function:
     telescope.load_extension('fzf')
     telescope.load_extension('ui-select')
+    -- telescope.load_extension('telescope-alternate');
+
 
     local function my_lsp_references()
       require('telescope.builtin')
@@ -75,73 +82,74 @@ return {
     vim.keymap.set('v', '<leader>f', builtin.grep_string, map_opts)
     vim.keymap.set('v', '<leader>t', function() builtin.grep_string({grep_open_files=true}) end, map_opts)
 
-    local galileo = require('galileo')
-    telescope.load_extension('galileo')
 
-    local g_constants = require('galileo.constants')
+    -- local galileo = require('galileo')
+    -- telescope.load_extension('galileo')
 
-    local other_projects_dir = '/Users/jls83/other_projects'
-    local cg = '(' .. g_constants.posix_portable_filename .. ')'
+    -- local g_constants = require('galileo.constants')
 
-    galileo.setup({
-      patterns = {
-        -- C++ items
-        {
-          pattern = other_projects_dir .. '/' .. cg .. '/' .. cg .. [[\.h]],
-          subs = {
-            other_projects_dir .. '/${1}/${2}.cc',
-            other_projects_dir .. '/${1}/${2}_test.cc',
-          },
-        },
-        {
-          pattern = [[/Users/jls83/other_projects/([a-z_]+)/([a-z]+)\.cc]],
-          subs = {
-            '/Users/jls83/other_projects/${1}/${2}.h',
-            '/Users/jls83/other_projects/${1}/${2}_test.cc',
-          },
-        },
-        {
-          pattern = [[/Users/jls83/other_projects/(?P<project_name>[a-z_]+)/(?P<module_name>[a-z]+)_test\.cc]],
-          subs = {
-            '/Users/jls83/other_projects/${project_name}/${module_name}.h',
-            '/Users/jls83/other_projects/${project_name}/${module_name}.cc',
-          },
-        },
-        -- Dart items
-        {
-          pattern = [[/Users/jls83/other_projects/([a-z_]+)/lib/([a-z]+)\.dart]],
-          subs = {
-            '/Users/jls83/other_projects/${1}/lib/${2}.template.html',
-            '/Users/jls83/other_projects/${1}/lib/${2}.scss',
-            '/Users/jls83/other_projects/${1}/tests/${2}_test.dart',
-          },
-        },
-        {
-          pattern = [[/Users/jls83/other_projects/([a-z_]+)/lib/([a-z]+)\.template\.html]],
-          subs = {
-            '/Users/jls83/other_projects/${1}/lib/${2}.dart',
-            '/Users/jls83/other_projects/${1}/lib/${2}.scss',
-            '/Users/jls83/other_projects/${1}/tests/${2}_test.dart',
-          },
-        },
-        {
-          pattern = [[/Users/jls83/other_projects/([a-z_]+)/lib/([a-z]+)\.scss]],
-          subs = {
-            '/Users/jls83/other_projects/${1}/lib/${2}.template.html',
-            '/Users/jls83/other_projects/${1}/lib/${2}.dart',
-            '/Users/jls83/other_projects/${1}/tests/${2}_test.dart',
-          },
-        },
-        {
-          pattern = [[/Users/jls83/other_projects/([a-z_]+)/tests/([a-z]+)_test\.dart]],
-          subs = {
-            '/Users/jls83/other_projects/${1}/lib/${2}.template.html',
-            '/Users/jls83/other_projects/${1}/lib/${2}.scss',
-            '/Users/jls83/other_projects/${1}/lib/${2}.dart',
-          },
-        },
-      },
-    })
+    -- local other_projects_dir = '/Users/jls83/other_projects'
+    -- local cg = '(' .. g_constants.posix_portable_filename .. ')'
+
+    -- galileo.setup({
+    --   patterns = {
+    --     -- C++ items
+    --     {
+    --       pattern = other_projects_dir .. '/' .. cg .. '/' .. cg .. [[\.h]],
+    --       subs = {
+    --         other_projects_dir .. '/${1}/${2}.cc',
+    --         other_projects_dir .. '/${1}/${2}_test.cc',
+    --       },
+    --     },
+    --     {
+    --       pattern = [[/Users/jls83/other_projects/([a-z_]+)/([a-z]+)\.cc]],
+    --       subs = {
+    --         '/Users/jls83/other_projects/${1}/${2}.h',
+    --         '/Users/jls83/other_projects/${1}/${2}_test.cc',
+    --       },
+    --     },
+    --     {
+    --       pattern = [[/Users/jls83/other_projects/(?P<project_name>[a-z_]+)/(?P<module_name>[a-z]+)_test\.cc]],
+    --       subs = {
+    --         '/Users/jls83/other_projects/${project_name}/${module_name}.h',
+    --         '/Users/jls83/other_projects/${project_name}/${module_name}.cc',
+    --       },
+    --     },
+    --     -- Dart items
+    --     {
+    --       pattern = [[/Users/jls83/other_projects/([a-z_]+)/lib/([a-z]+)\.dart]],
+    --       subs = {
+    --         '/Users/jls83/other_projects/${1}/lib/${2}.template.html',
+    --         '/Users/jls83/other_projects/${1}/lib/${2}.scss',
+    --         '/Users/jls83/other_projects/${1}/tests/${2}_test.dart',
+    --       },
+    --     },
+    --     {
+    --       pattern = [[/Users/jls83/other_projects/([a-z_]+)/lib/([a-z]+)\.template\.html]],
+    --       subs = {
+    --         '/Users/jls83/other_projects/${1}/lib/${2}.dart',
+    --         '/Users/jls83/other_projects/${1}/lib/${2}.scss',
+    --         '/Users/jls83/other_projects/${1}/tests/${2}_test.dart',
+    --       },
+    --     },
+    --     {
+    --       pattern = [[/Users/jls83/other_projects/([a-z_]+)/lib/([a-z]+)\.scss]],
+    --       subs = {
+    --         '/Users/jls83/other_projects/${1}/lib/${2}.template.html',
+    --         '/Users/jls83/other_projects/${1}/lib/${2}.dart',
+    --         '/Users/jls83/other_projects/${1}/tests/${2}_test.dart',
+    --       },
+    --     },
+    --     {
+    --       pattern = [[/Users/jls83/other_projects/([a-z_]+)/tests/([a-z]+)_test\.dart]],
+    --       subs = {
+    --         '/Users/jls83/other_projects/${1}/lib/${2}.template.html',
+    --         '/Users/jls83/other_projects/${1}/lib/${2}.scss',
+    --         '/Users/jls83/other_projects/${1}/lib/${2}.dart',
+    --       },
+    --     },
+    --   },
+    -- })
 
   end,
 }

@@ -7,7 +7,7 @@ return {
   -- Clojure items
   {
     "Olical/conjure",
-    ft = { "clojure", "lua" }
+    ft = { "clojure", "lua", "fennel" }
   },
   {
     "clojure-vim/vim-jack-in",
@@ -19,11 +19,11 @@ return {
   },
   {
     "guns/vim-sexp",
-    ft = { "clojure" }
+    ft = { "clojure", "fennel" }
   },
   {
     "tpope/vim-sexp-mappings-for-regular-people",
-    ft = { "clojure" }
+    ft = { "clojure", "fennel" }
   },
   -- For whatever reason, this plugin doesn"t like to be lazy-loaded. Keep it
   -- with the other Clojure plugins anyway, though.
@@ -43,23 +43,14 @@ return {
   "andymass/vim-matchup",
   "nvim-telescope/telescope-ui-select.nvim",
   {
-    "Bekaboo/dropbar.nvim",
-    dependencies = {
-      'nvim-telescope/telescope-fzf-native.nvim'
-    },
+    'Wansmer/treesj',
+    keys = { '<leader>m', '<leader>j', '<leader>s' },
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
     config = function()
-      require('dropbar').setup({
-        -- icons = { enable = false },
-        sources = {
-          path = {
-            -- relative_to = function(_, win)
-            --   return false
-            -- end,
-          },
-        },
-      })
+      require('treesj').setup({})
     end,
   },
+  "tpope/vim-speeddating",
   -- Forked plugins
   {
     "jls83/vim-oscyank",

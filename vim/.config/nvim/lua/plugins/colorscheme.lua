@@ -1,4 +1,4 @@
-return {
+local gruvbox = {
   "ellisonleao/gruvbox.nvim",
   lazy = false,
   priority = 1000,
@@ -62,7 +62,7 @@ return {
         bold = true,
       },
       TelescopePromptNormal = { fg = palette.light1, bg = telescope_bg },
-      TelescopePromptPrefix = { fg = palette.bright_red, bg = telescope_bg },
+      TelescopePromptPrefix = { fg = palette.bright_red },
 
       TelescopePreviewBorder = telescope_borders,
       TelescopePreviewTitle = telescope_titles;
@@ -126,3 +126,17 @@ return {
     vim.api.nvim_set_hl(0, 'WinBarNC', { bg = nil });
   end,
 }
+
+-- example lazy.nvim install setup
+local lackluster = {
+    "slugbyte/lackluster.nvim",
+    lazy = false,
+    priority = 1000,
+    init = function()
+        -- vim.cmd.colorscheme("lackluster")
+        vim.cmd.colorscheme("lackluster-hack") -- my favorite
+        -- vim.cmd.colorscheme("lackluster-mint")
+    end,
+}
+
+return gruvbox

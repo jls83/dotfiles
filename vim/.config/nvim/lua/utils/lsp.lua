@@ -11,6 +11,7 @@ M.on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, opts)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
   vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+  vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, opts)
 
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_clear_autocmds({ group = lsp_formatting_augroup, buffer = bufnr })
