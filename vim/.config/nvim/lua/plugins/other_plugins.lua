@@ -51,6 +51,7 @@ return {
     end,
   },
   "tpope/vim-speeddating",
+  "cshuaimin/ssr.nvim",
   -- Forked plugins
   {
     "jls83/vim-oscyank",
