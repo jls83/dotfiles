@@ -50,6 +50,10 @@ return {
       require('treesj').setup({})
     end,
   },
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  },
   "tpope/vim-speeddating",
   "cshuaimin/ssr.nvim",
   -- Forked plugins
