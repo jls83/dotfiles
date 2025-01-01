@@ -2,28 +2,25 @@ font:
     size: 20.0
     # builtin_box_drawing: false
     normal:
-        family: Inconsolata Nerd Font Mono
-        # family: Iosevka
+        family: Iosevka Nerd Font Mono
         style: Regular
 
     bold:
         style: Bold
 
     italic:
-        style: Regular Oblique
-        # style: Italic
+        style: Oblique
 
     bold_italic:
         style: Bold Oblique
-        # style: Bold Italic
 
     offset:
         x: 0
         y: 3
 
-    # glyph_offset:
-    #     x: 0
-    #     y: 0
+    glyph_offset:
+        x: 0
+        y: 0
 
 window:
     dimensions:
