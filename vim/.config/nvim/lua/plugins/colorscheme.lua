@@ -27,6 +27,7 @@ local gruvbox = {
     local color_overrides = {
       -- General overrides
       -- NormalFloat = { bg = palette.dark0_soft },
+      Directory = { link = "GruvboxBlueBold" },
       Normal = { bg = "#000000" },
       String = { italic = false },
       Operator = { italic = false },
