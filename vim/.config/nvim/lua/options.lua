@@ -34,7 +34,7 @@ vim.g.node_host_prog = '/usr/local/bin/neovim-node-host'
 vim.g.markdown_syntax_conceal = 0
 vim.g.vim_json_conceal = 0
 
-vim.opt.completeopt = {"menuone", "noselect"}
+vim.opt.completeopt = {"menu", "menuone", "noselect"}
 vim.opt.shortmess:append("c")
 
 -- TODO: explain and/or move to a plugin file
