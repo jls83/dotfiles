@@ -117,7 +117,7 @@ local gruvbox = {
     gruvbox.setup({
       contrast = '',
       transparent_mode = false,
-      invert_selection = true,
+      invert_selection = false,
       overrides = color_overrides,
     })
     vim.cmd([[colorscheme gruvbox]])
