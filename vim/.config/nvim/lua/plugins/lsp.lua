@@ -14,8 +14,8 @@ return {
     local nvim_lsp = require('lspconfig')
     local lsp_utils = require('utils.lsp')
 
-    -- local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd', 'lua_ls', 'java_language_server'}
-    local servers = {'pyright', 'tsserver', 'clojure_lsp', 'rust_analyzer', 'clangd', 'lua_ls'}
+    -- local servers = {'pyright', 'clojure_lsp', 'rust_analyzer', 'clangd', 'lua_ls', 'java_language_server'}
+    local servers = {'pyright', 'clojure_lsp', 'rust_analyzer', 'clangd', 'lua_ls'}
 
     lsp_utils.mason_setup(servers)
 
@@ -29,13 +29,7 @@ return {
       }
       -- if lsp == 'pyright' then
       --     config['cmd'] = {'/usr/local/bin/pyright-langserver', '--stdio'}
-      -- elseif lsp == 'tsserver' then
-      if lsp == 'tsserver' then
-        -- config['cmd'] = {'/usr/local/bin/typescript-language-server', '--stdio'}
-        config['analysis'] = {
-          typeCheckingMode = 'off',
-        }
-      elseif lsp == 'lua_ls' then
+      if lsp == 'lua_ls' then
         config['settings'] = {
           Lua = {
             diagnostics = {
