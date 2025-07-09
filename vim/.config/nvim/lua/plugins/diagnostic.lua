@@ -5,27 +5,25 @@ local toggle_float = function()
     vim.api.nvim_win_close(win_id, true)
     vim.g.current_diag_window_id = nil
   else
-    _, win_id = vim.diagnostic.open_float()
+    _, win_id = vim.diagnostic.open_float({
+      border = "solid",
+    })
     vim.g.current_diag_window_id = win_id
   end
 end
 
 vim.diagnostic.config({
   virtual_text = false,
-  signs = true,
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = " ",
+      [vim.diagnostic.severity.WARN] = " ",
+      [vim.diagnostic.severity.HINT] = " ",
+      [vim.diagnostic.severity.INFO] = " "
+    },
+  },
   update_in_insert = false,
 })
-
-local signs = {
-  Error = " ",
-  Warn = " ",
-  Hint = " ",
-  Info = " "
-}
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
 
 local opts = { silent = true }
 
