@@ -1,6 +1,7 @@
 return {
   "jls83/vimwiki",
   branch = "mixed_backlinks",
+  enabled = false,
   init = function()
     local Keymap = require("utils.keymap")
 

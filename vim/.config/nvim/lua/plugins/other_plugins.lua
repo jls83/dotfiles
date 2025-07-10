@@ -7,10 +7,12 @@ return {
   -- Clojure items
   {
     "Olical/conjure",
+    enabled = false,
     ft = { "clojure", "lua", "fennel" }
   },
   {
     "clojure-vim/vim-jack-in",
+    enabled = false,
     ft = { "clojure" },
     dependencies = {
       "tpope/vim-dispatch",
@@ -19,31 +21,46 @@ return {
   },
   {
     "guns/vim-sexp",
+    enabled = false,
     ft = { "clojure", "fennel" }
   },
   {
     "tpope/vim-sexp-mappings-for-regular-people",
+    enabled = false,
     ft = { "clojure", "fennel" }
   },
   -- For whatever reason, this plugin doesn"t like to be lazy-loaded. Keep it
   -- with the other Clojure plugins anyway, though.
-  "junegunn/rainbow_parentheses.vim",
+  {
+    "junegunn/rainbow_parentheses.vim",
+    enabled = false,
+  },
 
   -- Other language-specific items
-  "mxw/vim-jsx",
-  "cespare/vim-toml",
+  -- "mxw/vim-jsx",
+  -- "cespare/vim-toml",
 
   -- Testing plugins
   {
     "jls83/galileo.nvim",
+    enabled = false,
     event = "VeryLazy",
   },
-  "mfussenegger/nvim-treehopper",
-  "tpope/vim-dadbod",
-  "andymass/vim-matchup",
-  "nvim-telescope/telescope-ui-select.nvim",
+  {
+    "mfussenegger/nvim-treehopper",
+    enabled = false,
+  },
+  {
+    "tpope/vim-dadbod",
+    enabled = false,
+  },
+  {
+    "andymass/vim-matchup",
+    enabled = false,
+  },
   {
     'Wansmer/treesj',
+    enabled = false,
     keys = { '<leader>m', '<leader>j', '<leader>s' },
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     config = function()
@@ -52,13 +69,21 @@ return {
   },
   {
     'nvim-treesitter/nvim-treesitter-textobjects',
+    enabled = false,
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
   },
-  "tpope/vim-speeddating",
-  "cshuaimin/ssr.nvim",
+  {
+    "tpope/vim-speeddating",
+    enabled = false,
+  },
+  {
+    "cshuaimin/ssr.nvim",
+    enabled = false,
+  },
   -- Forked plugins
   {
     "jls83/vim-oscyank",
+    enabled = false,
     branch = "fix_visual_range"
   },
 }
