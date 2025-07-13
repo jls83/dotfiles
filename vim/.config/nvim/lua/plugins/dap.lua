@@ -1,11 +1,13 @@
 return {
   {
     "mfussenegger/nvim-dap",
-    enabled = false,
+    enabled = true,
+    event = "VeryLazy",
   },
   {
     "rcarriga/nvim-dap-ui",
-    enabled = false,
+    enabled = true,
+    event = "VeryLazy",
     dependencies = { "mfussenegger/nvim-dap" },
   },
 }
