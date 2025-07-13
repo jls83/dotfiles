@@ -1,6 +1,6 @@
 return {
   "L3MON4D3/LuaSnip",
-  enabled = false,
+  enabled = true,
   event = "VeryLazy",
   dependencies = {
     "saadparwaiz1/cmp_luasnip",
