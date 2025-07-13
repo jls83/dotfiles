@@ -1,7 +1,7 @@
 return {
   "kylechui/nvim-surround",
   -- TODO: Move config
-  enabled = false,
+  enabled = true,
   event = "VeryLazy",
   -- config = true,
   -- require("nvim-surround").setup({})

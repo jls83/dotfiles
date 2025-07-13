@@ -1,7 +1,7 @@
 return {
   "phaazon/hop.nvim",
   branch = "v2",
-  enabled = false,
+  enabled = true,
   config = function()
     local Keymap = require('utils.keymap')
 
