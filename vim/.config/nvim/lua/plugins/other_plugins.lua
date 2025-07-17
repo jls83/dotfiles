@@ -48,7 +48,7 @@ return {
   },
   {
     "mfussenegger/nvim-treehopper",
-    enabled = true,
+    enabled = false,
   },
   {
     "tpope/vim-dadbod",
@@ -60,7 +60,7 @@ return {
   },
   {
     'Wansmer/treesj',
-    enabled = true,
+    enabled = false,
     keys = { '<leader>m', '<leader>j', '<leader>s' },
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     config = function()
@@ -69,7 +69,7 @@ return {
   },
   {
     'nvim-treesitter/nvim-treesitter-textobjects',
-    enabled = true,
+    enabled = false,
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
   },
   {

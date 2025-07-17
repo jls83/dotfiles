@@ -1,6 +1,6 @@
 return {
   "nvim-lualine/lualine.nvim",
-  enabled = false,
+  enabled = true,
   config = function()
     local lualine = require('lualine')
 
@@ -10,14 +10,14 @@ return {
       options = {
         -- theme = 'gruvbox',
         -- theme = 'lackluster',
-        component_separators = { left = '', right = '' },
-        section_separators = { left = '', right = '' },
+        component_separators = { left = '', right = '' },
+        section_separators = { left = '', right = '' },
       },
-      sections = {
-        lualine_c = {
-          'filename',
-        },
-      },
+      -- sections = {
+      --   lualine_c = {
+      --     'filename',
+      --   },
+      -- },
     })
   end,
 }
