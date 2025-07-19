@@ -1,6 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
-  enabled = false,
+  enabled = true,
   dependencies = {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -13,7 +13,7 @@ return {
     end
 
     local nvim_lsp = require('lspconfig')
-    local lsp_utils = require('utils.lsp')
+    local lsp_utils = require('plugins.lsp.utils')
 
     -- local servers = {'pyright', 'clojure_lsp', 'rust_analyzer', 'clangd', 'lua_ls', 'java_language_server'}
     local servers = {'pyright', 'clojure_lsp', 'rust_analyzer', 'clangd', 'lua_ls'}
