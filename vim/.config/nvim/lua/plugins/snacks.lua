@@ -5,7 +5,8 @@ return {
     indent = {
       scope = {
         char = "▎",
-        underline = true
+        underline = true,
+        hl = "IndentBlanklineContextChar",
       },
       animate = {
         enabled = false,
