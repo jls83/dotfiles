@@ -6,7 +6,7 @@ return {
       scope = {
         char = "▎",
         underline = true,
-        hl = "IndentBlanklineContextChar",
+        -- hl = "IndentBlanklineContextChar",
       },
       animate = {
         enabled = false,

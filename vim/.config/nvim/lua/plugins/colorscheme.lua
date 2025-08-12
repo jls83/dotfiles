@@ -153,12 +153,18 @@ local zenbones = {
     init = function()
         -- vim.g.zenbones_darken_comments = 45
         --
-        vim.g.zenbones_lighten_noncurrent_window = true
-        vim.g.zenbones_darken_noncurrent_window = true
-        vim.g.zenbones_darkness = "stark"
-        vim.g.zenbones_italic_strings = false
+        -- vim.g.zenbones_lighten_noncurrent_window = true
+        -- vim.g.zenbones_darken_noncurrent_window = true
+        -- vim.g.zenbones_darkness = "stark"
+        -- vim.g.zenbones_italic_strings = false
+        vim.g.zenbones = {
+          darkness = "stark",
+          italic_strings = false,
+          lighten_cursor_line = 10,
+          -- solid_line_nr = true,
+        }
         vim.cmd.colorscheme('zenbones')
     end
 }
 
-return gruvbox
+return zenbones
