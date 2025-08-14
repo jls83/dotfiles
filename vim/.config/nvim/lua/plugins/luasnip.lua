@@ -2,9 +2,9 @@ return {
   "L3MON4D3/LuaSnip",
   enabled = true,
   event = "VeryLazy",
-  dependencies = {
-    "saadparwaiz1/cmp_luasnip",
-  },
+  -- dependencies = {
+  --   "saadparwaiz1/cmp_luasnip",
+  -- },
   config = function()
     local luasnip = require('luasnip')
     local snippet = luasnip.s

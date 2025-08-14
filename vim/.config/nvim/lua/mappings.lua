@@ -8,3 +8,13 @@ Keymap.nnoremap("Y", "y$")
 Keymap.nnoremap("<leader>y", ":%y*<CR>")
 Keymap.vnoremap("<leader>y", '"*y')
 Keymap.nnoremap("<leader>p", '"*p')
+
+local opts = { silent = true, buffer = bufnr }
+
+vim.keymap.set('n', '<leader>gd', function()
+  return require('telescope.builtin').lsp_definitions()
+end, opts)
+vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, opts)
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, opts)
