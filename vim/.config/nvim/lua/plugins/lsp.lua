@@ -7,5 +7,19 @@ return {
       { "mason-org/mason.nvim", opts = {} },
       "neovim/nvim-lspconfig",
     },
+    config = function()
+      local mason_lspconfig = require("mason-lspconfig")
+
+      if vim.env.MACHINE_TYPE == 'glinux' then
+        mason_lspconfig.setup({
+          automatic_enable = {
+            exclude = {
+              'clangd',
+              'pyright',
+            },
+          },
+        })
+      end
+    end,
   },
 }

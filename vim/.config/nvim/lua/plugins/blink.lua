@@ -9,6 +9,7 @@ return {
     },
     completion = {
       list = {
+        max_items = 40,
         selection = {
           preselect = false,
         },
@@ -19,6 +20,22 @@ return {
             { "label", "label_description", gap = 1 },
             { "kind_icon", gap = 1, "kind" },
             { "source_name" },
+          },
+          components = {
+            label = {
+              width = { fill = true, max = 40 },
+            },
+            kind_icon = {
+              text = function(item)
+                local kind = require("lspkind").symbol_map[item.kind] or ""
+                return kind
+              end,
+            },
+            source_name = {
+              text = function(item)
+                return "[" .. item.source_name .. "]"
+              end,
+            },
           },
         },
       },

@@ -16,7 +16,12 @@ require('mappings')
 
 local lazy = require('lazy')
 
-lazy.setup('plugins')
+lazy.setup({
+  spec = {
+    { import = 'plugins' },
+  },
+  -- git = { },
+})
 
 if vim.env.MACHINE_TYPE == 'glinux' then
   vim.cmd('source $HOME/.config/nvim/google/my_google.vim')
