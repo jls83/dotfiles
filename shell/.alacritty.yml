@@ -1,5 +1,5 @@
 font:
-    size: 20.0
+    size: 18.0
     # builtin_box_drawing: false
     normal:
         family: Iosevka Nerd Font Mono
