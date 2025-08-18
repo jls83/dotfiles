@@ -6,7 +6,16 @@ return {
       scope = {
         char = "▎",
         underline = true,
-        -- hl = "IndentBlanklineContextChar",
+        hl = "Keyword",
+      },
+      chunk = {
+        enabled = true,
+        hl = "Keyword",
+        char = {
+          vertical = "┃",
+          corner_top = "┎",
+          corner_bottom = "┖",
+        },
       },
       animate = {
         enabled = false,
