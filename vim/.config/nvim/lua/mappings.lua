@@ -20,3 +20,12 @@ vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
 vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, opts)
 
 vim.keymap.set('n', 'zf', 'zcVzCzo', opts)
+
+vim.keymap.set('n', '<leader>w<leader>w', function()
+  local note = require("obsidian.daily").today()
+  note:open()
+end, opts)
+
+vim.keymap.set('n', '<leader>wi', function()
+  require("obsidian.commands.dailies")(nil, {})
+end, opts)
