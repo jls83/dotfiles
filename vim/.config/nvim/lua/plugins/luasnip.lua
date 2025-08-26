@@ -2,40 +2,46 @@ return {
   "L3MON4D3/LuaSnip",
   enabled = true,
   event = "VeryLazy",
-  -- dependencies = {
-  --   "saadparwaiz1/cmp_luasnip",
-  -- },
+  dependencies = {
+    "rafamadriz/friendly-snippets"
+  },
   config = function()
+    --
+    require("luasnip.loaders.from_vscode").lazy_load()
+    require("luasnip.loaders.from_vscode").lazy_load({
+        paths = { vim.fn.stdpath("config") .. "/snippets" }
+    })
+    --
     local luasnip = require('luasnip')
-    local snippet = luasnip.s
-    local text = luasnip.text_node
-    local insert = luasnip.insert_node
-    local fmt = require("luasnip.extras.fmt").fmt
+    -- local snippet = luasnip.s
+    -- local text = luasnip.text_node
+    -- local insert = luasnip.insert_node
+    -- local fmt = require("luasnip.extras.fmt").fmt
 
-    luasnip.config.set_config({
-      history = true,
-      updateevents = "TextChanged,TextChangedI"
-    })
+    -- luasnip.config.set_config({
+    --   history = true,
+    --   updateevents = "TextChanged,TextChangedI"
+    -- })
 
-    local vwhead = snippet("vwhead", fmt("# {}\n\n## Today's Activity\n* ", { os.date("%Y-%m-%d (%A)") }))
+    -- local vwhead = snippet("vwhead", fmt("# {}\n\n## Today's Activity\n* ", { os.date("%Y-%m-%d (%A)") }))
 
-    local tdate = snippet("tdate", text(os.date("%Y-%m-%d")))
+    -- local tdate = snippet("tdate", text(os.date("%Y-%m-%d")))
 
-    local review_snip = snippet(
-    "creview",
-    {
-      text("Reviewed cl/"),
-      insert(1), -- CL number
-      text(" for "),
-      insert(2), -- LDAP
-      text("@"),
-    })
+    -- local review_snip = snippet(
+    -- "creview",
+    -- {
+    --   text("Reviewed cl/"),
+    --   insert(1), -- CL number
+    --   text(" for "),
+    --   insert(2), -- LDAP
+    --   text("@"),
+    -- })
 
-    luasnip.add_snippets("all", {
-      vwhead,
-      review_snip,
-      tdate,
-    })
+    -- luasnip.add_snippets("all", {
+    --   vwhead,
+    --   review_snip,
+    --   tdate,
+    -- })
 
     -- Keymaps stolen from TJ DeVries
     vim.keymap.set({ "i", "s" }, "<c-j>", function()
@@ -59,8 +65,5 @@ return {
     end)
 
     vim.keymap.set("i", "<c-u>", require "luasnip.extras.select_choice")
-
-    -- shorcut to source my luasnips file again, which will reload my snippets
-    vim.keymap.set("n", "<leader><leader>s", "<cmd>source ~/.config/nvim/lua/luasnip-config.lua<CR>")
   end,
 }

@@ -19,14 +19,15 @@ vim.opt.matchpairs:append("<:>")
 
 vim.opt.mouse = ""
 
+vim.opt.foldenable = true
 vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.opt.foldtext = 'v:lua.require("utils.misc").foldText()'
 -- TODO: Explain
 vim.opt.foldcolumn = "1"
 vim.opt.foldlevel = 99
-vim.opt.foldlevelstart = 99
-vim.opt.foldenable = true
+-- vim.opt.foldlevelstart = 99
+-- vim.opt.foldnestmax = 4
 
 vim.g.python3_host_prog = '$HOME/.virtualenvs/py3nvim/bin/python'
 vim.g.node_host_prog = '/usr/local/bin/neovim-node-host'

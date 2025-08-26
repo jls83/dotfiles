@@ -60,7 +60,7 @@ return {
   },
   {
     'Wansmer/treesj',
-    enabled = false,
+    enabled = true,
     keys = { '<leader>m', '<leader>j', '<leader>s' },
     dependencies = { 'nvim-treesitter/nvim-treesitter' },
     config = function()
@@ -110,11 +110,18 @@ return {
 
       -- see below for full list of options 👇
     },
+    {
+      "chrisgrieser/nvim-scissors",
+      dependencies = "nvim-telescope/telescope.nvim",
+      opts = {
+        snippetDir = vim.fn.stdpath("config") .. "/snippets",
+      },
+    },
   },
   -- Forked plugins
   {
     "jls83/vim-oscyank",
-    enabled = false,
+    enabled = true,
     branch = "fix_visual_range"
   },
 }

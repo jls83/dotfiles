@@ -4,12 +4,13 @@ return {
   event = "InsertEnter",
   version = "1.*",
   opts = {
+    snippets = { preset = 'luasnip' },
     sources = {
       default = { 'lsp', 'path', 'snippets', 'buffer' },
     },
     completion = {
       list = {
-        max_items = 40,
+        -- max_items = 40,
         selection = {
           preselect = false,
         },
@@ -44,6 +45,5 @@ return {
       ['<Tab>'] = {'select_next', 'fallback'},
       ['<S-Tab>'] = {'select_prev', 'fallback'},
     },
-    snippets = { preset = 'luasnip' },
   },
 }
