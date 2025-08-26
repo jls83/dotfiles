@@ -85,7 +85,7 @@ return {
     "obsidian-nvim/obsidian.nvim",
     enabled = true,
     version = "*", -- recommended, use latest release instead of latest commit
-    -- ft = "markdown",
+    ft = "*",
     -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
     -- event = {
     --   "BufReadPre " .. vim.fn.expand("~") .. "/obsidian_data/*.md",
@@ -109,12 +109,12 @@ return {
         folder = "daily_notes",
       },
     },
-    {
-      "chrisgrieser/nvim-scissors",
-      dependencies = "nvim-telescope/telescope.nvim",
-      opts = {
-        snippetDir = vim.fn.stdpath("config") .. "/snippets",
-      },
+  },
+  {
+    "chrisgrieser/nvim-scissors",
+    dependencies = "nvim-telescope/telescope.nvim",
+    opts = {
+      snippetDir = vim.fn.stdpath("config") .. "/snippets",
     },
   },
   -- Forked plugins
