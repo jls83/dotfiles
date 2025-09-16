@@ -108,6 +108,9 @@ return {
       daily_notes = {
         folder = "daily_notes",
       },
+      ui = {
+        ignore_conceal_warn = true,
+      },
     },
   },
   {

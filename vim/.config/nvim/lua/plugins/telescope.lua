@@ -84,6 +84,16 @@ return {
     vim.keymap.set('v', '<leader>f', builtin.grep_string, map_opts)
     vim.keymap.set('v', '<leader>t', function() builtin.grep_string({grep_open_files=true}) end, map_opts)
 
+    vim.keymap.set('n', '<leader>F', function()
+      if vim.bo.filetype ~= 'oil' then
+        return nil
+      else
+        local oil = require('oil')
+        local oil_dir = oil.get_current_dir()
+        builtin.live_grep({cwd=oil_dir})
+      end
+    end, map_opts)
+
 
     -- local galileo = require('galileo')
     -- telescope.load_extension('galileo')
