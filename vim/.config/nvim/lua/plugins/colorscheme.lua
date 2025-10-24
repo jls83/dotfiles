@@ -175,6 +175,41 @@ local vague = {
     -- NOTE: you do not need to call setup if you don't want to.
     require("vague").setup({
       -- optional configuration here
+      on_highlights = function(hl, colors)
+        -- TODO: This still needs a tweak, but the background is way better
+        local common = require("vague.groups.common")
+        local common_colors = common.get_colors({colors = colors})
+
+        local my_pmenu = { bg = "#21212a" }
+        local my_match = { fg = colors.delta, bg = "#21212a", gui = "bold" }
+        local my_kind =  { fg = colors.comment, bg = "#21212a" }
+
+        hl.BlinkCmpMenu = my_pmenu -- The completion menu window
+        hl.BlinkCmpLabel = my_pmenu -- Label of the completion item
+        hl.BlinkCmpSignatureHelp = my_pmenu -- Signature help window
+
+        hl.BlinkCmpDocBorder = common_colors.NormalFloat -- The documentation window border
+        hl.BlinkCmpMenuBorder = my_pmenu -- The completion menu window border
+        hl.BlinkCmpSignatureHelpBorder = common_colors.NormalFloat -- The signature help window border
+
+        hl.BlinkCmpKind = my_kind -- Kind icon/text of the completion item
+        hl.BlinkCmpGhostText = common_colors.NonText -- Preview item with ghost text 
+
+        hl.BlinkCmpLabelMatch = my_match -- (Currently unused) Label of the completion item when it matches the query
+        hl.BlinkCmpLabelDeprecated = my_pmenu -- Deprecated label of the completion item
+        hl.BlinkCmpLabelDetail = my_pmenu -- Label description of the completion item
+        hl.BlinkCmpLabelDescription = my_pmenu -- Label description of the completion item
+
+        hl.BlinkCmpMenuSelection = common_colors.PmenuSel -- The completion menu window selected item
+        hl.BlinkCmpScrollBarThumb = common_colors.PmenuThumb -- The scrollbar thumb
+        hl.BlinkCmpScrollBarGutter = common_colors.PmenuSbar -- The scrollbar gutter
+        hl.BlinkCmpSource = my_pmenu -- Source of the completion item
+        hl.BlinkCmpDoc = common_colors.NormalFloat -- The documentation window
+        hl.BlinkCmpDocSeparator = common_colors.NormalFloat -- The documentation separator between doc and detail
+        hl.BlinkCmpDocCursorLine = common_colors.Visual -- The documentation window cursor line
+        hl.BlinkCmpSignatureHelp = common_colors.NormalFloat -- The signature help window
+        hl.BlinkCmpSignatureHelpActiveParameter = common_colors.LspSignatureActiveParameter -- Active parameter of the signature help
+      end,
     })
     vim.cmd("colorscheme vague")
   end
