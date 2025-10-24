@@ -7,7 +7,7 @@ return {
   -- Clojure items
   {
     "Olical/conjure",
-    enabled = true,
+    enabled = false,
     ft = { "clojure", "lua", "fennel" }
   },
   {
@@ -119,6 +119,15 @@ return {
     opts = {
       snippetDir = vim.fn.stdpath("config") .. "/snippets",
     },
+  },
+  {
+    'MagicDuck/grug-far.nvim',
+    enabled = false,
+    config = function()
+      require('grug-far').setup({
+        engine = 'astgrep',
+      });
+    end
   },
   -- Forked plugins
   {
