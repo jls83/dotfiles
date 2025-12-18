@@ -7,7 +7,7 @@ return {
   -- Clojure items
   {
     "Olical/conjure",
-    enabled = false,
+    enabled = true,
     ft = { "clojure", "lua", "fennel" }
   },
   {
@@ -28,6 +28,11 @@ return {
     "tpope/vim-sexp-mappings-for-regular-people",
     enabled = true,
     ft = { "clojure", "fennel" }
+  },
+  {
+    "Olical/nfnl",
+    enabled = true,
+    ft = "fennel",
   },
   -- For whatever reason, this plugin doesn"t like to be lazy-loaded. Keep it
   -- with the other Clojure plugins anyway, though.

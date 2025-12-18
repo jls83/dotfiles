@@ -12,9 +12,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('LspFormatting', {}),
   callback = function(args)
     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
-    if client.server_capabilities.documentFormattingProvider then
+    -- if client.server_capabilities.documentFormattingProvider then
+    if client.supports_method("textDocument/formatting", args.buf) then
       vim.api.nvim_create_autocmd("BufWritePre", {
-        group = vim.api.nvim_create_augroup('LspFormatting', {clear=false}),
         buffer = args.buf,
         callback = function()
           -- A number of our SQL files shouldn't be autoformatted.
@@ -25,7 +25,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
           if (vim.bo.filetype == 'lua') then
             return
           end
-          vim.lsp.buf.format()
+          vim.lsp.buf.format({ async = false, id = args.data.client_id })
         end,
       })
     end
@@ -66,7 +66,21 @@ vim.lsp.config('lua_ls', {
   }
 })
 
+vim.lsp.config('fennel_language_server', {
+  settings = {
+    fennel = {
+      diagnostics = {
+        globals = {'vim', 'comment', 'case'},
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file('', true),
+        checkThirdParty = false,
+      },
+    },
+  },
+})
+
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('clojure_lsp')
-
+vim.lsp.enable('fennel_language_server')

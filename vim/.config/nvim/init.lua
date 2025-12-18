@@ -23,6 +23,9 @@ lazy.setup({
   -- git = { },
 })
 
+-- Do this after the lazy setup so we have lsp-related plugins available.
+require('lsp')
+
 if vim.env.MACHINE_TYPE == 'glinux' then
   vim.cmd('source $HOME/.config/nvim/google/my_google.vim')
   -- Some config remains outside Lazy's files

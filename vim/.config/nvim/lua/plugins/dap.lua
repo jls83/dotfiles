@@ -8,6 +8,9 @@ return {
     "rcarriga/nvim-dap-ui",
     enabled = true,
     event = "VeryLazy",
-    dependencies = { "mfussenegger/nvim-dap" },
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio",
+    },
   },
 }
