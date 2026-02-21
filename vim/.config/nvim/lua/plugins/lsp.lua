@@ -19,6 +19,8 @@ return {
             },
           },
         })
+      else
+        mason_lspconfig.setup({})
       end
     end,
   },

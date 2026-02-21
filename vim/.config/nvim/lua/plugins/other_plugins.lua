@@ -86,38 +86,38 @@ return {
     "cshuaimin/ssr.nvim",
     enabled = false,
   },
-  {
-    "obsidian-nvim/obsidian.nvim",
-    enabled = vim.env.MACHINE_TYPE ~= 'glinux',
-    version = "*", -- recommended, use latest release instead of latest commit
-    ft = "*",
-    -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
-    -- event = {
-    --   "BufReadPre " .. vim.fn.expand("~") .. "/obsidian_data/*.md",
-    --   "BufNewFile " .. vim.fn.expand("~") .. "/obsidian_data/*.md",
-    -- },
-    ---@module 'obsidian'
-    ---@type obsidian.config
-    opts = {
-      legacy_commands = false,
-      workspaces = {
-        {
-          name = "main",
-          path = "~/obsidian_data",
-        },
-      },
-      completion = {
-        nvim_cmp = false,
-        blink = true,
-      },
-      daily_notes = {
-        folder = "daily_notes",
-      },
-      ui = {
-        ignore_conceal_warn = true,
-      },
-    },
-  },
+  --{
+  --  "obsidian-nvim/obsidian.nvim",
+  --  enabled = vim.env.MACHINE_TYPE ~= 'glinux',
+  --  version = "*", -- recommended, use latest release instead of latest commit
+  --  ft = "*",
+  --  -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
+  --  -- event = {
+  --  --   "BufReadPre " .. vim.fn.expand("~") .. "/obsidian_data/*.md",
+  --  --   "BufNewFile " .. vim.fn.expand("~") .. "/obsidian_data/*.md",
+  --  -- },
+  --  ---@module 'obsidian'
+  --  ---@type obsidian.config
+  --  opts = {
+  --    legacy_commands = false,
+  --    workspaces = {
+  --      {
+  --        name = "main",
+  --        path = "~/obsidian_data",
+  --      },
+  --    },
+  --    completion = {
+  --      nvim_cmp = false,
+  --      blink = true,
+  --    },
+  --    daily_notes = {
+  --      folder = "daily_notes",
+  --    },
+  --    ui = {
+  --      ignore_conceal_warn = true,
+  --    },
+  --  },
+  --},
   {
     "chrisgrieser/nvim-scissors",
     dependencies = "nvim-telescope/telescope.nvim",

@@ -37,19 +37,19 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- vim.lsp.config('clangd', {})
 
 vim.lsp.config('rust_analyzer', {
-  settings = {
-    ["rust-analyzer"] = {
+  -- settings = {
+  --   ["rust-analyzer"] = {
       procMacro = { enable = true, attributes = { enable = true } },
       checkOnSave = {
         command = "clippy",
       },
-    }
-  }
+    -- }
+  -- }
 })
 
 
 vim.lsp.config('lua_ls', {
-  settings = {
+  -- settings = {
     Lua = {
       diagnostics = {
         -- Get the language server to recognize the `vim` global
@@ -63,7 +63,7 @@ vim.lsp.config('lua_ls', {
         enable = false,
       },
     },
-  }
+  -- }
 })
 
 vim.lsp.config('fennel_language_server', {

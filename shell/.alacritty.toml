@@ -1,0 +1,79 @@
+[window]
+decorations = "none"
+dynamic_padding = true
+opacity = 1
+option_as_alt = "Both"
+
+[window.dimensions]
+columns = 120
+lines = 40
+
+[window.padding]
+x = 10
+y = 10
+
+[font]
+size = 20.0
+
+[font.normal]
+style = "Regular"
+family = "Iosevka Nerd Font Mono"
+
+[font.italic]
+style = "Oblique"
+
+[font.bold]
+style = "Bold"
+
+[font.bold_italic]
+style = "Bold Oblique"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.cursor]
+cursor = "CellForeground"
+text = "CellBackground"
+
+[colors.primary]
+background = "#000000"
+foreground = "#dbded8"
+
+[colors.normal]
+black = "#000000"
+blue = "#417ab3"
+cyan = "#00a7aa"
+green = "#5da602"
+magenta = "#88658d"
+red = "#d71e00"
+white = "#dbded8"
+yellow = "#cfad00"
+
+[colors.bright]
+black = "#676965"
+blue = "#83afd8"
+cyan = "#37e5e7"
+green = "#98e342"
+magenta = "#bc93b6"
+red = "#f44135"
+white = "#f1f1ef"
+yellow = "#fcea60"
+
+[cursor]
+blink_interval = 600
+
+[cursor.style]
+blinking = "Always"
+
+[[hints.enabled]]
+command = "/Users/jls83/open_all_links.sh"
+post_processing = true
+regex = "((magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:|go/|g/|b/|cl/|cs/|t/|shortn/|slides/|docs/|yaqs/|google3/|mail/|scripts2/|gpaste/|meme/|omg/|dashboards/)[^\u0000-\u001F\u007F-<>\"\\s{-}\\^⟨⟩`¬]+|[a-zA-Z]+@)"
+
+[hints.enabled.binding]
+key = "U"
+mods = "Control|Shift"
+
+[hints.enabled.mouse]
+enabled = true
+mods = "Control"

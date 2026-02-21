@@ -181,7 +181,7 @@ local vague = {
         local common_colors = common.get_colors({colors = colors})
 
         local my_pmenu = { bg = "#21212a" }
-        local my_match = { fg = colors.delta, bg = "#21212a", gui = "bold" }
+        local my_match = { fg = colors.delta, bg = "#21212a", bold = true }
         local my_kind =  { fg = colors.comment, bg = "#21212a" }
 
         hl.BlinkCmpMenu = my_pmenu -- The completion menu window
